@@ -1,4 +1,3 @@
-Meshtastic auf device flashen
-- Gerätebezeichnung
-- Schritte
-- Probleme mit Lösung
+# Projektseminar
+
+## Ist Meshtastic im Kriesenfall dafür geeignet in Dresden Kommunikation zu gewährleisten.
