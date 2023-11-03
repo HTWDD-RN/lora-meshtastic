@@ -1,3 +1,4 @@
 # Projektseminar
 
-## Ist Meshtastic im Kriesenfall dafür geeignet in Dresden Kommunikation zu gewährleisten.
+## Fragestellung
+Ist Meshtastic im Kriesenfall(Internet und Mobilfunknetze down) dafür geeignet in Dresden Kommunikation zu gewährleisten?
