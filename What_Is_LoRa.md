@@ -60,6 +60,6 @@ https://loganmarchione.com/2023/05/lora-and-meshtastic/20230510_003.png
 
 
 
-LORA RANGE:
+LORA RANGE(1300KM):
 
 https://www.gsm-modem.de/M2M/m2m-faq/lpwan-range-comparision-nb-iot-lorawan-sigfox/
