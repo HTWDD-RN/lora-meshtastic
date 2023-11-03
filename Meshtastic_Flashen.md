@@ -25,7 +25,7 @@ https://meshtastic.org/docs/getting-started/serial-drivers
 ### nRF52
 nRF52 Chips benötigen normalerweise _keinen_ Serial Treiber. Sie benutzen einen UF2 bootloader, welche das Gerät als USB-Stick vom Betriebssystem erkennen lassen.
 
-_Auf keinen Fall folgenden USB geräte treiber herunterladen, es sei denn es wird UF2 support benötigt
+_Auf keinen Fall folgenden USB geräte treiber herunterladen, es sei denn es wird UF2 support benötigt_
 
 https://meshtastic.org/docs/getting-started/serial-drivers/nrf52
 

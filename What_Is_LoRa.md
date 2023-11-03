@@ -6,7 +6,6 @@ LoRa can be operated on the license free sub-gigahertz bands, for example, 868 M
 
 
 
-
 LoRa (from long range) is a proprietary radio technology that is owned by Semtech. It is designed for long-range (e.g., 10km), low-bandwidth (i.e., measured in Kbps), low-power communication, primarily for internet of things (IoT) networks.
 
 LoRa defines the physical layer that controls how the radio signals are modulated. Specifically, LoRa uses chirp spread spectrum (CSS) to encode information.
