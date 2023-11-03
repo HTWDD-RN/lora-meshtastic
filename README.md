@@ -6,4 +6,6 @@ Ist Meshtastic im Kriesenfall(Internet und Mobilfunknetze down) dafür geeignet 
 - Fläche Dresden 328,8 km^2
 - höchster Punkt in Dresden
 - - Triebenberg 383m ü. NHN 51° 1′ 35″ N, 13° 55′ 23″ O
-- - Rathausturm Aussichtsplattform 68m höhe
+- Rathausturm Aussichtsplattform 68m höhe
+- Liste der höchsten Bauwerke
+- - https://www.stadtwikidd.de/wiki/Liste_der_höchsten_Bauwerke
