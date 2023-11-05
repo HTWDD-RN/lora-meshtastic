@@ -10,7 +10,7 @@ Es ist darauf zu achten, dass jedes Gerät welches im Meshnetz betrieben werden 
 
 Ohne Amateurfunklizenz kann man die in Deutschland freien Frequenzbänder 433 MHz und 868MHz, auf welchen Lora operiert, ohne Lizenzkosten nutzen.
 
-Solange WLAN Verbindung zu einem Device nicht notw. ist und Bluetooth  ausreicht, sollte ein nRF52 Chip gewählt werden, da diese energieffizienter als ESP32 Chips sind.
+Solange WLAN Verbindung zu einem Device nicht notw. ist und Bluetooth  ausreicht, sollte ein nRF52 Chip gewählt werden, da diese energieffizienter als ESP32 Chips und einfacher zu flashen sind.
 
 Eine Liste mit unterstützer Hardware findet sich hier:
 
