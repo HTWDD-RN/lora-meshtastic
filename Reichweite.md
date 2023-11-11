@@ -14,11 +14,11 @@ P(dBm) = 27dbm
 
 Radio link budget formula  
 𝑃RX=𝑃TX+𝐺TX+𝐺RX−𝐿TX−𝐿FS−𝐿𝑃−𝐿RX  
-PRX  = received power (dBm)
-PTX  = transmitter output power (dBm)
-GTX  = transmitter antenna gain (dBi)
-GRX  = receiver antenna gain (dBi)
-LTX  = transmit feeder and associated losses (feeder, connectors, etc.) (dB)
-LFS  = free space loss or path loss (dB)
-LP  = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)
-LRX  = receiver feeder and associated losses (feeder, connectors, etc.) (d)B
+PRX  = received power (dBm)  
+PTX  = transmitter output power (dBm)  
+GTX  = transmitter antenna gain (dBi)  
+GRX  = receiver antenna gain (dBi)  
+LTX  = transmit feeder and associated losses (feeder, connectors, etc.) (dB)  
+LFS  = free space loss or path loss (dB)  
+LP  = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)  
+LRX  = receiver feeder and associated losses (feeder, connectors, etc.) (d)B  
