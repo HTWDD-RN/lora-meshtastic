@@ -22,3 +22,8 @@ LTX  = transmit feeder and associated losses (feeder, connectors, etc.) (dB)
 LFS  = free space loss or path loss (dB)  
 LP  = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)  
 LRX  = receiver feeder and associated losses (feeder, connectors, etc.) (d)B  
+
+
+
+Line of Sight tool
+https://www.heywhatsthat.com
