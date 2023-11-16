@@ -27,7 +27,11 @@ LFS  = free space loss or path loss (dB)
 LP  = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)  
 LRX  = receiver feeder and associated losses (feeder, connectors, etc.) (d)B  
 
+Zusammenfassung:
 
+Das Link-Budget definiert die max. Reichweite in einenm LoRa Funk Netzr.
+Der Spreading Faktor und somit die Reichweite eines Senders hängen von den Ausbreitungsbedingungen ab. LoRa hat dabei den ADR Mechanismus eingeführt und regelt damit die Reichweiten der Sender.
+Die Rx-Empfindlichkeit hängt von Signal-Rausch-Verhältnis (SNR), Rauschfaktor (NF) und Bandbreite (BW) ab.
 
 Line of Sight tool
 https://www.heywhatsthat.com
