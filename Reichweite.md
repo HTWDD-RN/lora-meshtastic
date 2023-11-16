@@ -1,4 +1,4 @@
-mit einem Link Budget von 150dBm (long fast mit 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
+mit einem Link Budget von 150dBm (long fast mit 17dBm transmit Power und 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
 
 
 Maximal 500mW ERP  (1)  
