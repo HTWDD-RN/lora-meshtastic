@@ -1,3 +1,6 @@
+mit einem Link Budget von 150dBm lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
+
+
 Maximal 500mW ERP  (1)  
 P(dBm) = 10 ⋅ log10( P(mW) / 1mW)  
 P(dBm) = 10 ⋅ log10( P(500mW) / 1mW)  
