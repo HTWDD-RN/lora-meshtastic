@@ -31,6 +31,34 @@ LRX  = receiver feeder and associated losses (feeder, connectors, etc.) (d)B
 Das Link-Budget, (Leistungsübertragungsbilanz) gibt die Qualität eines Funk-Übertragungskanals an.
 Über ein einfaches Modell lässt sich das Link-Budget mittels Addition der Sendeleistung (Transmitter Power, Tx), der Empfängerempfindlichkeit (Receiver Power, Rx), des Antennengewinns und der Freiraumdämpfung (Free Space Path Loss, FSPL) errechnen.
 
+FSPL (dB) = 20log10(d) + 20log10(f) – 147,55
+FSPL = (4πd/λ)2 = (4πdf/c)2
+FSPL = Free Space Path Loss (Freiraumdämpfung)
+d = Abstand zwischen Tx und Rx in Metern
+f = Frequenz in Hertz
+
+Rx-Empfindlichkeit = -174 + 10log10(BW) + NF + SNR
+BW = Bandbreite in Hz,
+NF = Rauschfaktor in dB,
+SNR = Signal-Rausch-Verhältnis (signal to noise ratio). Es gibt an, wie weit das Signal über
+dem Rauschen liegen muss.
+
+Material	Dämpfung (dB)
+Glas (6mm)	0,8
+Glas (13mm)	2
+Holz (76mm)	2,8
+Ziegelstein (89mm)	3,5
+Ziegelstein (178mm)	5
+Ziegelstein (267mm)	7
+Beton (102mm)	12
+Steinmauer (203mm)	12
+Ziegelbeton (192mm)	14
+Steinmauer (406mm)	17
+Beton (203mm)	23
+Stahlbeton (89mm)	27
+Steinmauer (610mm)	28
+Beton (305mm)	35
+
 
 Zusammenfassung:
 
