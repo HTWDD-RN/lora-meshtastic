@@ -27,6 +27,11 @@ LFS  = free space loss or path loss (dB)
 LP  = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)  
 LRX  = receiver feeder and associated losses (feeder, connectors, etc.) (d)B  
 
+
+Das Link-Budget, (Leistungsübertragungsbilanz) gibt die Qualität eines Funk-Übertragungskanals an.
+Über ein einfaches Modell lässt sich das Link-Budget mittels Addition der Sendeleistung (Transmitter Power, Tx), der Empfängerempfindlichkeit (Receiver Power, Rx), des Antennengewinns und der Freiraumdämpfung (Free Space Path Loss, FSPL) errechnen.
+
+
 Zusammenfassung:
 
 Das Link-Budget definiert die max. Reichweite in einenm LoRa Funk Netzr.
