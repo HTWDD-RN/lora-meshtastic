@@ -11,10 +11,6 @@ P(dBm) = 27dBm
 (1) https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html  
 (Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)
 
-Max EIRP / ERP	+16 dBm (40 mW) / +14 dBm (25 mW)
-This is the power radiated by the isotropic antenna / half-wave dipole antenna (not the transmitter power)
-https://www.thethingsnetwork.org/docs/lorawan/regional-parameters/
-
 
 
 
