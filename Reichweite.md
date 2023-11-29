@@ -7,11 +7,11 @@ SPreading Factor/ Symbols: 11 / 2048
 Coding Rate: 4/5	  
 Bandwith: 250	  
 
-transmit Power: 17dBm  
-Antenna gain: 1,5dBi 
-RX sensitivity: -136dBm
-RX antenna: 0dBi
-Link Budget: 150dB
+transmit Power: 17dBm    
+Antenna gain: 1,5dBi  
+RX sensitivity: -136dBm  
+RX antenna: 0dBi  
+Link Budget: 150dB  
 
 
 Umkreisradius 400km
