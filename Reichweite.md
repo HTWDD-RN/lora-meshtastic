@@ -4,7 +4,7 @@ Umkreisradius 400km
 Rechtech in kreis Seitenlänge 565km
 
 WiFi LoRa 32 v3 (SX1262 Lora Chip)  
-P(dBm) = 21dBm +-1dBm
+P(dBm) = 21dBm +-1dBm  
 Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
 
 Maximal 500mW ERP  (1)  
