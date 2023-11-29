@@ -81,3 +81,32 @@ Die Rx-Empfindlichkeit hängt von Signal-Rausch-Verhältnis (SNR), Rauschfaktor 
 
 Line of Sight tool
 https://www.heywhatsthat.com
+
+
+Certainly! Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:
+
+1. **Transmit Power (Tx Power):** Let's assume the transmitter has a power output of 20 dBm.
+
+2. **Frequency (f):** Assume a frequency of 868 MHz.
+
+3. **Distance (d):** Let's consider a communication distance of 2 kilometers.
+
+4. **Antenna Gains (Gt and Gr):** Assume both the transmitter and receiver antennas have a gain of 2 dBi.
+
+5. **Free Space Path Loss (Lp):** Using the free space path loss formula:
+
+   \[ Lp = 20 \log_{10}(d) + 20 \log_{10}(f) + L_{FS} \]
+
+   \[ Lp = 20 \log_{10}(2) + 20 \log_{10}(868 \times 10^6) + 20\log_{10}\left(\frac{4\pi}{c}\right) \]
+
+   Here, \(c\) is the speed of light. The result will be the path loss in dB.
+
+6. **Received Power (Rx Power):** Plug the values into the link budget equation:
+
+   \[ \text{Rx Power} = \text{Tx Power} + \text{Tx Antenna Gain} - \text{Path Loss} + \text{Rx Antenna Gain} \]
+
+   Substitute the values and calculate the received power.
+
+The calculated received power should be compared with the receiver's sensitivity specification. If the received power is higher than the sensitivity threshold, the link is expected to work under the specified conditions.
+
+Keep in mind that this is a simplified example, and in a real-world scenario, additional factors such as atmospheric conditions, interference, and fading effects should be considered for a more accurate link budget analysis.
