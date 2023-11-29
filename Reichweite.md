@@ -1,4 +1,18 @@
-mit einem Link Budget von 150dBm (Einstellung = long fast, mit 20dBm transmit Power und 0dBi Antenne) lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
+mit einem Link Budget von 150dBm (Einstellung = long fast, mit 17dBm transmit Power und 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
+
+Channelsetting: Long Range / Fast  	
+Alt Channelname: Long Fast  
+Data Rate: 1.07 kbps (default)	  
+SPreading Factor/ Symbols: 11 / 2048	  
+Coding Rate: 4/5	  
+Bandwith: 250	  
+
+transmit Power: 17dBm  
+Antenna gain: 1,5dBi 
+RX sensitivity: -136dBm
+RX antenna: 0dBi
+Link Budget: 150dB
+
 
 Umkreisradius 400km
 Rechtech in kreis Seitenlänge 565km
