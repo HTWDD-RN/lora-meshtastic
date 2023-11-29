@@ -83,7 +83,7 @@ Line of Sight tool
 https://www.heywhatsthat.com
 
 
-Certainly! Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:
+Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:
 
 1. **Transmit Power (Tx Power):** Let's assume the transmitter has a power output of 20 dBm.
 
