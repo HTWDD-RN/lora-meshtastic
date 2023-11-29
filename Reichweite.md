@@ -1,4 +1,4 @@
-mit einem Link Budget von 150dBm (long fast mit 17dBm transmit Power und 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
+mit einem Link Budget von 150dBm (Einstellung = long fast, mit 20dBm transmit Power und 0dBi Antenne) lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
 
 Umkreisradius 400km
 Rechtech in kreis Seitenlänge 565km
