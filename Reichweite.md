@@ -3,6 +3,8 @@ mit einem Link Budget von 150dBm (long fast mit 17dBm transmit Power und 1,5dBi 
 Umkreisradius 400km
 Rechtech in kreis Seitenlänge 565km
 
+WiFi LoRa 32 v3 (SX1262 Lora Chip)
+P(dBm) = 21dBm +-1dBm
 
 Maximal 500mW ERP  (1)  
 P(dBm) = 10 ⋅ log10( P(mW) / 1mW)  
