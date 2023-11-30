@@ -28,8 +28,8 @@ Range Hata City: 5,2km
 Range City(-28dB loss): 0,85km  
 Line of sight: 22,7km  
 
-Das Hata-Modell beachtet keine Line of Sight, deswegen habe ich die Höhe der Antenne des Senders auf 25Meter festgelegt, da die die übliche Antennenhöhe einer LTE-Antenne im innerstädtischem Gebiet darstellt.  
-Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tableu angegebene Reichweite von 35,3km theoretische Werte. Die Sichlinie begrenzt die Reichweite auf 22,7km.  
+Das Hata-Modell beachtet keine Line of Sight, deswegen habe ich die Höhe der Antenne des Senders auf 25Meter festgelegt, da die die übliche Antennenhöhe einer LTE-Antenne im innerstädtischem Gebiet darstellt und die Line of Sight serperat mit 22,7km berechnet. 
+Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tableu angegebene Reichweite von 35,3km theoretische Werte.
 Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation.
 
 Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Gegencheck sollte immer eine Sichtlinie beachtet werden. Um genauere Werte zu erreichen kann das Longley-Rice-Modell verwendet werden.
