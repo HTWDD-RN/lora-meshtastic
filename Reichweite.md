@@ -1,5 +1,33 @@
 mit einem Link Budget von 150dBm (Einstellung = long fast, mit 17dBm transmit Power und 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nir freiraumdämpfing) eine Distanz von bis zu 800km Überwinden
 
+Im Weltraum können Funksignale tatsächlich viel weiter reisen. Aber nun zurück zu Realität, in der die Sichtlinie eine größere Rolle spielt.
+Mit 1,7m höhe ist es möglich 4,7km weit zu sehen. Aufgrund der Tatsache, dass die Welt eine Kugel ist.   
+Der Horizont ist aber nur eine Begrenzung einer Radiowelle. Die quasioptische Ausbreitung gilt für Radiowellen im sub-GHz Bereich.
+
+Im nächsten Schritt betrachten wir die Wellenausbreitung mit dem Hata-Okumura-Modell (Hata-Modell).
+
+Das Hata-Modell verwendet verschiedene Begriffe uin der Dämpfungsformel, um zwischen verschiedenen Landnutzungen zu unterscheiden, von ländlicher bis zu dicht besiedelten Region.  
+Hata-Ausbreitungsformel  
+D=69,55+36,26log(f)-13,82log(h_s)+[44,9-6,55log(h_s)*log(d)-K]
+mit:  
+d=Entfernung zwischen Sender und Empfänger  
+hS=Höhe der Senderantenne  
+hR=Empfängerantennenhöhe  
+K=Konstatne für den Stadttyp und die Gebäude  
+Nicht entwickelt: K = 4,78 × (log(f2) – log(f) + 40,94  
+Vorort: K = 2 × log(f/28)2 + 5,4  
+Kleinstadt: K = (1,1 × log(f) – 0,7) × hR – (1,56 × log(f) – 0,8)  
+Großstadt, f < 300 MHz: K = 8,29 × (log(1,54 × hR))2 – 1,1  
+Großstadt, f > 300 MHz: K = 3,2 × (log(11,7555 × hR))2 – 4,97  
+f = Übertragungsfrequenz  
+Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Der Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu vergleichen.  
+
+Link Budget: 154
+Range Hata Open: 35,3km  
+Range Hata City: 5,2km  
+Range City(-28dB loss): 0,85km
+Line of sight: 22,7km
+
 Channelsetting: Long Range / Fast  	
 Alt Channelname: Long Fast  
 Data Rate: 1.07 kbps (default)	  
