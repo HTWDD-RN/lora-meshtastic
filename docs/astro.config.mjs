@@ -8,7 +8,7 @@ export default defineConfig({
   base: BASE_PATH,
   site: 'https://htwdd-rn.github.io/lora-meshtastic/',
   redirects: {
-    '/': 'intro/projektbeschreibung/',
+    '/': 'einfuehrung/projektbeschreibung/',
   },
   trailingSlash: 'always',
   integrations: [
@@ -38,11 +38,15 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Einführung',
-          autogenerate: { directory: 'intro' },
+          autogenerate: { directory: 'einfuehrung' },
         },
         {
           label: 'FAQ',
           autogenerate: { directory: 'faq' },
+        },
+        {
+          label: 'Ergebnisse',
+          autogenerate: { directory: 'ergebnisse' },
         },
       ],
     }),
