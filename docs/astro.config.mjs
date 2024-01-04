@@ -1,14 +1,14 @@
 import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 
-const BASE_PATH = '/lora-meshtastic/'
+const BASE_PATH = 'lora-meshtastic'
 
 // https://astro.build/config
 export default defineConfig({
   base: BASE_PATH,
-  site: 'https://htwdd-rn.github.io/lora-meshtastic/',
+  site: `https://htwdd-rn.github.io/${BASE_PATH}/`,
   redirects: {
-    '/': 'einfuehrung/projektbeschreibung/',
+    '/': `/${BASE_PATH}/einfuehrung/projektbeschreibung/`,
   },
   trailingSlash: 'always',
   integrations: [
