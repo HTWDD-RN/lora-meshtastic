@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "cd .. && husky install"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
@@ -15,5 +16,10 @@
     "astro": "^4.0.9",
     "sharp": "^0.33.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1"
   }
 }
