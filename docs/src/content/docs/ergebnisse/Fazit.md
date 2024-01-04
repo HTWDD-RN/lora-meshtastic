@@ -1,5 +1,7 @@
 ---
 title: Fazit
+sidebar:
+  order: 99
 ---
 
 Meshtastic ist ein gut voranschreitendes Projekt, dass eine solide Software-Plattform für die Kommunikation zwischen LoRa-fähigen Geräten ermöglicht.

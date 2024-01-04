@@ -1,9 +1,17 @@
 ---
 title: Häufige Probleme
 ---
-## ESP32 : Linux: Ubuntu : Kommunikation zwischen Device und Computer funktioniert nicht
-1. Das Gerät /dev/ttyUSB0 hat eine Gruppe: dialout. Der User muss der dialoutgruppe hinzugefügt werden. //
-sudo adduser USER_NAME dialout //
-USER_NAME muss sich jetzt ausloggen und wieder einloggen damit die Änderung in Kraft tritt.
-2. Prüfen ob das Kabel zwischen Computer und Gerät auch wirklich Daten übertragen kann!
-3. USB-C -> USB-C funktioniert nicht. Adapter USB-C:USB-A schafft abhilfe (Anscheinend funktioniert Power Delivery bei meinem Device nicht)
+## Kommunikation zum Device funktioniert nicht (Linux)
+
+1. Die Gerät-Datei `/dev/ttyUSB0` gehört der Nutzergruppe `dialout`. Damit der Nutzer Schreibrechte erhalten kann, muss er zur Gruppe hinzugefügt werden:
+
+    ```bash
+    sudo adduser <user-name> dialout
+    logout
+    ```
+
+    Der Nutzer muss sich ausloggen und wieder einloggen, damit er in der Gruppe enthalten ist.
+
+2. Prüfen, ob das Kabel zwischen Computer und Gerät auch wirklich Daten übertragen kann.
+
+3. USB-C &rarr; USB-C funktioniert manchmal nicht. Dies könnte an einem Fehler bei USB-C Power Delivery liegen. Adapter USB-C &rarr; USB-A schafft Abhilfe.

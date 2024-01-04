@@ -1,9 +1,9 @@
 ---
-title: Meshtastic flashen
+title: Firmware flashen
 sidebar:
-  order: 3
+  order: 4
 ---
-# Die ersten Schritte
+
 
 ## Hardware identifizieren oder auswählen
 
@@ -23,8 +23,7 @@ Eine Liste mit unterstützer Hardware findet sich hier:
 
 https://meshtastic.org/docs/supported-hardware/
 
-
-##  Serial Treiber
+## Serial Treiber
 ### ESP32
 Einen für das eigene Betriebssystem passenden Treiber auf folgender Seite identifizieren, herunterladen und Installieren:
 

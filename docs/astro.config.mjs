@@ -19,14 +19,6 @@ export default defineConfig({
           label: 'Deutsch',
         },
       },
-      head: [
-        {
-          tag: 'base',
-          attrs: {
-            href: `${BASE_PATH}`,
-          },
-        },
-      ],
       title: 'LoRa Meshtastic',
       editLink: {
         baseUrl: 'https://github.com/HTWDD-RN/lora-meshtastic/edit/main/docs/',
