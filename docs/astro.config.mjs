@@ -1,26 +1,48 @@
 import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 
+const BASE_PATH = '/lora-meshtastic/'
+
 // https://astro.build/config
 export default defineConfig({
-  base: '/lora-meshtastic',
+  base: BASE_PATH,
+  site: 'https://htwdd-rn.github.io/lora-meshtastic/',
+  redirects: {
+    '/': 'intro/projektbeschreibung/',
+  },
+  trailingSlash: 'always',
   integrations: [
     starlight({
-      title: 'My Docs',
-      social: {
-        github: 'https://github.com/withastro/starlight',
+      locales: {
+        root: {
+          lang: 'de-DE',
+          label: 'Deutsch',
+        },
       },
+      head: [
+        {
+          tag: 'base',
+          attrs: {
+            href: `${BASE_PATH}`,
+          },
+        },
+      ],
+      title: 'LoRa Meshtastic',
+      editLink: {
+        baseUrl: 'https://github.com/HTWDD-RN/lora-meshtastic/edit/main/docs/',
+      },
+      social: {
+        github: 'https://github.com/HTWDD-RN/lora-meshtastic',
+      },
+      lastUpdated: true,
       sidebar: [
         {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', link: '/guides/example/' },
-          ],
+          label: 'Einführung',
+          autogenerate: { directory: 'intro' },
         },
         {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          label: 'FAQ',
+          autogenerate: { directory: 'faq' },
         },
       ],
     }),

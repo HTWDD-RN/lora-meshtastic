@@ -1,8 +1,6 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Häufige Probleme
 ---
-# Aufgetretene Probleme mit Lösungen
 ## ESP32 : Linux: Ubuntu : Kommunikation zwischen Device und Computer funktioniert nicht
 1. Das Gerät /dev/ttyUSB0 hat eine Gruppe: dialout. Der User muss der dialoutgruppe hinzugefügt werden. //
 sudo adduser USER_NAME dialout //

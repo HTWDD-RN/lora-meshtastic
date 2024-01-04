@@ -1,6 +1,7 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Meshtastic flashen
+sidebar:
+  order: 3
 ---
 # Die ersten Schritte
 
