@@ -3,22 +3,19 @@ title: Was ist LoRa?
 sidebar:
   order: 2
 ---
-LoRa is a wireless modulation technique derived from Chirp Spread Spectrum (CSS) technology. It encodes information on radio waves using chirp pulses - similar to the way dolphins and bats communicate! LoRa modulated transmission is robust against disturbances and can be received across great distances.
+LoRa (von Long Range) ist eine proprietäre Radiotechnologie im Besitz von Semtech. Sie ist für die Langstreckenübertragung (z.B. 10 km), schmalbandige Übertragung (gemessen in Kbps) und energiesparende Kommunikation konzipiert, hauptsächlich für Internet of Things (IoT)-Netzwerke. Dafür wird eine drahtlose Modulationstechnik, die aus der Chirp Spread Spectrum (CSS)-Technologie abgeleitet ist verwendet. Sie codiert Informationen auf Radiowellen mithilfe von Chirp-Impulsen! 
+? Die modulierte Übertragung von LoRa ist robust gegen Störungen und kann über große Entfernungen empfangen werden.
 
-LoRa is ideal for applications that transmit small chunks of data with low bit rates. Data can be transmitted at a longer range compared to technologies like WiFi, Bluetooth or ZigBee. These features make LoRa well suited for sensors and actuators that operate in low power mode.
+LoRa eignet sich ideal für Anwendungen, die kleine Datenmengen mit niedrigen Bitraten übertragen. Daten können über eine längere Reichweite übertragen werden im Vergleich zu Technologien wie Wlan, Bluetooth oder ZigBee. Diese Eigenschaften machen LoRa besonders geeignet für Sensoren und Aktoren, die im Niedrigenergiemodus arbeiten.
 
-LoRa (from long range) is a proprietary radio technology that is owned by Semtech. It is designed for long-range (e.g., 10km), low-bandwidth (i.e., measured in Kbps), low-power communication, primarily for internet of things (IoT) networks.
+LoRa arbeitet in einem lizenzfreien Sub-Gigahertz-Frequenzband (d.h. unter 1 GHz), aber die zu verwendenden Frequenzen variieren von Region zu Region aufgrund regulatorischer Anforderungen. Wenn Sie ein LoRa-Gerät kaufen, stellen Sie sicher, dass Sie eines wählen, das auf das richtige Frequenzband für Ihre Region abgestimmt ist. 
 
-LoRa defines the physical layer that controls how the radio signals are modulated. Specifically, LoRa uses chirp spread spectrum (CSS) to encode information.
-
-LoRa operates in a license-free, sub-gigahertz frequency band (i.e., under 1GHz or 1000MHz), but each frequency varies from region to region due to regulatory requirements. If you’re buying a LoRa device, make sure you pick one tuned to the correct frequency band for your region.
-
-China - 470-510MHz and 779-787MHz
-Europe - 863–870MHz (typically 868MHz)
-India - 865–867 MHz (typically 865MHz)
+China - 470-510MHz und 779-787MHz
+Europa - 863–870MHz (normalerweise 868MHz)
+Indien - 865–867 MHz (normalerweise 865MHz)
 Japan - 920-923MHz
-USA - 902–928 MHz (typically 915MHz)
-South America - 915–928 MHz (typically 915 or 923MHz)
+USA - 902–928 MHz (normalerweise 915MHz)
+Südamerika - 915–928 MHz (normalerweise 915 oder 923MHz)
 
 ## Why LoRa?
 
