@@ -13,6 +13,7 @@ Das Link-Budget (Leistungsübertragungsbilanz) ist eine wichtige größe um die 
 Über ein einfaches Modell lässt sich das Link-Budget mittels Addition der Sendeleistung (Transmitter Power, Tx), der Empfängerempfindlichkeit (Receiver Power, Rx), des Antennengewinns und der Freiraumdämpfung (Free Space Path Loss, FSPL) errechnen.
 
 ### Kenngrößen
+
 Der Spreading Faktor und somit die Reichweite eines Senders hängen von den Ausbreitungsbedingungen ab. LoRa hat dabei den ADR Mechanismus eingeführt und regelt damit die Reichweiten der Sender.
 Die Rx-Empfindlichkeit hängt von Signal-Rausch-Verhältnis (SNR), Rauschfaktor (NF) und Bandbreite (BW) ab.
 
@@ -26,6 +27,7 @@ SF-Werte und somit die Reichweite eines Senders hängen von den Ausbreitungsbedi
 Die Einheit dB (Dezibel) wird im Zusammenhang mit Funkverbindungen verwendet, um die Signalstärke, Dämpfung oder Verstärkung von elektromagnetischen Signalen zu messen. dB ist eine logarithmische Einheit, die das Verhältnis zwischen zwei Größen ausdrückt. In Bezug auf Funkverbindungen sind die beiden häufigsten Anwendungen die Messung der Signalstärke und die Angabe von Dämpfung oder Verstärkung.
 
 1. **Signalstärke in dBm (Dezibel Milliwatt):**
+
    - dBm misst die absolute Leistung eines Signals im Vergleich zu einem Referenzwert von 1 Milliwatt.
    - Ein positives dBm-Wert zeigt an, dass das Signal stärker ist als 1 Milliwatt, während ein negativer Wert darauf hinweist, dass es schwächer ist.
    - Beispiel: Ein Signal mit -50 dBm ist stärker als ein Signal mit -60 dBm.
@@ -93,7 +95,7 @@ WiFi LoRa 32 v3 (SX1262 Lora Chip)
 P(dBm) = 21dBm +-1dBm
 Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
 
-Maximal 500mW ERP  (1)
+Maximal 500mW ERP (1)
 P(dBm) = 10 ⋅ log10( P(mW) / 1mW)
 P(dBm) = 10 ⋅ log10( P(500mW) / 1mW)
 P(dBm) = 26.9897000434
@@ -104,14 +106,14 @@ P(dBm) = 27dBm
 
 Radio link budget formula
 𝑃RX=𝑃TX+𝐺TX+𝐺RX−𝐿TX−𝐿FS−𝐿𝑃−𝐿RX
-PRX  = received power (dBm)
-PTX  = transmitter output power (dBm)
-GTX  = transmitter antenna gain (dBi)
-GRX  = receiver antenna gain (dBi)
-LTX  = transmit feeder and associated losses (feeder, connectors, etc.) (dB)
-LFS  = free space loss or path loss (dB)
-LP  = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)
-LRX  = receiver feeder and associated losses (feeder, connectors, etc.) (d)B
+PRX = received power (dBm)
+PTX = transmitter output power (dBm)
+GTX = transmitter antenna gain (dBi)
+GRX = receiver antenna gain (dBi)
+LTX = transmit feeder and associated losses (feeder, connectors, etc.) (dB)
+LFS = free space loss or path loss (dB)
+LP = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)
+LRX = receiver feeder and associated losses (feeder, connectors, etc.) (d)B
 
 FSPL (dB) = 20log10(d) + 20log10(f) – 147,55
 FSPL = (4πd/λ)2 = (4πdf/c)2
@@ -140,9 +142,9 @@ Let's consider a simplified example of a LoRa link budget for a point-to-point c
 
 5. **Free Space Path Loss (Lp):** Using the free space path loss formula:
 
-   \[ Lp = 20 \log_{10}(d) + 20 \log_{10}(f) + L_{FS} \]
+   \[ Lp = 20 \log*{10}(d) + 20 \log*{10}(f) + L\_{FS} \]
 
-   \[ Lp = 20 \log_{10}(2) + 20 \log_{10}(868 \times 10^6) + 20\log_{10}\left(\frac{4\pi}{c}\right) \]
+   \[ Lp = 20 \log*{10}(2) + 20 \log*{10}(868 \times 10^6) + 20\log\_{10}\left(\frac{4\pi}{c}\right) \]
 
    Here, \(c\) is the speed of light. The result will be the path loss in dB.
 
