@@ -51,7 +51,9 @@ Im nächsten Schritt betrachten wir die Wellenausbreitung mit dem Hata-Okumura-M
 
 Das Hata-Modell verwendet verschiedene Begriffe uin der Dämpfungsformel, um zwischen verschiedenen Landnutzungen zu unterscheiden, von ländlicher bis zu dicht besiedelten Region.
 Hata-Ausbreitungsformel
-$$ D=69,55+36,26log(f)-13,82log(h_s)+[44,9-6,55log(h_s)*log(d)-K] $$
+$$
+   D=69,55+36,26log(f)-13,82log(h_s)+[44,9-6,55log(h_s)*log(d)-K]
+$$
 mit:
 d=Entfernung zwischen Sender und Empfänger
 hS=Höhe der Senderantenne

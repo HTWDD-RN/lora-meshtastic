@@ -1,5 +1,8 @@
 import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+
 const BASE_PATH = 'lora-meshtastic'
 
 // https://astro.build/config
@@ -10,6 +13,10 @@ export default defineConfig({
     '/': `/${BASE_PATH}/einfuehrung/projektbeschreibung/`,
   },
   trailingSlash: 'always',
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
+  },
   integrations: [
     starlight({
       locales: {
