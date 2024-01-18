@@ -43,7 +43,7 @@ https://meshtastic.org/docs/getting-started/serial-drivers/nrf52
 ### ESP32
 
 https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/
-Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux eine Nix-Flake erstellt, die Python mit den richtigen Paketen installiert und eine kleine Anleitung (auch zum selber Compilieren der Firmware) für esp32 und nRF52 Geräte enthät.
+Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux eine [Nix-Flake](https://github.com/go3ranh/meshtastic-flasher) erstellt, die Python mit den richtigen Paketen installiert und eine kleine Anleitung (auch zum selber Compilieren der Firmware) für esp32 und nRF52 Geräte enthät.
 
 ### nRF52
 
