@@ -23,6 +23,9 @@ Südamerika - 915–928 MHz (normalerweise 915 oder 923MHz)
 LoRa tries to bridge the gap between current communication technologies, like WiFi, Bluetooth, and cellular (4G/5G).
 
 ![https://www.thethingsnetwork.org](../../../assets/images/bandwidth-vs-range.png)
+https://www.semtech.com/uploads/images/LoRa_Why_Range.png  
+Semtech  
+
 
 LoRa is useful for long-range, low-bandwidth, low-power communication, which is perfect for IoT devices. Some examples include:
 
@@ -51,6 +54,8 @@ Open-source software
 Unlike the traditional cellular network, each end-user device (e.g., phone, laptop, etc…) connects to a LoRa radio running Meshtastic, and all LoRa radios running Meshtastic can mesh together. Messages are relayed through LoRa radios until they reach their destination.
 
 ![Meshtastic connections](../../../assets/images/meshtastic-connections.png)
+https://loganmarchione.com/2023/05/lora-and-meshtastic/20230510_003.png
+
 
 LORA RANGE(1300KM):
 
