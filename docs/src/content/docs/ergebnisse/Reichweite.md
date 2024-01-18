@@ -68,7 +68,7 @@ $$   Großstadt, f < 300 MHz: K = 8,29 × (log(1,54 × hR))2 – 1,1  $$
 $$   Großstadt, f > 300 MHz: K = 3,2 × (log(11,7555 × hR))2 – 4,97 $$
 
 
-Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu vergleichen.
+Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
 
 Link Budget: 154
 Range Hata Open: 35,3km
@@ -77,34 +77,34 @@ Range City(-28dB loss): 0,85km
 Line of sight: 22,7km
 
 Das Hata-Modell beachtet keine Sichtlinie, deswegen habe ich die Höhe der Antenne des Senders auf 25Meter festgelegt, da die die übliche Antennenhöhe einer LTE-Antenne im innerstädtischem Gebiet darstellt und die Sichtlinie seperat mit 22,7km berechnet.  
-  
+    
 Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tableu angegebene Reichweite von 35,3km nur theoretische Werte.  
-Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation welche das Signal unterschiedlich beeinflussen würden.
-
-Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Gegencheck sollte immer die Sichtlinie beachtet werden. Um genauere Werte zu erreichen kann das Longley-Rice-Modell verwendet werden.
-
-Channelsetting: Long Range / Fast
-Alt Channelname: Long Fast
-Data Rate: 1.07 kbps (default)
-SPreading Factor/ Symbols: 11 / 2048
-Coding Rate: 4/5
-Bandwith: 250
-
-transmit Power: 17dBm
-Antenna gain: 1,5dBi
-RX sensitivity: -136dBm
-RX antenna: 0dBi
-Link Budget: 150dB
-
-WiFi LoRa 32 v3 (SX1262 Lora Chip)
-P(dBm) = 21dBm +-1dBm
-Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
-
-Maximal 500mW ERP (1)
-P(dBm) = 10 ⋅ log10( P(mW) / 1mW)
-P(dBm) = 10 ⋅ log10( P(500mW) / 1mW)
-P(dBm) = 26.9897000434
-P(dBm) = 27dBm
+Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation welche das Signal unterschiedlich beeinflussen würden.  
+  
+Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Gegencheck sollte immer die Sichtlinie beachtet werden. Um genauere Werte zu erreichen kann das Longley-Rice-Modell verwendet werden.  
+  
+Channelsetting: Long Range / Fast  
+Alt Channelname: Long Fast  
+Data Rate: 1.07 kbps (default)  
+SPreading Factor/ Symbols: 11 / 2048  
+Coding Rate: 4/5  
+Bandwith: 250  
+  
+transmit Power: 17dBm  
+Antenna gain: 1,5dBi  
+RX sensitivity: -136dBm  
+RX antenna: 0dBi  
+Link Budget: 150dB  
+  
+WiFi LoRa 32 v3 (SX1262 Lora Chip)  
+P(dBm) = 21dBm +-1dBm  
+Max Receiving sensitivity = -136dBm@SF12 BW=125KHz  
+  
+Maximal 500mW ERP (1)  
+P(dBm) = 10 ⋅ log10( P(mW) / 1mW)  
+P(dBm) = 10 ⋅ log10( P(500mW) / 1mW)  
+P(dBm) = 26.9897000434  
+P(dBm) = 27dBm  
 
 (1) <https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html>
 (Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)
