@@ -15,38 +15,44 @@ In Europa - 863–870MHz (normalerweise 868MHz).
 
 ## Warum LoRa?
 
-LoRa versucht die Schlucht zwischen den Kommunikationstechnologien, wie WiFi, Bluetooth und LTE zu schließen.
+LoRa versucht die Lücke zwischen zwischen den Kommunikationstechnologien, wie WiFi, Bluetooth und LTE zu schließen.
 
 ![https://www.thethingsnetwork.org](../../../assets/images/bandwidth-vs-range.png)
 https://www.semtech.com/uploads/images/LoRa_Why_Range.png  
 Semtech  
 
-
-LoRa is useful for long-range, low-bandwidth, low-power communication, which is perfect for IoT devices. Some examples include:
-
-a water sensor in a well in a remote location
-a factory with hundreds of smoke alarms that all need to communicate
-a large nature preserve trying to track animal migration
-a natural gas provider needing to monitor each customer’s meter for usage
-a weather station that only occasionally needs to transmit information
+Es ist für große Reichweiten, kleiner Bandbreite und niedrig Energie Kommunikation gemacht. Alles in allem also extrem nützlich für IoT Geräte.  
+Einige Beispiele sind:  
+  
+Wassersensoren in einer entfernten Umgebung (Grundwasser)  
+Rauchwarnmelder  
+Tierbeobachtung  
+Verbrauchsmessungen bei Endkunden (Gas, Strom)  
+Wetterstationen die nur ab und zu Informationen übertragen  
+  
 
 ## LoRa and LoRaWAN
 
-LoRaWAN builds on top of LoRa to define the communication protocol and system architecture.
 
-It’s important to note that you can use LoRa without using LoRaWAN. Other LoRa-based networks (that are not LoRaWAN) include Helium, The Things Network, Disaster.radio, and Meshtastic.
+LoRaWAN ist über LoRa angesiedelt und definiert das Kommunikationsprotokoll und die Systemarchitektur.  
+  
+Es ist wichtig zu verstehen, dass es möglich ist LoRa ohne LoRaWAN zu benutzen.  
+Andere LoRa basierte Netzwerke sind Helium, The Things Network Disaster.radio und, was wir weiter betrachten werden, Meshtastic.
 
 ## Meshtastic
 
-Meshtastic builds on LoRa (not LoraWAN) to produce a decentralized mesh network. Features include:
-
-Text-based, encrypted communication
-No phone required (e.g., you can use a computer with the right hardware), but there are iOS and Android applications
-Decentralization
-Great battery life
-Optional GPS location sharing
-Open-source software
-Unlike the traditional cellular network, each end-user device (e.g., phone, laptop, etc…) connects to a LoRa radio running Meshtastic, and all LoRa radios running Meshtastic can mesh together. Messages are relayed through LoRa radios until they reach their destination.
+Wie im vorherigen Absatz erwähnt, baut Meshtastic auf LoRa auf und schafft ein dezentralisiertes mesh Netzwerk.  
+  
+Es bringt folgende Eigenschaften mit sich:  
+Verschlüsselte und Textbasierte Kommunikation  
+Es ist kein Telefon nötig. Es kann mit einem Computer genutzt werden aber es gibt auch APP's zur einfachen Nutzung am Smartphone  
+Dezentralisiert  
+Geringer Stromverbrauch  
+Optionales Standort teilen  
+Es ist Open-source  
+  
+Anders wie traditionelle Mobilfunknetzwerke, verbindet sich jedes Endnutzergerät mit einem LoRa radio und alle LoRa Radios welche Meshtastic nutzen können Nachrichten, selbst wenn die Radios nicht im gleichen Mesh sind, weiterleiten.
+Das passiert so lange, bis die Nachricht Ihr Ziel erreicht oder die voreingestellten "Hops" ausgeschöpft werden.
 
 ![Meshtastic connections](../../../assets/images/meshtastic-connections.png)
 https://loganmarchione.com/2023/05/lora-and-meshtastic/20230510_003.png
