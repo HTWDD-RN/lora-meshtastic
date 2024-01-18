@@ -14,7 +14,7 @@ Meshtastic wird offiziell nur von bestimmten Geräten welche ein LoRa Modul inne
 
 Es ist darauf zu achten, dass jedes Gerät welches im Meshnetz betrieben werden soll auf der _gleichen_ Frequenz arbeitet. Hier gibt es unterschiede!
 
-Ohne Amateurfunklizenz kann man die in Deutschland freien Frequenzbänder 433 MHz und 868MHz, auf welchen Lora operiert, ohne Lizenzkosten nutzen.
+Ohne Amateurfunklizenz kann man die in Deutschland freien Frequenzbänder 433 MHz und 868MHz, auf welchen Lora operiert, ohne Lizenzkosten oder Amateurfunklizenz nutzen.
 
 Solange WLAN Verbindung zu einem Device nicht notw. ist und Bluetooth ausreicht, sollte ein nRF52 Chip gewählt werden, da diese energieffizienter als ESP32 Chips und einfacher zu flashen sind.
 
@@ -43,6 +43,7 @@ https://meshtastic.org/docs/getting-started/serial-drivers/nrf52
 ### ESP32
 
 https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/
+Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux eine Nix-Flake erstellt, die Python mit den richtigen Paketen installiert und eine kleine Anleitung (auch zum selber Compilieren der Firmware) für esp32 und nRF52 Geräte enthät.
 
 ### nRF52
 
