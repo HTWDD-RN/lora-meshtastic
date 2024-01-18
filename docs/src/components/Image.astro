@@ -1,0 +1,13 @@
+---
+import { Image as AstroImage, type LocalImageProps, type RemoteImageProps } from 'astro:assets'
+
+type Props = LocalImageProps | RemoteImageProps
+
+const props = Astro.props
+---
+
+<figure>
+  <!-- @ts-expect-error egal -->
+  <AstroImage {...props} />
+  <figcaption>{props.alt}</figcaption>
+</figure>

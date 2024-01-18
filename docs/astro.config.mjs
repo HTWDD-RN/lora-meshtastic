@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
+import tailwind from '@astrojs/tailwind'
 
 const BASE_PATH = 'lora-meshtastic'
 
@@ -25,6 +26,7 @@ export default defineConfig({
           label: 'Deutsch',
         },
       },
+      customCss: ['./src/tailwind.css'],
       title: 'LoRa Meshtastic',
       editLink: {
         baseUrl: 'https://github.com/HTWDD-RN/lora-meshtastic/edit/main/docs/',
@@ -41,6 +43,12 @@ export default defineConfig({
           },
         },
         {
+          label: 'Anwendung',
+          autogenerate: {
+            directory: 'anwendung',
+          },
+        },
+        {
           label: 'FAQ',
           autogenerate: {
             directory: 'faq',
@@ -53,6 +61,9 @@ export default defineConfig({
           },
         },
       ],
+    }),
+    tailwind({
+      applyBaseStyles: false,
     }),
   ],
 })

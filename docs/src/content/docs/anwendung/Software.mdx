@@ -1,0 +1,32 @@
+---
+title: Software
+sidebar:
+  order: 1
+---
+
+import Image from '@components/Image.astro'
+import iOSBluetooth from '@assets/images/anwendung/software/ios/bluetooth.png'
+import iOSNodes from '@assets/images/anwendung/software/ios/nodes.png'
+
+Zum aktuellen Zeitpunkt gibts es jeweils eine App für iOS und Android. Außerdem gibt es einen Web Client, der sich per Bluetooth, Wi-Fi und Serial verbinden kann.
+
+| App       | Link                                                              | Quellcode                                                  |
+| --------- | ----------------------------------------------------------------- | ---------------------------------------------------------- |
+| `Android` | https://play.google.com/store/apps/details?id=com.geeksville.mesh | [GitHub](https://github.com/meshtastic/Meshtastic-Android) |
+| `iOS`     | https://apps.apple.com/us/app/meshtastic/id1586432531             | [GitHub](https://github.com/meshtastic/Meshtastic-Apple)   |
+| `Web`     | https://client.meshtastic.org/                                    | [GitHub](https://github.com/meshtastic/web)                |
+
+Die Apps werden regelmäßig geupdated und sind modern aufgebaut.
+
+Ursprünglich sollte hier ein Vergleich der Funktionalitäten erfolgen, es gibt aber keine erkennbaren Unterschiede, außer kleinere in der Bennennung und Bedienung.
+
+## UI
+
+### iOS
+
+<div class="grid grid-cols-2 items-center *:!mt-0 gap-8 flex-wrap">
+  <Image src={iOSBluetooth} alt="Bluetooth-Verbindung zum eigenen Node" width="200px" />
+  <Image src={iOSNodes} alt="Übersicht der verbundenen Nodes" width="200px" />
+  <Image src={iOSNodes} alt="Übersicht der verbundenen Nodes" width="200px" />
+  <Image src={iOSNodes} alt="Übersicht der verbundenen Nodes" width="200px" />
+</div>
