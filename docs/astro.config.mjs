@@ -55,10 +55,14 @@ export default defineConfig({
           },
         },
         {
-          label: 'Ergebnisse',
+          label: 'Reichweite',
           autogenerate: {
-            directory: 'ergebnisse',
+            directory: 'reichweite',
           },
+        },
+        {
+          label: 'Fazit',
+          link: '/fazit/',
         },
       ],
     }),

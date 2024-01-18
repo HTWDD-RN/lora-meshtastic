@@ -5,8 +5,6 @@ sidebar:
   order: 1
 ---
 
-## Theorie
-
 ### Link-Budget
 
 Das Link-Budget (Leistungsübertragungsbilanz) ist eine wichtige größe um die Reichweite einer Funkverbindung darzustellen und gibt die Qualität eines Funk-Übertragungskanals an.
