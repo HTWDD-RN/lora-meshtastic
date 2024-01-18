@@ -26,7 +26,7 @@ export default defineConfig({
           label: 'Deutsch',
         },
       },
-      customCss: ['./src/tailwind.css'],
+      customCss: ['./src/tailwind.css', 'katex/dist/katex.min.css'],
       title: 'LoRa Meshtastic',
       editLink: {
         baseUrl: 'https://github.com/HTWDD-RN/lora-meshtastic/edit/main/docs/',
