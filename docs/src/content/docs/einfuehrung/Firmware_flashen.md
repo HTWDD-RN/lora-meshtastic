@@ -48,3 +48,4 @@ Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux
 ### nRF52
 
 https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/
+Beim diesen Geräten ist es bei uns manchmal vorgekommen, dass das Flashen von Firmware zwar bis zu dem "Drag und Drop"-Schritt funktioniert und dann aber nicht wirklich mit der neuen Version neu startet. Falls das passiert muss man sich mit einer seriellen Konsole mit dem Gerät verbinden und einfach nur einmal Enter drücken, besonders nachdem Factory-Erase. Das steht unter dem Punkt Factory-Erase auch dokumentiert, aber man benötigt nicht zwingend die Meshtastic CLI, sondern lediglich ein Programm wie z. B. minicom unter Linux.
