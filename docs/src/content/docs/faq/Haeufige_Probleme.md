@@ -15,4 +15,4 @@ title: Häufige Probleme
 
 2. Prüfen, ob das Kabel zwischen Computer und Gerät auch wirklich Daten übertragen kann.
 
-3. USB-C &rarr; USB-C funktioniert manchmal nicht. Dies könnte an einem Fehler bei USB-C Power Delivery liegen. Adapter USB-C &rarr; USB-A schafft Abhilfe.
+3. USB-C &rarr; USB-C funktioniert manchmal nicht. Dies könnte an einem Fehler bei USB-C Power Delivery liegen. Adapter USB-C &rarr; USB-A (findet man meist als OTG-Adapter) schafft Abhilfe.
