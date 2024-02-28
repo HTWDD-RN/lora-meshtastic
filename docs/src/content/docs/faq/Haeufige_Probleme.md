@@ -7,7 +7,7 @@ title: Häufige Probleme
 1. Die Gerät-Datei `/dev/ttyUSB0` gehört der Nutzergruppe `dialout`. Damit der Nutzer Schreibrechte erhalten kann, muss er zur Gruppe hinzugefügt werden:
 
    ```bash
-   sudo adduser <user-name> dialout
+   sudo usermod -aG dialout <user-name>
    logout
    ```
 
