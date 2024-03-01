@@ -1,0 +1,501 @@
+MESHTASTIC MESH ACTIVITY LOG
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 16:08:35,85 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 16:08:35,90 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 16:08:36,02 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 16:08:36,08 
+📻 LoRa config received: 779377771 - 08.11.23, 16:08:36,14 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 16:08:36,20 
+🌉 MQTT module config received: 779377771 - 08.11.23, 16:08:36,26 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:08:36,32 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 16:08:36,38 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 16:08:36,44 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 16:08:36,50 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:08:36,56 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 16:08:36,62 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 16:08:36,92 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:08:38,48 
+🕸️ Routing empfangen für RequestID: 1601358435 Ack Status: Bestätigt - 08.11.23, 16:08:44,60 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:09:10,46 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:09:25,31 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:09:32,63 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:09:37,06 
+💬 Sende Nachricht 3559851092 von 779377771 an 633503840 - 08.11.23, 16:09:53,00 
+🕸️ Routing empfangen für RequestID: 3559851092 Ack Status: Bestätigt - 08.11.23, 16:09:55,01 
+🕸️ Routing empfangen für RequestID: 1601358441 Ack Status: Bestätigt - 08.11.23, 16:09:55,58 
+📈 Telemetrie empfangen für: 633503840 - 08.11.23, 16:09:56,84 
+💬 Sende Nachricht 1669608809 von 779377771 an 4201957616 - 08.11.23, 16:10:00,93 
+🕸️ Routing empfangen für RequestID: 1669608809 Ack Status: Bestätigt - 08.11.23, 16:10:05,81 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:10:25,58 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:10:37,02 
+🕸️ Routing empfangen für RequestID: 1601358447 Ack Status: Bestätigt - 08.11.23, 16:10:39,41 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:10:40,40 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:10:40,85 
+📻 LoRa config received: 779377771 - 08.11.23, 16:10:55,29 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 16:11:39,48 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 16:11:39,71 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 16:11:41,85 
+📟 Node info empfangen für: 779377771 - 08.11.23, 16:11:44,15 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 16:11:46,40 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 16:11:46,68 
+📟 Node info empfangen für: 633503840 - 08.11.23, 16:11:46,93 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 16:11:47,12 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 16:11:48,97 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 16:11:51,17 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 16:11:51,23 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 16:11:51,35 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 16:11:51,41 
+📻 LoRa config received: 779377771 - 08.11.23, 16:11:51,47 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 16:11:51,53 
+🌉 MQTT module config received: 779377771 - 08.11.23, 16:11:51,59 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:11:51,65 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 16:11:51,71 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 16:11:51,77 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 16:11:51,83 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:11:51,89 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 16:11:51,95 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 16:11:52,25 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:11:55,73 
+🕸️ Routing empfangen für RequestID: 686732523 Ack Status: Bestätigt - 08.11.23, 16:11:57,87 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:11:57,93 
+📟 Node info empfangen für: 633503840 - 08.11.23, 16:11:58,11 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:12:10,55 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:12:23,81 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 16:12:30,50 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 16:12:30,74 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 16:12:30,80 
+📟 Node info empfangen für: 779377771 - 08.11.23, 16:12:30,86 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 16:12:30,92 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 16:12:30,98 
+📟 Node info empfangen für: 633503840 - 08.11.23, 16:12:31,04 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 16:12:31,10 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 16:12:31,16 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 16:12:31,58 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 16:12:31,64 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 16:12:31,76 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 16:12:31,82 
+📻 LoRa config received: 779377771 - 08.11.23, 16:12:31,88 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 16:12:31,94 
+🌉 MQTT module config received: 779377771 - 08.11.23, 16:12:32,00 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:12:32,06 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 16:12:32,12 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 16:12:32,18 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 16:12:32,24 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:12:32,33 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 16:12:32,39 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 16:12:32,69 
+🕸️ Routing empfangen für RequestID: 686732528 Ack Status: Bestätigt - 08.11.23, 16:12:35,93 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:12:59,36 
+📈 Telemetrie empfangen für: 633503840 - 08.11.23, 16:12:59,63 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:13:11,90 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:13:24,08 
+🕸️ Routing empfangen für RequestID: 686732531 Ack Status: Bestätigt - 08.11.23, 16:13:36,95 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:14:05,39 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:14:10,67 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:14:13,34 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:14:24,14 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:14:32,83 
+🕸️ Routing empfangen für RequestID: 686732535 Ack Status: Bestätigt - 08.11.23, 16:14:37,58 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:15:12,02 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:15:14,42 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:15:25,91 
+🕸️ Routing empfangen für RequestID: 686732539 Ack Status: Bestätigt - 08.11.23, 16:15:36,47 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:16:12,17 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:16:24,56 
+🕸️ Routing empfangen für RequestID: 686732542 Ack Status: Bestätigt - 08.11.23, 16:16:35,96 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:17:12,38 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:17:14,81 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:17:21,41 
+🕸️ Routing empfangen für RequestID: 686732546 Ack Status: Bestätigt - 08.11.23, 16:17:36,62 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:18:12,62 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:18:20,54 
+🕸️ Routing empfangen für RequestID: 686732549 Ack Status: Bestätigt - 08.11.23, 16:18:37,73 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:19:12,86 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:19:17,06 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:19:20,72 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:19:36,32 
+🕸️ Routing empfangen für RequestID: 686732553 Ack Status: Bestätigt - 08.11.23, 16:19:42,48 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:19:47,84 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 16:19:57,59 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 16:19:57,83 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 16:19:57,89 
+📟 Node info empfangen für: 779377771 - 08.11.23, 16:19:57,95 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 16:19:58,01 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 16:19:58,07 
+📟 Node info empfangen für: 633503840 - 08.11.23, 16:19:58,13 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 16:19:58,19 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 16:19:58,25 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 16:19:58,67 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 16:19:58,73 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 16:19:58,85 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 16:19:58,91 
+📻 LoRa config received: 779377771 - 08.11.23, 16:19:58,97 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 16:19:59,03 
+🌉 MQTT module config received: 779377771 - 08.11.23, 16:19:59,09 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:19:59,15 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 16:19:59,21 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 16:19:59,27 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 16:19:59,33 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:19:59,39 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 16:19:59,45 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 16:19:59,75 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:20:12,95 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:20:25,07 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:20:39,32 
+🕸️ Routing empfangen für RequestID: 686732556 Ack Status: Bestätigt - 08.11.23, 16:20:41,60 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:21:11,15 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:21:14,21 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:21:25,28 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:21:25,49 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:21:41,78 
+🕸️ Routing empfangen für RequestID: 686732560 Ack Status: Bestätigt - 08.11.23, 16:21:44,15 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:21:59,84 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:22:13,28 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:22:23,96 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:22:31,25 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:22:42,71 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:22:59,85 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:23:25,49 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:23:25,76 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:23:41,27 
+🕸️ Routing empfangen für RequestID: 686732567 Ack Status: Bestätigt - 08.11.23, 16:23:48,47 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:24:13,67 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:24:25,67 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:24:41,42 
+🕸️ Routing empfangen für RequestID: 686732570 Ack Status: Bestätigt - 08.11.23, 16:24:53,54 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:25:14,15 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:25:22,37 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:25:27,62 
+🕸️ Routing empfangen für RequestID: 686732574 Ack Status: Bestätigt - 08.11.23, 16:25:46,34 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:26:14,36 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:26:19,82 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:26:29,96 
+🕸️ Routing empfangen für RequestID: 686732577 Ack Status: Bestätigt - 08.11.23, 16:26:48,20 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:27:11,18 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:27:14,66 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:27:20,45 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:27:23,45 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:27:28,70 
+🕸️ Routing empfangen für RequestID: 686732582 Ack Status: Bestätigt - 08.11.23, 16:27:45,56 
+📈 Telemetrie empfangen für: 633503840 - 08.11.23, 16:27:57,29 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:27:59,84 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:28:14,72 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:28:20,18 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:28:23,21 
+🕸️ Routing empfangen für RequestID: 686732586 Ack Status: Bestätigt - 08.11.23, 16:28:46,19 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:28:59,84 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:29:11,60 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:29:14,81 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:29:20,18 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:29:24,50 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:29:30,45 
+🕸️ Routing empfangen für RequestID: 686732591 Ack Status: Bestätigt - 08.11.23, 16:29:46,25 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:30:15,20 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:30:20,33 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:30:23,37 
+🕸️ Routing empfangen für RequestID: 686732594 Ack Status: Bestätigt - 08.11.23, 16:30:47,49 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:31:11,85 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:31:15,66 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:31:20,52 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:31:23,52 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:31:33,75 
+🕸️ Routing empfangen für RequestID: 686732598 Ack Status: Bestätigt - 08.11.23, 16:31:46,20 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:32:15,87 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:32:20,76 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:32:23,88 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 16:32:40,59 
+🕸️ Routing empfangen für RequestID: 686732601 Ack Status: Bestätigt - 08.11.23, 16:32:46,35 
+📈 Telemetrie empfangen für: 4201957616 - 08.11.23, 16:32:55,83 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:32:59,90 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:33:12,42 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:33:16,05 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:33:20,91 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:33:27,78 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:33:36,15 
+🕸️ Routing empfangen für RequestID: 686732606 Ack Status: Bestätigt - 08.11.23, 16:33:46,35 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:34:16,20 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:34:21,09 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:34:28,32 
+🕸️ Routing empfangen für RequestID: 686732609 Ack Status: Bestätigt - 08.11.23, 16:34:46,59 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:35:12,54 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:35:16,47 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:35:21,30 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:35:28,03 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:35:36,54 
+🕸️ Routing empfangen für RequestID: 686732613 Ack Status: Bestätigt - 08.11.23, 16:35:48,09 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:36:16,62 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:36:21,33 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:36:28,70 
+🕸️ Routing empfangen für RequestID: 686732616 Ack Status: Bestätigt - 08.11.23, 16:36:47,13 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:37:12,87 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:37:16,71 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:37:21,51 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:37:29,01 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:37:36,96 
+🕸️ Routing empfangen für RequestID: 686732620 Ack Status: Bestätigt - 08.11.23, 16:37:46,71 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:38:16,95 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:38:21,75 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 16:38:27,60 
+🕸️ MESH PACKET received for Range Test App UNHANDLED {"from":633503840,"to":4294967295,"decoded":{"portnum":"RANGE_TEST_APP","payload":"c2VxIDI3"},"id":1434761424,"rxTime":1699457902,"rxSnr":6.5,"hopLimit":2,"rxRssi":-46} - 08.11.23, 16:38:27,72 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 16:38:27,83 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 16:38:27,89 
+📟 Node info empfangen für: 779377771 - 08.11.23, 16:38:27,98 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 16:38:28,04 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 16:38:28,10 
+📟 Node info empfangen für: 633503840 - 08.11.23, 16:38:28,16 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 16:38:28,22 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 16:38:28,29 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 16:38:28,70 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 16:38:28,76 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 16:38:28,88 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 16:38:28,94 
+📻 LoRa config received: 779377771 - 08.11.23, 16:38:29,00 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 16:38:29,06 
+🌉 MQTT module config received: 779377771 - 08.11.23, 16:38:29,12 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:38:29,18 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 16:38:29,24 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 16:38:29,30 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 16:38:29,36 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:38:29,42 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 16:38:29,48 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 16:38:29,78 
+🕸️ Routing empfangen für RequestID: 686732623 Ack Status: Bestätigt - 08.11.23, 16:38:47,39 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 16:39:11,43 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 16:39:11,66 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 16:39:11,72 
+📟 Node info empfangen für: 779377771 - 08.11.23, 16:39:11,79 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 16:39:11,84 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 16:39:11,90 
+📟 Node info empfangen für: 633503840 - 08.11.23, 16:39:11,96 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 16:39:12,02 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 16:39:12,09 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 16:39:12,50 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 16:39:12,56 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 16:39:12,68 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 16:39:12,75 
+📻 LoRa config received: 779377771 - 08.11.23, 16:39:12,80 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 16:39:12,86 
+🌉 MQTT module config received: 779377771 - 08.11.23, 16:39:12,93 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:39:12,98 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 16:39:13,05 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 16:39:13,10 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 16:39:13,16 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 16:39:13,22 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 16:39:13,28 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 16:39:13,58 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:39:13,70 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:39:17,06 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:39:21,98 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:39:26,24 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:39:37,34 
+🕸️ Routing empfangen für RequestID: 686732627 Ack Status: Bestätigt - 08.11.23, 16:39:47,15 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:40:13,68 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:40:14,01 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:40:17,21 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:40:22,14 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:40:26,42 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:40:33,05 
+🕸️ Routing empfangen für RequestID: 686732631 Ack Status: Bestätigt - 08.11.23, 16:40:46,98 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 16:40:54,35 
+📈 Telemetrie empfangen für: 4201957616 - 08.11.23, 16:41:08,94 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:41:13,68 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:41:17,64 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:41:24,30 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:41:26,22 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:41:33,06 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:41:49,56 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:42:17,61 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:42:24,44 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:42:32,49 
+🕸️ Routing empfangen für RequestID: 686732639 Ack Status: Bestätigt - 08.11.23, 16:42:47,37 
+📈 Telemetrie empfangen für: 633503840 - 08.11.23, 16:42:57,75 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:43:17,94 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:43:24,42 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:43:26,16 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:43:32,73 
+🕸️ Routing empfangen für RequestID: 686732642 Ack Status: Bestätigt - 08.11.23, 16:43:46,86 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:43:49,68 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:44:18,09 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:44:24,54 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:44:32,85 
+🕸️ Routing empfangen für RequestID: 686732646 Ack Status: Bestätigt - 08.11.23, 16:44:47,31 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:45:18,18 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:45:24,72 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:45:26,34 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:45:33,06 
+🕸️ Routing empfangen für RequestID: 686732649 Ack Status: Bestätigt - 08.11.23, 16:45:51,30 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:45:51,36 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:46:18,54 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:46:24,90 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:46:33,18 
+🕸️ Routing empfangen für RequestID: 686732653 Ack Status: Bestätigt - 08.11.23, 16:46:47,88 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:47:18,60 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:47:25,02 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:47:25,98 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:47:26,67 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:47:33,24 
+🕸️ Routing empfangen für RequestID: 686732657 Ack Status: Bestätigt - 08.11.23, 16:47:47,49 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:47:55,35 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:48:18,84 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:48:25,23 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:48:25,98 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:48:33,48 
+🕸️ Routing empfangen für RequestID: 686732662 Ack Status: Bestätigt - 08.11.23, 16:48:48,27 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:49:19,05 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:49:25,41 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:49:26,67 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:49:27,75 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:49:33,66 
+🕸️ Routing empfangen für RequestID: 686732666 Ack Status: Bestätigt - 08.11.23, 16:49:50,64 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:49:55,68 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:50:19,17 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:50:25,53 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:50:26,64 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:50:34,26 
+🕸️ Routing empfangen für RequestID: 686732671 Ack Status: Bestätigt - 08.11.23, 16:50:47,61 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:51:19,26 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:51:25,62 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:51:27,29 
+📍 Positionspaket empfangen von Node: 4201957616 - 08.11.23, 16:51:27,45 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:51:33,93 
+🕸️ Routing empfangen für RequestID: 686732675 Ack Status: Bestätigt - 08.11.23, 16:51:47,70 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:51:55,86 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:52:19,50 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:52:26,34 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:52:27,27 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:52:36,71 
+🕸️ Routing empfangen für RequestID: 686732680 Ack Status: Bestätigt - 08.11.23, 16:52:51,42 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:53:19,93 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:53:25,98 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:53:28,35 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:53:36,39 
+🕸️ Routing empfangen für RequestID: 686732684 Ack Status: Bestätigt - 08.11.23, 16:53:47,59 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:53:56,94 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:54:16,51 
+📍 Positionspaket empfangen von Node: 633503840 - 08.11.23, 16:54:20,14 
+💬 Nachricht von der Textnachricht-App empfangen. - 08.11.23, 16:54:26,08 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:54:28,35 
+🕸️ Routing empfangen für RequestID: 686732689 Ack Status: Bestätigt - 08.11.23, 16:54:48,64 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:55:32,71 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:55:37,15 
+🕸️ Routing empfangen für RequestID: 686732694 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 16:56:09,55 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:56:45,97 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:56:47,35 
+🕸️ Routing empfangen für RequestID: 686732697 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 16:57:12,61 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:57:42,01 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:57:47,53 
+🕸️ Routing empfangen für RequestID: 686732704 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 16:58:11,36 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:58:42,01 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:58:47,77 
+🕸️ Routing empfangen für RequestID: 686732709 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 16:59:11,13 
+💬 Sende Nachricht 540087395 von 779377771 an 0 - 08.11.23, 16:59:16,89 
+🕸️ Routing empfangen für RequestID: 540087395 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 16:59:40,57 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 16:59:42,01 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 16:59:50,17 
+🕸️ Routing empfangen für RequestID: 686732715 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:00:10,75 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:00:46,69 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:00:51,25 
+🕸️ Routing empfangen für RequestID: 686732719 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:01:11,56 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:01:46,94 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:01:51,43 
+🕸️ Routing empfangen für RequestID: 686732724 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:02:11,56 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 17:02:36,96 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 17:02:37,18 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 17:02:37,58 
+📟 Node info empfangen für: 779377771 - 08.11.23, 17:02:37,96 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 17:02:38,31 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 17:02:38,35 
+📟 Node info empfangen für: 633503840 - 08.11.23, 17:02:38,41 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 17:02:38,47 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 17:02:38,81 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 17:02:39,49 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 17:02:39,55 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 17:02:39,67 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 17:02:39,73 
+📻 LoRa config received: 779377771 - 08.11.23, 17:02:39,79 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 17:02:39,85 
+🌉 MQTT module config received: 779377771 - 08.11.23, 17:02:39,91 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 17:02:39,97 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 17:02:40,03 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 17:02:40,09 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 17:02:40,15 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 17:02:40,21 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 17:02:40,27 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 17:02:40,57 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:02:47,17 
+🕸️ Routing empfangen für RequestID: 932444923 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:03:07,60 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:03:29,05 
+💬 Sende Nachricht 3631368152 von 779377771 an 0 - 08.11.23, 17:03:31,28 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:03:40,67 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:03:46,86 
+🕸️ Routing empfangen für RequestID: 3631368152 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:03:56,95 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 17:04:04,57 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 17:04:04,81 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 17:04:04,87 
+📟 Node info empfangen für: 779377771 - 08.11.23, 17:04:04,93 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 17:04:04,99 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 17:04:05,05 
+📟 Node info empfangen für: 633503840 - 08.11.23, 17:04:05,11 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 17:04:05,17 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 17:04:05,23 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 17:04:05,65 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 17:04:05,71 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 17:04:05,83 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 17:04:05,89 
+📻 LoRa config received: 779377771 - 08.11.23, 17:04:05,95 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 17:04:06,01 
+🌉 MQTT module config received: 779377771 - 08.11.23, 17:04:06,07 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 17:04:06,14 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 17:04:06,19 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 17:04:06,25 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 17:04:06,31 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 17:04:06,40 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 17:04:06,46 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 17:04:06,76 
+🕸️ Routing empfangen für RequestID: 932444930 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:04:07,36 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:04:29,86 
+🕸️ Routing empfangen für RequestID: 932444936 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:05:06,43 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:05:15,03 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:05:29,77 
+🕸️ Routing empfangen für RequestID: 932444941 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:06:06,53 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:06:20,39 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:06:30,01 
+🕸️ Routing empfangen für RequestID: 932444946 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:07:06,61 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:07:42,84 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:07:45,17 
+🕸️ Routing empfangen für RequestID: 932444949 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:08:08,33 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:08:52,49 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:08:56,24 
+🕸️ Routing empfangen für RequestID: 932444954 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:09:07,88 
+🕸️ Routing empfangen für RequestID: 932444959 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:10:06,92 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:10:07,13 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:10:11,45 
+🛎️ Issuing Want Config to Grhe_5c6b - 08.11.23, 17:10:57,83 
+ℹ️ MyInfo received: 779377771 - 08.11.23, 17:10:58,07 
+🏷️ Device Metadata received from: 779377771 - 08.11.23, 17:10:58,13 
+📟 Node info empfangen für: 779377771 - 08.11.23, 17:10:58,22 
+📟 Node info empfangen für: 4201957616 - 08.11.23, 17:10:58,31 
+📟 Node info empfangen für: 4201006512 - 08.11.23, 17:10:58,37 
+📟 Node info empfangen für: 633503840 - 08.11.23, 17:10:58,43 
+🎛️ Channel 0 received from: 779377771 - 08.11.23, 17:10:58,52 
+🎛️ Channel 1 received from: 779377771 - 08.11.23, 17:10:58,58 
+📟 Geräte Konfiguration empfangen: 779377771 - 08.11.23, 17:10:59,00 
+🗺️ Positions Konfiguration empfangen: 779377771 - 08.11.23, 17:10:59,06 
+🌐 Netzwerk onfiguration empfangen: 779377771 - 08.11.23, 17:10:59,18 
+🖥️ Display Konfiguration empfangen: 779377771 - 08.11.23, 17:10:59,24 
+📻 LoRa config received: 779377771 - 08.11.23, 17:10:59,30 
+📶 Bluetooth Konfiguration empfangen: 779377771 - 08.11.23, 17:10:59,36 
+🌉 MQTT module config received: 779377771 - 08.11.23, 17:10:59,42 
+🤖 Serial Modul Konfiguration empfangen: 779377771 - 08.11.23, 17:10:59,48 
+📣 External Notifiation module config received: 779377771 - 08.11.23, 17:10:59,54 
+📬 Store & Forward module config received: 779377771 - 08.11.23, 17:10:59,60 
+⛰️ Range Test Modul konfiguration empfangen: 779377771 - 08.11.23, 17:10:59,72 
+📈 Telemetrie Modul Konfiguration empfangen: 779377771 - 08.11.23, 17:10:59,78 
+🥫 Canned Message module config received: 779377771 - 08.11.23, 17:10:59,84 
+🕵️ Detection Sensor module config received: 779377771 - 08.11.23, 17:11:00,14 
+🕸️ Routing empfangen für RequestID: 932444964 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:11:06,74 
+🕸️ Routing empfangen für RequestID: 932444967 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:12:06,86 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:12:11,63 
+📍 Sent a Position Packet from the Apple device GPS to node: 779377771 - 08.11.23, 17:13:06,96 
+🕸️ Routing empfangen für RequestID: 932444971 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:13:07,16 
+📍 Positionspaket empfangen von Node: 779377771 - 08.11.23, 17:13:11,84 
+🕸️ Routing empfangen für RequestID: 932444976 Ack Status: Maximale Wiederholungen erreicht - 08.11.23, 17:14:07,07 
