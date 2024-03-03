@@ -95,13 +95,11 @@ Hata-Ausbreitungsformel
 
 $$
 \begin{align*}
-L_p(urbanesGebiet) &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} + [44.9 - 6.55 \cdot \log_{10}{h_s}] \cdot \log_{10}{d} - K(h_r) \\
-\\
-\text{urbanes Gebiet: große Stadt}
+
 d &= \text{Entfernung zwischen Sender und Empfänger} \\
 h_s &= \text{Höhe der Senderantenne} \\
 h_r &= \text{Empfängerantennenhöhe} \\
-K(h_r) &= \text{Korrekturfaktor abhängig h_r} \\
+K(h_r) &= \text{Korrekturfaktor abhängig } h_r \\
 f &= \text{Übertragungsfrequenz} \\
 
 \end{align*}
@@ -110,7 +108,7 @@ f &= \text{Übertragungsfrequenz} \\
 
 \begin{align*}
 
-\text{Mittlere Stadt - kleine Stadt} K(h_r) &= (1.1log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8 \\
+\text{Mittlere Stadt - kleine Stadt} K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8 \\
 
 \text{Großstadt, f <= 300 MHz: }K(h_r) &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
 
