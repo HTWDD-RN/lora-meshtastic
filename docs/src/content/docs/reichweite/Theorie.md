@@ -107,6 +107,23 @@ f &= \text{Übertragungsfrequenz} \\
 \\[2em]
 
 \begin{align*}
+L_p \text{(urbanes Gebiet)} &= 69.55 + 26.16 \cdot \log_{10}{f} \\&\quad - 13.82 \cdot \log_{10}{h_s} \\&\quad + [44.9 - 6.55 \cdot \log_{10}{h_s}] \\&\quad \cdot \log_{10}{d} - K(h_r) \\
+
+L_p \text{(suburbanes Gebiet)} &= L_p \text{(urbanes Gebiet)} - 2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
+L_p \text{(offenes Gebiet)} &= L_p \text{(urbanes Gebiet)} - 4.78 \cdot (\log_{10}{f})^2 + 18.33 \cdot \log_{10}{f} - 40.94\\
+\end{align*}
+
+
+$$
+
+**Urbanes Gebiet:** große Stadt mit großen Gebäuden welche zwei oder mehreren Stockwerken oder größere Dörfer mit sehr nahen Häusern.
+
+**Suburbanes Gebiet:** Stadt oder oder Autobahn mit vereinzelten Bäumen und Gebäuden. Einige Hindernisse in der Nähe des Empfängers aber nicht sehr überfüllt.
+
+**Offenes Gebiet:** Keine großen Bäume oder Gebäude in Sichtlinie.
+
+$$
+\begin{align*}
 
 \text{Mittlere Stadt - kleine Stadt} K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8 \\
 
@@ -123,6 +140,16 @@ $$
 [[1](https://www.researchgate.net/figure/Okumura-Hata-Model-for-path-loss-for-small-and-medium-sized-cities-The-red-shaded-area_fig3_327211499)]
 
 Die Grafik zeigt die Reichweite nach dem Okumura Hata Modell für Vororte und Kleinstädte. Der Rote Bereich überschreitet das totale link budget welches mit LoRa transceivern erlaubt ist.
+
+Die bereitgestellten Formeln decken nicht alle im Okumuras-Bericht vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt für folgende Einschränkungen:
+| | |
+| ---------------------- | ------ |
+| Frequenz | 100-1500 MHz |
+| Distanz | 1-20km |
+| Höhe Senderantenne | 25-200m |
+| Höhe Empfängerantenne | 1-10m |
+
+Weil Hatas Modell nur für Entfernungen größer als 1km gilt, nutzen Simulatoren Freiraumausbreitung bis zu dieser Entfernung.
 
 Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
 
