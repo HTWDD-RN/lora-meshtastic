@@ -74,6 +74,9 @@ $$   Großstadt, f > 300 MHz: K = 3,2 × (log(11,7555 × hR))2 – 4,97 $$
 
 Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
 
+
+![alt text](../../../assets/images/OkumuraHataSmallMedium.png)
+
 Link Budget: 154dB
 Range Hata Open: 35,3km
 Range Hata City: 5,2km
