@@ -71,9 +71,7 @@ $$   Kleinstadt: K = (1,1 × log(f) – 0,7) × hR – (1,56 × log(f) – 0,8) 
 $$   Großstadt, f < 300 MHz: K = 8,29 × (log(1,54 × hR))2 – 1,1  $$  
   
 $$   Großstadt, f > 300 MHz: K = 3,2 × (log(11,7555 × hR))2 – 4,97 $$  
-  
-  
-  
+
 Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
 
 Link Budget: 154dB
