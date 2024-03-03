@@ -96,11 +96,12 @@ Hata-Ausbreitungsformel
 $$
 
 \begin{align*}
-D &= 69.55 + 36.26 \cdot \log{f} - 13.82 \cdot \log{h_s} + [44.9 - 6.55 \cdot \log{h_s} \cdot \log{d} - K] \\
+L_p(unbebautesGebiet) &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} + [44.9 - 6.55 \cdot \log_{10}{h_s}] \cdot \log_{10}{d} - K(h_r)^* \\
+* Korrekturfaktor für Empfängerantenne in abhängigkeit zur höhe \\
 \\
 d &= \text{Entfernung zwischen Sender und Empfänger} \\
-hS &= \text{Höhe der Senderantenne} \\
-hR &= \text{Empfängerantennenhöhe} \\
+h_s &= \text{Höhe der Senderantenne} \\
+h_r &= \text{Empfängerantennenhöhe} \\
 K &= \text{Konstante für den Stadttyp und die Gebäude} \\
 f &= \text{Übertragungsfrequenz} \\
 
@@ -110,7 +111,7 @@ f &= \text{Übertragungsfrequenz} \\
 
 \begin{align*}
 
-\text{Freie Fläche: }K &= 4.78 \cdot (\log{(f^2)} - \log{f} + 40.94) \\
+\text{Mittlere Stadt - kleine Stadt} K &= (1.1log_{10}{f} - 0.7\\
 
 \text{Vorort: }K &= 2 \cdot \log{f \over 28} \cdot 2 + 5.4 \\
 
