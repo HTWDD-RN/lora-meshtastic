@@ -6,7 +6,20 @@ sidebar:
 
 import Image from '@components/Image.astro'
 import iOSBluetooth from '@assets/images/anwendung/software/ios/bluetooth.png'
+import iOSConfigModule from '@assets/images/anwendung/software/ios/config_module.png'
+import iOSConfigRadio from '@assets/images/anwendung/software/ios/config_radio.png'
+import iOSMeshMap from '@assets/images/anwendung/software/ios/mesh_map.png'
+import iOSMessagesContacts from '@assets/images/anwendung/software/ios/messages_contacts.png'
+import iOSMessagesChannels from '@assets/images/anwendung/software/ios/messages_channels.png'
+import iOSMessages from '@assets/images/anwendung/software/ios/messages.png'
 import iOSNodes from '@assets/images/anwendung/software/ios/nodes.png'
+
+import WebConnectionBluetooth from '@assets/images/anwendung/software/web/connection_bluetooth.png'
+import WebMessages from '@assets/images/anwendung/software/web/messages.png'
+import WebNodes from '@assets/images/anwendung/software/web/peers.png'
+import WebConfigChannels from '@assets/images/anwendung/software/web/config_channels.png'
+import WebConfigModule from '@assets/images/anwendung/software/web/config_module.png'
+import WebConfigRadio from '@assets/images/anwendung/software/web/config_radio.png'
 
 Zum aktuellen Zeitpunkt gibts es jeweils eine App für iOS und Android. Außerdem gibt es einen Web Client, der sich per Bluetooth, Wi-Fi und Serial verbinden kann.
 
@@ -24,9 +37,24 @@ Ursprünglich sollte hier ein Vergleich der Funktionalitäten erfolgen, es gibt 
 
 ### iOS
 
-<div class="grid grid-cols-2 items-center *:!mt-0 gap-8 flex-wrap">
-  <Image src={iOSBluetooth} alt="Bluetooth-Verbindung zum eigenen Node" width="200px" />
-  <Image src={iOSNodes} alt="Übersicht der verbundenen Nodes" width="200px" />
-  <Image src={iOSNodes} alt="Übersicht der verbundenen Nodes" width="200px" />
-  <Image src={iOSNodes} alt="Übersicht der verbundenen Nodes" width="200px" />
+<div class="grid grid-cols-3 items-start *:!mt-0 gap-8">
+  <Image src={iOSMessages} alt="Nachrichten Tab" />
+  <Image src={iOSMessagesChannels} alt="Nachrichten in Channels" />
+  <Image src={iOSMessagesContacts} alt="Direktnachrichten mit anderen Nodes" />
+  <Image src={iOSBluetooth} alt="Bluetooth-Verbindung zum eigenen Node" />
+  <Image src={iOSNodes} alt="Übersicht der verbundenen Nodes" />
+  <Image src={iOSMeshMap} alt="Kartenansicht" />
+  <Image src={iOSConfigModule} alt="Modul-Konfiguration" />
+  <Image src={iOSConfigRadio} alt="Radio-Konfiguration" />
+</div>
+
+### Web
+
+<div class="grid grid-cols-1 items-start *:!mt-0 gap-8">
+  <Image src={WebConnectionBluetooth} alt="Bluetooth-Verbindung mit Node" />
+  <Image src={WebMessages} alt="Nachrichten" />
+  <Image src={WebNodes} alt="Übersicht der verbundenen Nodes" />
+  <Image src={WebConfigChannels} alt="Channel-Konfiguration" />
+  <Image src={WebConfigModule} alt="Modul-Konfiguration" />
+  <Image src={WebConfigRadio} alt="Radio-Konfiguration" />
 </div>
