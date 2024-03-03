@@ -96,13 +96,12 @@ Hata-Ausbreitungsformel
 $$
 
 \begin{align*}
-L_p(unbebautesGebiet) &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} + [44.9 - 6.55 \cdot \log_{10}{h_s}] \cdot \log_{10}{d} - K(h_r)^* \\
-* Korrekturfaktor für Empfängerantenne in abhängigkeit zur höhe \\
+L_p(unbebautesGebiet) &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} + [44.9 - 6.55 \cdot \log_{10}{h_s}] \cdot \log_{10}{d} - K(h_r) \\
 \\
 d &= \text{Entfernung zwischen Sender und Empfänger} \\
 h_s &= \text{Höhe der Senderantenne} \\
 h_r &= \text{Empfängerantennenhöhe} \\
-K &= \text{Konstante für den Stadttyp und die Gebäude} \\
+K(h_r) &= \text{Korrekturfaktor abhängig h_r} \\
 f &= \text{Übertragungsfrequenz} \\
 
 \end{align*}
@@ -111,15 +110,14 @@ f &= \text{Übertragungsfrequenz} \\
 
 \begin{align*}
 
-\text{Mittlere Stadt - kleine Stadt} K &= (1.1log_{10}{f} - 0.7\\
+\text{Mittlere Stadt - kleine Stadt} K(h_r) &= (1.1log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8 \\
 
-\text{Vorort: }K &= 2 \cdot \log{f \over 28} \cdot 2 + 5.4 \\
+\text{Großstadt, f <= 300 MHz: }K(h_r) &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
 
-\text{Kleinstadt: }K &= (1.1 \cdot \log{f} - 0.7) \cdot hR - (1.56 \cdot \log{f} - 0.8) \\
+\text{Großstadt, f > 300 MHz: }K(h_r) &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97
 
-\text{Großstadt, f < 300 MHz: }K &= 8.29 \cdot (\log{1.54 \cdot hR}) \cdot 2 - 1.1 \\
 
-\text{Großstadt, f > 300 MHz: }K &= 3.2 \cdot (\log{11.7555 \cdot hR}) \cdot 2 - 4.97
+
 
 \end{align*}
 
