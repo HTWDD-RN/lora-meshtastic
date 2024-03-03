@@ -37,6 +37,34 @@ Die Einheit dB (Dezibel) wird im Zusammenhang mit Funkverbindungen verwendet, um
 
 Bei Funkverbindungen wird die Signalstärke oft in dBm gemessen, während Dämpfung oder Verstärkung von Antennen, Kabeln oder Verstärkern in einfachen dB-Angaben ausgedrückt werden. Dies ermöglicht eine präzise und effektive Kommunikation über die Leistung von Funksignalen und die Leistung von Komponenten in drahtlosen Netzwerken.
 
+### Channelsettings
+Channelsetting: Long Range / Fast  
+Alt Channelname: Long Fast  
+Data Rate: 1.07 kbps (default)  
+SPreading Factor/ Symbols: 11 / 2048  
+Coding Rate: 4/5  
+Bandwith: 250  
+### Transceiverwerte  
+transmit Power: 17dBm  
+Antenna gain: 1,5dBi  
+RX sensitivity: -136dBm  
+RX antenna: 0dBi  
+Link Budget: 150dB  
+  
+WiFi LoRa 32 v3 (SX1262 Lora Chip)  
+P(dBm) = 21dBm +-1dBm  
+Max Receiving sensitivity = -136dBm@SF12 BW=125KHz  
+### Maximal mögliche Übertragunsstärke  
+
+Maximal 500mW ERP (1)  
+$$ P(dBm) = 10 ⋅ \log10( P(\mathrm{mW}) / 1\mathrm{mW})  $$
+$$ P(dBm) = 10 ⋅ \log10( P(500\mathrm{mW}) / 1\mathrm{mW})  $$
+$$ P(dBm) = 26.9897000434  $$
+$$ P(dBm) = 27\mathrm{dBm}  $$ 
+
+(1) <https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html>
+(Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)
+
 ## Überlegungen
 
 Mit einem Link Budget von 150dBm (Einstellung = long fast, mit 17dBm transmit Power und 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nur Freiraumdämpfung(Vakuum)) eine Distanz von bis zu 800km Überwinden
@@ -86,36 +114,15 @@ Das Hata-Modell beachtet keine Sichtlinie, deswegen habe ich die Höhe der Anten
     
 Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tabella angegebene Reichweite von 35,3km nur theoretische Werte.  
 Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation welche das Signal unterschiedlich beeinflussen würden.  
-  
+
+## Fazit  
 Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollte immer die Sichtlinie beachtet werden. Um genauere Werte zu erreichen kann das Longley-Rice-Modell verwendet werden.  
-  
-Channelsetting: Long Range / Fast  
-Alt Channelname: Long Fast  
-Data Rate: 1.07 kbps (default)  
-SPreading Factor/ Symbols: 11 / 2048  
-Coding Rate: 4/5  
-Bandwith: 250  
-  
-transmit Power: 17dBm  
-Antenna gain: 1,5dBi  
-RX sensitivity: -136dBm  
-RX antenna: 0dBi  
-Link Budget: 150dB  
-  
-WiFi LoRa 32 v3 (SX1262 Lora Chip)  
-P(dBm) = 21dBm +-1dBm  
-Max Receiving sensitivity = -136dBm@SF12 BW=125KHz  
-  
-Maximal 500mW ERP (1)  
-P(dBm) = 10 ⋅ log10( P(mW) / 1mW)  
-P(dBm) = 10 ⋅ log10( P(500mW) / 1mW)  
-P(dBm) = 26.9897000434  
-P(dBm) = 27dBm  
 
-(1) <https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html>
-(Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)
 
-Radio link budget formula  
+## Notizen
+
+### Link-Budget Formel
+
 𝑃RX=𝑃TX+𝐺TX+𝐺RX−𝐿TX−𝐿FS−𝐿𝑃−𝐿RX  
 PRX = received power (dBm)  
 PTX = transmitter output power (dBm)  
@@ -126,21 +133,22 @@ LFS = free space loss or path loss (dB)
 LP = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)  
 LRX = receiver feeder and associated losses (feeder, connectors, etc.) (d)B  
   
-FSPL (dB) = 20log10(d) + 20log10(f) – 147,55  
-FSPL = (4πd/λ)2 = (4πdf/c)2  
+$$ FSPL (dB) = 20\log10(d) + 20\log10(f) – 147,55  $$
+$$ FSPL = (4πd/λ)2 = (4πdf/c)2  $$
 FSPL = Free Space Path Loss (Freiraumdämpfung)  
 d = Abstand zwischen Tx und Rx in Metern  
 f = Frequenz in Hertz  
   
-Rx-Empfindlichkeit = -174 + 10log10(BW) + NF + SNR  
+$$ Rx-Empfindlichkeit = -174 + 10\log10(BW) + NF + SNR  $$
 BW = Bandbreite in Hz,  
 NF = Rauschfaktor in dB,  
 SNR = Signal-Rausch-Verhältnis (signal to noise ratio). Es gibt an, wie weit das Signal über
 dem Rauschen liegen muss.  
   
-Line of Sight tool  
+### Line of Sight tool  
 <https://www.heywhatsthat.com>
   
+### Beispiel
 Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:  
   
 1. **Transmit Power (Tx Power):** Let's assume the transmitter has a power output of 20 dBm.  
