@@ -38,30 +38,36 @@ Die Einheit dB (Dezibel) wird im Zusammenhang mit Funkverbindungen verwendet, um
 Bei Funkverbindungen wird die Signalstärke oft in dBm gemessen, während Dämpfung oder Verstärkung von Antennen, Kabeln oder Verstärkern in einfachen dB-Angaben ausgedrückt werden. Dies ermöglicht eine präzise und effektive Kommunikation über die Leistung von Funksignalen und die Leistung von Komponenten in drahtlosen Netzwerken.
 
 ### Channelsettings
-Channelsetting: Long Range / Fast  
-Alt Channelname: Long Fast  
-Data Rate: 1.07 kbps (default)  
-SPreading Factor/ Symbols: 11 / 2048  
-Coding Rate: 4/5  
-Bandwith: 250  
+
+|   |  |
+|---|---|
+| Channelsetting  | Long Range / Fast  |
+| Alt Channelname  | Long Fast  |  
+| Data Rate | 1.07 kbps (default) |
+|Spreading Factor/ Symbols| 11 / 2048 | 
+| Coding Rate  | 4/5 |
+|  Bandwith | 250 |
+
 ### Transceiverwerte  
-transmit Power: 17dBm  
-Antenna gain: 1,5dBi  
-RX sensitivity: -136dBm  
-RX antenna: 0dBi  
-Link Budget: 150dB  
+|   |  |
+|---|---|
+| transmit Power  | 17dBm |
+|  Antenna gain | 1,5dBi |
+| RX sensitivity  | -136dBm |
+| RX antenna  | 0dBi |
+|  Link Budget | 150dB |
   
 WiFi LoRa 32 v3 (SX1262 Lora Chip)  
 P(dBm) = 21dBm +-1dBm  
 Max Receiving sensitivity = -136dBm@SF12 BW=125KHz  
 ### Maximal mögliche Übertragunsstärke  
 
-Maximal 500mW ERP (1)  
-$$ P(dBm) = 10 ⋅ \log10( P(\mathrm{mW}) / 1\mathrm{mW})  $$
-$$ P(dBm) = 10 ⋅ \log10( P(500\mathrm{mW}) / 1\mathrm{mW})  $$
-$$ P(dBm) = 26.9897000434  $$
-$$ P(dBm) = 27\mathrm{dBm}  $$ 
-
+$$ \text{Maximal 500mW ERP (1)}  $$  
+$$ P(dBm) = 10 ⋅ \log10( P(\mathrm{mW}) / 1\mathrm{mW})  $$  
+$$ P(dBm) = 10 ⋅ \log10( P(500\mathrm{mW}) / 1\mathrm{mW})  $$  
+$$ P(dBm) = 26.9897000434  $$  
+$$ P(dBm) = 27\mathrm{dBm}  $$   
+  
 (1) <https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html>
 (Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)
 
@@ -77,14 +83,14 @@ Im nächsten Schritt betrachten wir die Wellenausbreitung mit dem Hata-Okumura-M
   
 Das Hata-Modell verwendet verschiedene Begriffe uin der Dämpfungsformel, um zwischen verschiedenen Landnutzungen zu unterscheiden, von ländlicher bis zu dicht besiedelten Region.  
   
-Hata-Ausbreitungsformel
-$$ D=69,55+36,26\log(f)-13,82log(h_s)+[44,9-6,55\log(h_s)*\log(d)-K] $$
-mit:
-d  = Entfernung zwischen Sender und Empfänger  
-hS = Höhe der Senderantenne  
-hR = Empfängerantennenhöhe  
-K  = Konstatne für den Stadttyp und die Gebäude  
-f  = Übertragungsfrequenz  
+Hata-Ausbreitungsformel  
+$$ D=69,55+36,26\log(f)-13,82log(h_s)+[44,9-6,55\log(h_s)*\log(d)-K] $$  
+mit:  
+$$ d  = \text{Entfernung zwischen Sender und Empfänger} $$    
+$$ hS = \text{Höhe der Senderantenne}$$    
+$$ hR = \text{Empfängerantennenhöhe}$$     
+$$ K  = \text{Konstatne für den Stadttyp und die Gebäude}$$     
+$$ f  = \text{Übertragungsfrequenz}$$      
   
 $$   \text{Nicht entwickelt:       }K = 4,78 \cdot (\log(f2) – \log(f) + 40,94) $$  
   
@@ -103,12 +109,12 @@ Die Grafik zeigt die Reichweite nach dem Okumura Hata Modell für Vororte und Kl
   
 Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
 
-
-Link Budget: 154dBm  
-Range Hata Open: 35,3km  
-Range Hata City: 5,2km  
-Range City(-28dB loss): 0,85km  
-Line of sight: 22,7km  
+| LinkBudget  | 154dBm  |
+|---|---|
+| Range Hata Open  | 35,3km  |
+| Range Hata City  | 5,2km  |
+| Range City(-28dB loss)  | 0,85km  |   
+| Line of sight | 22,7km | 
 
 Das Hata-Modell beachtet keine Sichtlinie, deswegen habe ich die Höhe der Antenne des Senders auf 25Meter festgelegt, da die die übliche Antennenhöhe einer LTE-Antenne im innerstädtischem Gebiet darstellt und die Sichtlinie seperat mit 22,7km berechnet.  
     
@@ -123,32 +129,32 @@ Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung
 
 ### Link-Budget Formel
 
-𝑃RX=𝑃TX+𝐺TX+𝐺RX−𝐿TX−𝐿FS−𝐿𝑃−𝐿RX  
-PRX = received power (dBm)  
-PTX = transmitter output power (dBm)  
-GTX = transmitter antenna gain (dBi)  
-GRX = receiver antenna gain (dBi)  
-LTX = transmit feeder and associated losses (feeder, connectors, etc.) (dB)  
-LFS = free space loss or path loss (dB)  
-LP = miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB)  
-LRX = receiver feeder and associated losses (feeder, connectors, etc.) (d)B  
+$$ PRX = PTX + GTX + GRX − LTX − LFS − LP − LRX $$  
+$$ PRX = \text{received power (dBm)}  $$  
+$$ PTX = \text{transmitter output power (dBm)  }$$  
+$$ GTX = \text{transmitter antenna gain (dBi)  }$$  
+$$ GRX = \text{receiver antenna gain (dBi)  }$$  
+$$ LTX = \text{transmit feeder and associated losses (feeder, connectors, etc.) (dB) }$$  
+$$ LFS = \text{free space loss or path loss (dB)} $$    
+$$ LP  = \text{miscellaneous signal propagation losses (these include fading margin, polarization mismatch, losses associated with medium through which signal is travelling, other losses...) (dB) }$$   
+$$ LRX = \text{receiver feeder and associated losses (feeder, connectors, etc.) (d)B  }$$  
+     
+$$ FSPL (dB) = 20\log10(d) + 20\log10(f) – 147,55 $$  
+$$ FSPL = (4πd/λ)2 = (4πdf/c)2  $$   
+$$ FSPL = \text{Free Space Path Loss (Freiraumdämpfung) } $$  
+$$ d = \text{Abstand zwischen Tx und Rx in Metern } $$  
+$$ f = \text{Frequenz in Hertz } $$  
   
-$$ FSPL (dB) = 20\log10(d) + 20\log10(f) – 147,55  $$
-$$ FSPL = (4πd/λ)2 = (4πdf/c)2  $$
-FSPL = Free Space Path Loss (Freiraumdämpfung)  
-d = Abstand zwischen Tx und Rx in Metern  
-f = Frequenz in Hertz  
-  
-$$ Rx-Empfindlichkeit = -174 + 10\log10(BW) + NF + SNR  $$
-BW = Bandbreite in Hz,  
-NF = Rauschfaktor in dB,  
-SNR = Signal-Rausch-Verhältnis (signal to noise ratio). Es gibt an, wie weit das Signal über
-dem Rauschen liegen muss.  
+$$ Rx-Empfindlichkeit = -174 + 10\log10(BW) + NF + SNR  $$  
+$$ BW = \text{Bandbreite in Hz} $$   
+$$ NF = \text{Rauschfaktor in dB} $$    
+ SNR = \text{Signal-Rausch-Verhältnis (signal to noise ratio). Es gibt an, wie weit das Signal über
+dem Rauschen liegen muss}  
   
 ### Line of Sight tool  
 <https://www.heywhatsthat.com>
   
-### Beispiel
+### Beispielrechnung
 Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:  
   
 1. **Transmit Power (Tx Power):** Let's assume the transmitter has a power output of 20 dBm.  
