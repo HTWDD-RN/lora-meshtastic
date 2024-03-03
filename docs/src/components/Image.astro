@@ -6,7 +6,7 @@ type Props = LocalImageProps | RemoteImageProps
 const props = Astro.props
 ---
 
-<figure>
+<figure class="!mt-0">
   <!-- @ts-expect-error egal -->
   <AstroImage {...props} />
   <figcaption class="!mt-3">{props.alt}</figcaption>
