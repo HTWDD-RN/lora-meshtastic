@@ -1,12 +1,12 @@
 ---
 title: Praxistest
-description: Experimente zur Reichweite mit Meshtastic.
+description: Experimente zur Reichweite mit Meshtastic
 sidebar:
   order: 20
 ---
 
 import Image from '@components/Image.astro'
-import Img0 from '@assets/images/reichweite/praxistest/IMG_5287.png'
+import ImgNodesBegin from '@assets/images/reichweite/praxistest/IMG_5287.png'
 import Img1 from '@assets/images/reichweite/praxistest/IMG_5289.png'
 import Img2 from '@assets/images/reichweite/praxistest/IMG_5290.png'
 import Img3 from '@assets/images/reichweite/praxistest/IMG_5291.png'
@@ -17,17 +17,52 @@ import Img7 from '@assets/images/reichweite/praxistest/IMG_5300.png'
 import Img8 from '@assets/images/reichweite/praxistest/IMG_5301.png'
 import ImageElbe from '@assets/images/reichweite/praxistest/IMG_5299.jpeg'
 
-In unseren Praxistests in Dresden am Elbufer haben wir eine Reichweite von 4km erreicht.
+In unseren Praxistests am Elbufer in Dresden haben wir eine Reichweite von 4km Luftlinie erreicht.
 
-<div class="grid grid-cols-3 gap-8">
-  <Image src={Img0} alt="Img0" />
-  <Image src={Img1} alt="Img1" />
-  <Image src={Img2} alt="Img2" />
-  <Image src={Img3} alt="Img3" />
-  <Image src={Img4} alt="Img4" />
-  <Image src={Img5} alt="Img5" />
-  <Image src={Img6} alt="Img6" />
-  <Image src={Img7} alt="Img7" />
-  <Image src={Img8} alt="Img8" />
-  <Image src={ImageElbe} alt="Elbe" />
+Wir sind mit dem Fahrrad jeweils vom Blauen Wunder in beide Richtungen gefahren und
+haben unsere Meshtastic Geräte im Rucksack mitgenommen.
+
+Für den kontinierlichen Sendetest, haben wir in den Moduleinstellungen den Range Test aktiviert
+und auf ein Interval von 1min gestellt.
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <Image class="md:col-span-2" src={ImgNodesBegin} alt="Node Übersicht" />
+  <div>
+    Mithilfe eines Setup QR Codes, konnten wir unser Mesh aufbauen. <br />
+    Node "Meshtastic 45b0" war noch von einem vorherigem Versuch im Mesh enthalten, aber nicht am Experiment
+    beteiligt.
+  </div>
+  <Image src={Img1} alt="" />
+  <Image src={Img2} alt="" />
+  <Image src={Img3} alt="" />
+  <div class="md:col-span-3">
+    Startpunkt: Blaues Wunder. Göran stand auf der Brücke und hat die Nachrichten empfangen. <br />
+    Christian (Sventastic) ist nach Westen Richtung Stadt gefahren. Julian nach Osten Richtung Pillnitz.
+  </div>
+  <Image src={Img4} alt="" />
+  <Image src={Img5} alt="" />
+  <div>
+    Bei ~3km Gesamt-Distanz (Luftlinie) herrschte immer noch eine gute Verbindung von der Brücke zu
+    beiden anderen Nodes.
+  </div>
+  <Image src={Img6} alt="" />
+  <Image src={Img7} alt="" />
+  <Image src={Img8} alt="" />
+  <div class="md:col-span-3">
+    Bei ~3.2km Distanz (Luftlinie), begann die Verbindung von Göran zu Christian schlechter zu
+    werden.
+  </div>
+  <Image class="md:col-span-3" src={ImageElbe} alt="Blick vom Blauen Wunder Richung Pillnitz" />
 </div>
+
+## Fazit
+
+Dieser Test konnte zeigen, dass Meshtastic mit batteriebetriebenen Geräten ohne besondere Ausrichtung
+der Antennen eine gute Distanz auf Luftlinie zurücklegen kann. Wegen der Weiterleitung von Nachrichten
+konnte die Verbindung zwischen Christian und Julian aufrechterhalten werden.
+
+Die Werte ließen sich wahrscheinlich auch noch verbessern, wenn bessere Antennen verwendet würden und
+eine genauere Ausrichtung der Antennen erfolgen würde.
+
+Innerhalb der Stadt, mit vielen Gebäuden und anderen Hindernissen, ist die Reichweite wesentlich geringer.
+Das Meshnetzwerk müsste dann enger aufgebaut werden, um eine gute Verbindung zu gewährleisten.

@@ -6,4 +6,4 @@ sidebar:
 
 ## Fragestellung
 
-Ist Meshtastic im Kriesenfall (Internet und Mobilfunknetze sind nicht funktional) dafür geeignet in Dresden Kommunikation zu gewährleisten?
+Ist Meshtastic im Krisenfall (Internet und Mobilfunknetze sind nicht funktional) dafür geeignet in Dresden Kommunikation zu gewährleisten?

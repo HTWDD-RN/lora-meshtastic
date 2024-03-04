@@ -15,3 +15,5 @@ Aber im Katastrophenfall mit zusammengebrochener Infrastruktur (Black-Out), ist 
 
 Aktuell ist Meshtastic noch softwareseitig auf Netzwerke [mit bis zu 80 Nodes limitiert](https://meshtastic.org/docs/introduction#:~:text=the%20Meshtastic%20mesh%20can%20sustain%20up%20to%2080%20device%20nodes). Das reicht bei Weitem nicht, um den Raum Dresden vollständig abzudecken.
 Das Protokoll scheint auch nicht für solche Mega-Meshes ausgelegt zu sein, was man am maximalen Hop Count von 7 erkennen kann. Ein limitierter Hop Count könnte eine weitreichende Zustellung verhindern.
+
+Die Software ist für ein Open Source Projekt ohne große Finanzierung auf einem guten Niveau, aber noch nicht für allgemeine Nutzung ausgereift. Dafür würde es einen Feinschliff in User Experience und Stabilität benötigen.

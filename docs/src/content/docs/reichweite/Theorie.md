@@ -142,12 +142,13 @@ $$
 Die Grafik zeigt die Reichweite nach dem Okumura Hata Modell für Vororte und Kleinstädte. Der Rote Bereich überschreitet das totale link budget welches mit LoRa transceivern erlaubt ist.
 
 Die bereitgestellten Formeln decken nicht alle im Okumuras-Bericht vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt für folgende Einschränkungen:
-| | |
-| ---------------------- | ------ |
-| Frequenz | 100-1500 MHz |
-| Distanz | 1-20km |
-| Höhe Senderantenne | 25-200m |
-| Höhe Empfängerantenne | 1-10m |
+
+|                       |              |
+| --------------------- | ------------ |
+| Frequenz              | 100-1500 MHz |
+| Distanz               | 1-20km       |
+| Höhe Senderantenne    | 25-200m      |
+| Höhe Empfängerantenne | 1-10m        |
 
 Weil Hatas Modell nur für Entfernungen größer als 1km gilt, nutzen Simulatoren Freiraumausbreitung bis zu dieser Entfernung.
 
