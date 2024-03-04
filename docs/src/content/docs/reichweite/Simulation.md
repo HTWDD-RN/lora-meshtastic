@@ -7,7 +7,7 @@ sidebar:
 
 Die Wartung vieler Meshtastic Nodes für den Zweck des Experimentierens mit der Software bzw. dem Protokoll kommt mit einem größeren Aufwand einher. Dafür kann sich eine Simulation besser eignen, um Resultate ohne Aufwand direkt beobachten zu können.
 
-Mit der Software [Meshtasticator](https://github.com/GUVWAF/Meshtasticator) ist es möglich, ein Meshtastic Netzwerk zu simulieren. Diese nutzt unterliegend die [Meshtastic Linux Anwendung](https://meshtastic.org/docs/software/linux-native/), weswegen die Verwendung eines Linux Betriebsystems Voraussetzung ist.
+Mit der Software [Meshtasticator](https://github.com/GUVWAF/Meshtasticator) ist es möglich, ein Meshtastic Netzwerk zu simulieren. Diese basiert auf zwei vorherigen Simulatoren ([lora-network-simulator](https://github.com/lucagioacchini/lora-network-simulator) und [LoRaSim](https://mcbor.github.io/lorasim/)) und nutzt unterliegend die [Meshtastic Linux Anwendung](https://meshtastic.org/docs/software/linux-native/), weswegen die Verwendung eines Linux Betriebsystems Voraussetzung ist.
 
 Wir haben den Simulator in einer Ubuntu-VM installiert. Einige Pakete mussten installiert werden.
 
