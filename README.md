@@ -2,7 +2,7 @@
 
 ## Fragestellung
 
-Ist Meshtastic im Krisenfall(Internet und Mobilfunknetze down) dafür geeignet in Dresden Kommunikation zu gewährleisten?
+Ist Meshtastic als unabhängiges Kommunikations-Netzwerk für den Krisenfall im Raum Dresden geeignet?
 
 - Mit weniger als 80<=Geräten
 - Fläche Dresden 328,8 km^2
