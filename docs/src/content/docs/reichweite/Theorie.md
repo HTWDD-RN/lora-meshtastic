@@ -213,15 +213,18 @@ d &= 10^\frac{Loss(dB) - A + K - C}{B} \\
 $$
 |             |  |
 | ---------------------- | ------ |
-| Freifläche(Max)        | 64.640km (begrenzt auf 24.6km) |
-| Freifläche(152dB)      | 37.943km (begrenzt auf 24.6km) |
-| Freifläche(Gebäude)    | 12.612km |
-| Urban(Max)             | 9.975km |
-| Urban(152dB)           | 5.855km |
-| Urban(Gebäude)         | 1.220km |
+| Freifläche(Max)        | 64.640km (begrenzt aufgrund Sichtlinie 24.6km) |
 | Suburban(Max)          | 10.130km|
+| Urban(Max)             | 9.975km |
+|||
+| Freifläche(152dB)      | 37.943km (begrenzt aufgrund Sichtlinie 24.6km) |
 | Suburban(152dB)        | 5.946km |
-| Suburban(Gebäude)      | 1.018km |
+| Urban(152dB)           | 5.855km |
+|||
+| Freifläche(Gebäude)    | 12.612km |
+| Suburban(Gebäude)      | 1.220km |
+| Urban(Gebäude)         | 1.018km |
+|||
 |Sichtlinie              | 24.6km  |
 
 Für Suburban(Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB reduziert.
