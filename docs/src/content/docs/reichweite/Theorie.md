@@ -132,11 +132,11 @@ $$
 K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
 C &= -4.78 \cdot (\log_{10}{f})^2 + 18.33 \cdot \log_{10}{f} - 40.94\\
 
-\\ \text{Suburban:} \\
+\text{Suburban:} \\
 K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
 C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
 
-\\ \text{Medium:} \\
+\text{Medium:} \\
 K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
 C &= 0 \\
 
