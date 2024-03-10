@@ -102,7 +102,7 @@ Hata-Ausbreitungsformel:
 
 $$
 \begin{align*}
-Loss(dB) &= A + B \cdot log_{10}{(d)} - K + C \\
+Loss(dB) &= A + B \cdot \log_{10}{(d)} - K + C \\
 
 d &= \text{Distanz zwischen Sender und Empfänger (km)} \\
 h_s &= \text{Höhe der Senderantenne (m)} \\
@@ -115,8 +115,8 @@ f &= \text{Übertragungsfrequenz  [MHz]} \\
 \\[2em]
 
 \begin{align*}
-A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \og_{10}{(h_s)} \\
-B &= 44.9 - 6.55 \og_{10}{(h_s)} \\
+A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
+B &= 44.9 - 6.55 \log_{10}{(h_s)} \\
 \end{align*}
 
 
