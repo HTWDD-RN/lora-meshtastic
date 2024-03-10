@@ -109,7 +109,7 @@ f &= \text{Übertragungsfrequenz  [MHz]} \\
 
 \begin{align*}
 A &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} \\
-B &= 44.9 - 6.55 \log{10}{h_s} \\
+B &= 44.9 - 6.55 \log_{10}{h_s} \\
 \end{align*}
 
 
@@ -129,15 +129,15 @@ $$
 \begin{align*}
 
 \text{Freifläche:} \\
-K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{f} - 0.8) \\
 C &= -4.78 \cdot (\log_{10}{f})^2 + 18.33 \cdot \log_{10}{f} - 40.94\\
 
 \text{Suburban:} \\
-K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{f} - 0.8) \\
 C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
 
 \text{Medium:} \\
-K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{f} - 0.8) \\
 C &= 0 \\
 
 \text{Urban, 150 <= f <= 200 MHz:} \\ 
@@ -168,46 +168,56 @@ Die bereitgestellten Formeln decken nicht alle im Okumuras vorgeschlagenen Bedin
 | Höhe Empfängerantenne | 1-10m        |
 
 $$
-\text{Mit folgenden Werten wurde gearbeitet: }\\
+\text{Mit folgenden Werten wurde im suburbanen gearbeitet: }\\
 
-\begin{align}
+\begin{align*}
 h_s &= 30\mathrm{m} \\
 h_r &= 2\mathrm{m} \\
 f &= 869\mathrm{MHz} \\
-\end{align}
+\end{align*}
 $$
-Somit können die Konstanten A und B im Vorfeld bestimmt werden
+Somit können die Konstanten A und B im Vorfeld bestimmt werden  
 $$
 \begin{align*}
-A &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} \\
-&= 69.55 + 26.16 \cdot \log_{10}{868} - 13.82 \cdot \log_{10}{30} \\
+A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
+&= 69.55 + 26.16 \cdot \log_{10}{(868)} - 13.82 \cdot \log_{10}{(30)} \\
 &\thickapprox 126.008 \\
 \\
-B &= 44.9 - 6.55 \log{10}{h_s} \\
-&= 44.9 - 6.55 \log{10}{30}
+B &= 44.9 - 6.55 \log_{10}{(h_s)} \\
+&= 44.9 - 6.55 \log_{10}{(30)}\\
 &\thickapprox 35.225\\
 \\
-K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
-&= (1.1 \cdot log_{10}{868} - 0.7) \cdot 2 - (1.56 \cdot \log{10}{868} - 0.8)
-&\thickapprox 1.281
-
+K &= (1.1 \cdot log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
+&= (1.1 \cdot log_{10}{(868)} - 0.7) \cdot 2 - (1.56 \cdot \log_{10}{(868)} - 0.8) \\
+&\thickapprox 1.281 \\
+\\
 C &= 0 \\
+\\
+Loss(dB)&= 154 \\
+\\
+\text{Somit müssen wir die einfache Formel nur noch nach d umstellen}\\
+\\
+Loss(dB) &= A + B \cdot log_{10}{(d)} - K + C \\
+log_{10}{(d)} &= \frac{Loss(dB) - A + K - C}{B} \\
+d &= 10^\frac{Loss(dB) - A + K - C}{B} \\
+&= 10^\frac{Loss(dB) - 126.008 + 1.281 - 0}{35.225}\\
+&= 10^\frac{Loss(dB) - 127.289}{35.225}\\
+\\
+d(154dBm) &= 5.732\mathrm{km}\\
+d(130dBm) &= 1.194\mathrm{km}\\
 \end{align*}
+
+
 $$
 | LinkBudget             | 154dBm |
 | ---------------------- | ------ |
-| Freifläche             |  |
-| Urban                  |  |
-| Urban(-28dB loss)      |  |
-| Line of sight          |  |
+| Suburban               | 5.732km |
+| Suburban(-24dB loss)   | 1.194km |
 
-Für Range City(-28dB loss) wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
+Für Range City(-24dB loss) wird eine Dämpfung von 16 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 24 dB reduziert.
 
 Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen höhe arbeiten kann.  
 Die Empfängerantenne liegt auf 2Meter höhe.
-
-Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tabella angegebene Reichweite von 35,3km nur theoretische Werte.
-Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation welche das Signal unterschiedlich beeinflussen würden.
 
 ## Fazit
 
