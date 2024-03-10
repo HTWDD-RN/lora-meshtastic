@@ -52,15 +52,17 @@ Bei Funkverbindungen wird die Signalstärke oft in dBm gemessen, während Dämpf
 
 |                |         |
 | -------------- | ------- |
-| transmit Power | 17dBm   |
-| Antenna gain   | 1,5dBi  |
-| RX sensitivity | -136dBm |
+| transmit Power | 21dBm   |
+| Antenna gain   | 0dBi  |
+| RX sensitivity | -131dBm |
 | RX antenna     | 0dBi    |
-| Link Budget    | 150dB   |
+| Link Budget    | 152dB   |
 
 WiFi LoRa 32 v3 (SX1262 Lora Chip)
-P(dBm) = 21dBm +-1dBm
+P(dBm) = 21dBm
 Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
+
+(1)<https://www.semtech.com/design-support/lora-calculator>
 
 ### Maximal mögliche Übertragunsstärke
 
@@ -85,11 +87,12 @@ $$
 (2) <https://www.thethingsnetwork.org/forum/t/max-allowed-antenna-gain-for-lora/37182>
 ## Überlegungen
 
-Mit einem Link Budget von 150dBm (Einstellung = long fast, mit 17dBm transmit Power und 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nur Freiraumdämpfung(Vakuum)) eine Distanz von bis zu 800km Überwinden
+Mit einem Link Budget von 152dBm (Einstellung = long fast, mit 21dBm transmit Power und 0dBi Antenne) lässt sich unter optimalen Bedingungen(nur Freiraumdämpfung(Vakuum)) eine Distanz von mehr als 800km Überwinden.
+Da dies nur unter optimalen Bedingungen möglich ist werden solche Werte natürlich nicht erreicht.
 
 Im Weltraum können Funksignale tatsächlich viel weiter reisen. Unter Normalbedingungen, auf unserem Planeten spielt die Sichtlinie eine bedeutende Rolle.
-Aufgrund der Tatsache, dass die Welt eine Kugel ist, ist es möglich auf 1,7m höhe 4,7km weit zu sehen.
-Da im sub-GHz Bereich eine quasioptische Ausbreitung für Radiowellen gilt. ist der Horizont auch gleichzeitig eine Begrenzung für Signale.
+Aufgrund der Tatsache, dass die Welt eine Kugel ist, ist es möglich auf 1,7m Höhe 4,7km weit zu sehen.
+Da im sub-GHz Bereich eine quasioptische Ausbreitung für Radiowellen gilt, ist der Horizont auch gleichzeitig eine Begrenzung für Funksignale.
 
 Im nächsten Schritt betrachten wir die Wellenausbreitung mit dem Hata-Okumura-Modell (Hata-Modell).
 
@@ -112,8 +115,8 @@ f &= \text{Übertragungsfrequenz  [MHz]} \\
 \\[2em]
 
 \begin{align*}
-A &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} \\
-B &= 44.9 - 6.55 \log_{10}{h_s} \\
+A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \og_{10}{(h_s)} \\
+B &= 44.9 - 6.55 \og_{10}{(h_s)} \\
 \end{align*}
 
 
@@ -133,23 +136,23 @@ $$
 \begin{align*}
 
 \text{Freifläche:} \\
-K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{f} - 0.8) \\
-C &= -4.78 \cdot (\log_{10}{f})^2 + 18.33 \cdot \log_{10}{f} - 40.94\\
+K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
+C &= -4.78 \cdot (\log_{10}{(f)})^2 + 18.33 \cdot \log_{10}{(f)} - 40.94\\
 
 \text{Suburban:} \\
-K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{f} - 0.8) \\
+K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
 C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
 
 \text{Medium:} \\
-K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{f} - 0.8) \\
+K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
 C &= 0 \\
 
 \text{Urban, 150 <= f <= 200 MHz:} \\ 
-K &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
+K &= 8.29 \cdot (\log_{10}{(1.54 \cdot h_r)})^2  - 1.1 \\
 C &= 0 \\
 
 \text{Urban, 200 < f <= 1500 MHz:} \\
-K &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97 \\
+K &= 3.2 \cdot (\log_{10}{(11.75 \cdot h_r)})^2 - 4.97 \\
 C &= 0 \\
 
 \end{align*}
@@ -219,12 +222,12 @@ Für Suburban(Max) wird das maximal mögliche legale Limit für Sendeleistung un
 
 Suburban(150dBm) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.
 
-Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen höhe arbeiten kann.  
-Die Empfängerantenne liegt auf 2Meter höhe.
+Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen Höhe arbeiten kann.  
+Die Empfängerantenne liegt auf 2Meter Höhe.
 
 ## Fazit
 
-Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollten bei Berechnungen immer die mögliche Sichtlinie beachtet werden und damit die plausabilität der Berechnung kontolliert und ggf. eingeschränkt werden. Die minimale höhe der Senderantenne macht die Anwendung des Hata-Modells für unser Projekt weniger praktikabel
+Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollten bei Berechnungen immer die mögliche Sichtlinie beachtet werden und damit die plausabilität der Berechnung kontolliert und ggf. eingeschränkt werden. Die minimale Höhe der Senderantenne macht die Anwendung des Hata-Modells für unser Projekt weniger praktikabel
 
 ## Notizen
 
@@ -287,7 +290,7 @@ Let's consider a simplified example of a LoRa link budget for a point-to-point c
 5. **Free Space Path Loss (Lp):** Using the free space path loss formula:
 
    $$
-   Lp = 20 \log_{10}{d} + 20 \log_{10}{f} + L_{FS}
+   Lp = 20 \log_{10}{d} + 20 \log_{10}{(f)} + L_{FS}
    $$
 
    $$
