@@ -95,12 +95,12 @@ Hata-Ausbreitungsformel
 
 $$
 \begin{align*}
-Loss(dB) &= A + B \cdot log_{10}{(d)} - K(hr) + C \\
+Loss(dB) &= A + B \cdot log_{10}{(d)} - K + C \\
 
 d &= \text{Distanz zwischen Sender und Empfänger (km)} \\
 h_s &= \text{Höhe der Senderantenne (m)} \\
 h_r &= \text{Empfängerantennenhöhe (m)} \\
-K(h_r) &= \text{Korrekturfaktor} \\
+K &= \text{Korrekturfaktor} \\
 f &= \text{Übertragungsfrequenz  [MHz]} \\
 
 \end{align*}
@@ -129,23 +129,23 @@ $$
 \begin{align*}
 
 \text{Freifläche:} \\
-K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
 C &= -4.78 \cdot (\log_{10}{f})^2 + 18.33 \cdot \log_{10}{f} - 40.94\\
 
 \text{Suburban:} \\
-K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
 C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
 
 \text{Medium:} \\
-K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
 C &= 0 \\
 
 \text{Urban, f <= 400 MHz:} \\ 
-K(h_r) &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
+K &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
 C &= 0 \\
 
 \text{Urban, f > 400 MHz:} \\
-K(h_r) &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97 \\
+K &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97 \\
 C &= 0 \\
 
 \end{align*}
@@ -173,12 +173,12 @@ Für die folgende Reichweitenanalyse [Range City(-28dB loss)] wird eine Dämpfun
 
 | LinkBudget             | 154dBm |
 | ---------------------- | ------ |
-| Range Hata Open        |  |
-| Range Hata City        |  |
-| Range City(-28dB loss) |  |
+| Freifläche             |  |
+| Urban                  |  |
+| Urban(-28dB loss)      |  |
 | Line of sight          |  |
 
-Das Hata-Modell beachtet keine Sichtlinie, deswegen habe ich die Höhe der Antenne des Senders auf 30Meter festgelegt, da dass Hata Modell nur mit dieser einschränkung genutzt werden kann.
+Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser Einschränkung genutzt werden kann.
 
 Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tabella angegebene Reichweite von 35,3km nur theoretische Werte.
 Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation welche das Signal unterschiedlich beeinflussen würden.
