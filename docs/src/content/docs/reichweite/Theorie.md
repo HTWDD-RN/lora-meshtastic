@@ -178,7 +178,7 @@ h_r &= 2\mathrm{m} \\
 f &= 869\mathrm{MHz} \\
 \end{align*}
 $$
-Somit können die Konstanten A und B im Vorfeld bestimmt werden  
+Somit können die gleichbleibenden Variablen A und B im Vorfeld bestimmt werden  
 $$
 \begin{align*}
 A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
@@ -225,7 +225,7 @@ Die Empfängerantenne liegt auf 2Meter höhe.
 
 ## Fazit
 
-Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollten bei Berechnungen immer die mögliche Sichtlinie beachtet werden und damit die plausabilität der Berechnung kontolliert und ggf. eingeschränkt werden.
+Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollten bei Berechnungen immer die mögliche Sichtlinie beachtet werden und damit die plausabilität der Berechnung kontolliert und ggf. eingeschränkt werden. Die minimale höhe der Senderantenne macht die Anwendung des Hata-Modells für unser Projekt weniger praktikabel
 
 ## Notizen
 
