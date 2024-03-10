@@ -140,11 +140,11 @@ C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
 K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
 C &= 0 \\
 
-\text{Urban, f <= 400 MHz:} \\ 
+\text{Urban, 150 <= f <= 200 MHz:} \\ 
 K &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
 C &= 0 \\
 
-\text{Urban, f > 400 MHz:} \\
+\text{Urban, 200 < f <= 1500 MHz:} \\
 K &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97 \\
 C &= 0 \\
 
@@ -162,15 +162,38 @@ Die bereitgestellten Formeln decken nicht alle im Okumuras vorgeschlagenen Bedin
 
 |                       |              |
 | --------------------- | ------------ |
-| Frequenz              | 100-1500 MHz |
+| Frequenz              | 150-1500 MHz |
 | Distanz               | 1-20km       |
 | Höhe Senderantenne    | 30-200m      |
 | Höhe Empfängerantenne | 1-10m        |
 
-Weil Hatas Modell nur für Entfernungen größer als 1km gilt, nutzen Simulatoren Freiraumausbreitung bis zu dieser Entfernung.
+$$
+\text{Mit folgenden Werten wurde gearbeitet: }\\
 
-Für die folgende Reichweitenanalyse [Range City(-28dB loss)] wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
+\begin{align}
+h_s &= 30\mathrm{m} \\
+h_r &= 2\mathrm{m} \\
+f &= 869\mathrm{MHz} \\
+\end{align}
+$$
+Somit können die Konstanten A und B im Vorfeld bestimmt werden
+$$
+\begin{align*}
+A &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} \\
+&= 69.55 + 26.16 \cdot \log_{10}{868} - 13.82 \cdot \log_{10}{30} \\
+&\thickapprox 126.008 \\
+\\
+B &= 44.9 - 6.55 \log{10}{h_s} \\
+&= 44.9 - 6.55 \log{10}{30}
+&\thickapprox 35.225\\
+\\
+K &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+&= (1.1 \cdot log_{10}{868} - 0.7) \cdot 2 - (1.56 \cdot \log{10}{868} - 0.8)
+&\thickapprox 1.281
 
+C &= 0 \\
+\end{align*}
+$$
 | LinkBudget             | 154dBm |
 | ---------------------- | ------ |
 | Freifläche             |  |
@@ -178,7 +201,10 @@ Für die folgende Reichweitenanalyse [Range City(-28dB loss)] wird eine Dämpfun
 | Urban(-28dB loss)      |  |
 | Line of sight          |  |
 
-Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser Einschränkung genutzt werden kann.
+Für Range City(-28dB loss) wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
+
+Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen höhe arbeiten kann.  
+Die Empfängerantenne liegt auf 2Meter höhe.
 
 Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tabella angegebene Reichweite von 35,3km nur theoretische Werte.
 Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation welche das Signal unterschiedlich beeinflussen würden.
