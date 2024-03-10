@@ -95,41 +95,58 @@ Hata-Ausbreitungsformel
 
 $$
 \begin{align*}
+Loss(dB) &= A + B \cdot log_{10}{d} - K(hr) + C \\
 
-d &= \text{Entfernung zwischen Sender und Empfänger} \\
-h_s &= \text{Höhe der Senderantenne} \\
-h_r &= \text{Empfängerantennenhöhe} \\
-K(h_r) &= \text{Korrekturfaktor abhängig} \\
-f &= \text{Übertragungsfrequenz} \\
+d &= \text{Distanz zwischen Sender und Empfänger (km)} \\
+h_s &= \text{Höhe der Senderantenne (m)} \\
+h_r &= \text{Empfängerantennenhöhe (m)} \\
+K(h_r) &= \text{Korrekturfaktor} \\
+f &= \text{Übertragungsfrequenz  [MHz]} \\
 
 \end{align*}
 
 \\[2em]
 
 \begin{align*}
-L_p \text{(urbanes Gebiet)} &= 69.55 + 26.16 \cdot \log_{10}{f} \\&\quad - 13.82 \cdot \log_{10}{h_s} \\&\quad + [44.9 - 6.55 \cdot \log_{10}{h_s}] \\&\quad \cdot \log_{10}{d} - K(h_r) \\
-
-L_p \text{(suburbanes Gebiet)} &= L_p \text{(urbanes Gebiet)} - 2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
-L_p \text{(offenes Gebiet)} &= L_p \text{(urbanes Gebiet)} - 4.78 \cdot (\log_{10}{f})^2 + 18.33 \cdot \log_{10}{f} - 40.94\\
+A &= 69.55 + 26.16 \cdot \log_{10}{f} - 13.82 \cdot \log_{10}{h_s} \\
+B &= 44.9 - 6.55 \log{10}{h_s} \\
 \end{align*}
 
 
 $$
 
-**Urbanes Gebiet:** große Stadt mit großen Gebäuden welche zwei oder mehreren Stockwerken oder größere Dörfer mit sehr nahen Häusern.
 
-**Suburbanes Gebiet:** Stadt oder oder Autobahn mit vereinzelten Bäumen und Gebäuden. Einige Hindernisse in der Nähe des Empfängers aber nicht sehr überfüllt.
 
-**Offenes Gebiet:** Keine großen Bäume oder Gebäude in Sichtlinie.
+**Urbanes Gebiet:** große Stadt mit großen Gebäuden welche zwei oder mehreren Stockwerken besitzen oder größere Dörfer mit sehr nahe stehenden Häusern.
+
+**Medium:**  Mittelgroße Stadt
+
+**Suburban:** Vorort
+
+**freifläche:** Keine großen Bäume oder Gebäude in Sichtlinie.
 
 $$
 \begin{align*}
 
-\text{Suburbanes Gebiet} K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8 \\
+\text{Freifläche:} \\
+K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+C &= -4.78 \cdot (\log_{10}{f})^2 + 18.33 \cdot \log_{10}{f} - 40.94\\
 
-\text{Urbanes Gebiet, f <= 300 MHz: }K(h_r) &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
+\\ \text{Suburban:} \\
+K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
 
-\text{Urbanes Gebiet, f > 300 MHz: }K(h_r) &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97
+\\ \text{Medium:} \\
+K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8) \\
+C &= 0 \\
+
+\text{Urban, f <= 400 MHz:} \\ 
+K(h_r) &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
+C &= 0 \\
+
+\text{Urban, f > 400 MHz:} \\
+K(h_r) &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97 \\
+C &= 0 \\
 
 \end{align*}
 
