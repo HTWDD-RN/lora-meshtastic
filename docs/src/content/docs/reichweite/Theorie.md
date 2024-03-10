@@ -65,6 +65,7 @@ Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
 ### Maximal mögliche Übertragunsstärke
 
 $ \text{Maximal 500mW ERP (1)} $
+$ \text{Maximal 2.15dBi Antenne (2)} $
 
 $$
 \begin{align*}
@@ -72,13 +73,16 @@ P(dBm) &= 10 ⋅ \log_{10} (P(500 \ \mathrm{mW}) \div 1 \ \mathrm{mW}) \\
 
 &= 26.9897000434 \\
 
-&= 27 \ \mathrm{dBm} \\
+&= 27\mathrm{dBm} \\
+\\
+P(max)&=P(dBm)+2.15\mathrm{dBi}\\
+P(max)&=29.15dBm
 \end{align*}
 $$
 
 (1) <https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html>
 (Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)
-
+(2) <https://www.thethingsnetwork.org/forum/t/max-allowed-antenna-gain-for-lora/37182>
 ## Überlegungen
 
 Mit einem Link Budget von 150dBm (Einstellung = long fast, mit 17dBm transmit Power und 1,5dBi Antenne) lässt sich unter optimalen Bedingungen(nur Freiraumdämpfung(Vakuum)) eine Distanz von bis zu 800km Überwinden
@@ -153,12 +157,10 @@ C &= 0 \\
 
 $$
 
-![Reichweite nach Okumara Hata](../../../assets/images/OkumuraHataSmallMedium.png)
-[[1](https://www.researchgate.net/figure/Okumura-Hata-Model-for-path-loss-for-small-and-medium-sized-cities-The-red-shaded-area_fig3_327211499)]
+![Reichweite nach Hata-Modell bei 868MHz](../../../assets/images/Figure_1.png)
+Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 150dBm maximal eine Reichweite
 
-Die Grafik zeigt die Reichweite nach dem Okumura Hata Modell für ein Suburbanes Gebiet. Der Rote Bereich überschreitet das totale link budget welches mit LoRa transceivern erlaubt ist.
-
-Die bereitgestellten Formeln decken nicht alle im Okumuras vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt für folgende Einschränkungen:
+Die bereitgestellten Formeln decken nicht alle im Okumura-Modell vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt nur für folgende Einschränkungen:
 
 |                       |              |
 | --------------------- | ------------ |
@@ -201,27 +203,29 @@ Loss(dB) &= A + B \cdot log_{10}{(d)} - K + C \\
 log_{10}{(d)} &= \frac{Loss(dB) - A + K - C}{B} \\
 d &= 10^\frac{Loss(dB) - A + K - C}{B} \\
 &= 10^\frac{Loss(dB) - 126.008 + 1.281 - 0}{35.225}\\
-&= 10^\frac{Loss(dB) - 127.289}{35.225}\\
-\\
-d(154dBm) &= 5.732\mathrm{km}\\
-d(130dBm) &= 1.194\mathrm{km}\\
+&= 10^\frac{Loss(dB) - 124.727}{35.225}\\
 \end{align*}
 
 
 $$
-| LinkBudget             | 154dBm |
+|             |  |
 | ---------------------- | ------ |
-| Suburban               | 5.732km |
-| Suburban(-24dB loss)   | 1.194km |
+| Suburban(Max)          | 10.467km|
+| Suburban(150dBm)               | 5.218km |
+| Suburban(Gebäude)   | 1.018km |
 
-Für Range City(-24dB loss) wird eine Dämpfung von 16 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 24 dB reduziert.
+Für Suburban(Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 20 dB reduziert.
+
+Für Suburban(Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget wie anfangs berechnet von 160,65dB.
+
+Suburban(150dBm) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.
 
 Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen höhe arbeiten kann.  
 Die Empfängerantenne liegt auf 2Meter höhe.
 
 ## Fazit
 
-Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollte immer die Sichtlinie beachtet werden. Um genauere Werte zu erreichen kann das Longley-Rice-Modell verwendet werden.
+Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollte gerade bei Freiflächen-Berechnungen immer die Sichtlinie beachtet werden.
 
 ## Notizen
 
