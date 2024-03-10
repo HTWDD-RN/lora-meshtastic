@@ -215,11 +215,11 @@ d &= 10^\frac{Loss(dB) - A + K - C}{B} \\
 $$
 |             |  |
 | ---------------------- | ------ |
-| Freifläche(Max)        | 64.640km (begrenzt aufgrund Sichtlinie 24.6km) |
+| Freifläche(Max)        | 64.640km (begrenzt auf Sichtlinie 24.6km) |
 | Suburban(Max)          | 10.130km|
 | Urban(Max)             | 9.975km |
 |||
-| Freifläche(152dB)      | 37.943km (begrenzt aufgrund Sichtlinie 24.6km) |
+| Freifläche(152dB)      | 37.943km (begrenzt auf Sichtlinie 24.6km) |
 | Suburban(152dB)        | 5.946km |
 | Urban(152dB)           | 5.855km |
 |||
