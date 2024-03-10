@@ -195,8 +195,6 @@ K &= (1.1 \cdot log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.
 \\
 C &= 0 \\
 \\
-Loss(dB)&= 154 \\
-\\
 \text{Somit müssen wir die einfache Formel nur noch nach d umstellen}\\
 \\
 Loss(dB) &= A + B \cdot log_{10}{(d)} - K + C \\
@@ -211,12 +209,13 @@ $$
 |             |  |
 | ---------------------- | ------ |
 | Suburban(Max)          | 10.467km|
-| Suburban(150dBm)               | 5.218km |
-| Suburban(Gebäude)   | 1.018km |
+| Suburban(150dBm)       | 5.218km |
+| Suburban(Gebäude)      | 1.018km |
+|Sichtlinie | 24.6km |
 
 Für Suburban(Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB reduziert.
 
-Für Suburban(Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget wie anfangs berechnet von 160,65dB.
+Für Suburban(Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget, wie anfänglich dargelegt, von 160,65dB.
 
 Suburban(150dBm) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.
 
