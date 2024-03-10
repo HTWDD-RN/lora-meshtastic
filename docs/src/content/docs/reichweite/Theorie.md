@@ -99,7 +99,7 @@ $$
 d &= \text{Entfernung zwischen Sender und Empfänger} \\
 h_s &= \text{Höhe der Senderantenne} \\
 h_r &= \text{Empfängerantennenhöhe} \\
-K(h_r) &= \text{Korrekturfaktor abhängig } h_r \\
+K(h_r) &= \text{Korrekturfaktor abhängig} \\
 f &= \text{Übertragungsfrequenz} \\
 
 \end{align*}
