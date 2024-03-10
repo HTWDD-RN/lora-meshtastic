@@ -214,7 +214,7 @@ $$
 | Suburban(150dBm)               | 5.218km |
 | Suburban(Gebäude)   | 1.018km |
 
-Für Suburban(Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 20 dB reduziert.
+Für Suburban(Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB reduziert.
 
 Für Suburban(Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget wie anfangs berechnet von 160,65dB.
 
