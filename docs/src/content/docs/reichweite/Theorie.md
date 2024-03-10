@@ -117,7 +117,7 @@ $$
 
 
 
-**Urbanes Gebiet:** große Stadt mit großen Gebäuden welche zwei oder mehreren Stockwerken besitzen oder größere Dörfer mit sehr nahe stehenden Häusern.
+**Urban:** große Stadt mit großen Gebäuden welche zwei oder mehreren Stockwerken besitzen oder größere Dörfer mit sehr nahe stehenden Häusern.
 
 **Medium:**  Mittelgroße Stadt
 
