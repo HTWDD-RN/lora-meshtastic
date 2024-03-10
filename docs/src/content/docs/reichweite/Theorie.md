@@ -91,14 +91,14 @@ Mit einem Link Budget von 152dBm (Einstellung = long fast, mit 21dBm transmit Po
 Da dies nur unter optimalen Bedingungen möglich ist werden solche Werte natürlich nicht erreicht.
 
 Im Weltraum können Funksignale tatsächlich viel weiter reisen. Unter Normalbedingungen, auf unserem Planeten spielt die Sichtlinie eine bedeutende Rolle.
-Aufgrund der Tatsache, dass die Welt eine Kugel ist, ist es möglich auf 1,7m Höhe 4,7km weit zu sehen.
+Aufgrund der Tatsache, dass die Welt eine Kugel ist, ist es möglich mit 1,7m Höhe 4,7km weit zu sehen.
 Da im sub-GHz Bereich eine quasioptische Ausbreitung für Radiowellen gilt, ist der Horizont auch gleichzeitig eine Begrenzung für Funksignale.
 
 Im nächsten Schritt betrachten wir die Wellenausbreitung mit dem Hata-Okumura-Modell (Hata-Modell).
 
-Das Hata-Modell verwendet verschiedene Begriffe in der Dämpfungsformel, um zwischen verschiedenen Typen von Landoberflächen zu unterscheiden. Es werden ländliche bis zu dicht besiedelten Region unterschieden.
+Das Hata-Modell verwendet verschiedene Begriffe in der Dämpfungsformel, um zwischen verschiedenen Typen von Landoberflächen zu unterscheiden. Es werden ländliche bis zu dicht besiedelte Regionen unterschieden.
 
-Hata-Ausbreitungsformel
+Hata-Ausbreitungsformel:
 
 $$
 \begin{align*}
@@ -161,7 +161,7 @@ C &= 0 \\
 $$
 
 ![Reichweite nach Hata-Modell bei 868MHz](../../../assets/images/Figure_1.png)
-Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 150dBm maximal eine Reichweite
+Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 152dBm maximal eine Reichweite
 
 Die bereitgestellten Formeln decken nicht alle im Okumura-Modell vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt nur für folgende Einschränkungen:
 
@@ -207,20 +207,28 @@ d &= 10^\frac{Loss(dB) - A + K - C}{B} \\
 &= 10^\frac{Loss(dB) - 124.727}{35.225}\\
 \end{align*}
 
-
+% K Urban 1.045
+% K Freifläche 1.281
+% C Freifläche -28.352
 $$
 |             |  |
 | ---------------------- | ------ |
-| Suburban(Max)          | 10.467km|
-| Suburban(150dBm)       | 5.218km |
+| Freifläche(Max)        | 64.640km (begrenzt auf 24.6km) |
+| Freifläche(152dB)      | 37.943km (begrenzt auf 24.6km) |
+| Freifläche(Gebäude)    | 12.612km |
+| Urban(Max)             | 9.975km |
+| Urban(152dB)           | 5.855km |
+| Urban(Gebäude)         | 1.220km |
+| Suburban(Max)          | 10.130km|
+| Suburban(152dB)        | 5.946km |
 | Suburban(Gebäude)      | 1.018km |
-|Sichtlinie | 24.6km |
+|Sichtlinie              | 24.6km  |
 
 Für Suburban(Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB reduziert.
 
-Für Suburban(Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget, wie anfänglich dargelegt, von 160,65dB.
+Für Suburban(Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget, wie anfänglich dargelegt, von 160.15dB.
 
-Suburban(150dBm) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.
+Suburban(150dB) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.
 
 Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen Höhe arbeiten kann.  
 Die Empfängerantenne liegt auf 2Meter Höhe.
