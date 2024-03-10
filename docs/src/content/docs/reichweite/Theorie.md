@@ -225,7 +225,7 @@ Die Empfängerantenne liegt auf 2Meter höhe.
 
 ## Fazit
 
-Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollte gerade bei Freiflächen-Berechnungen immer die Sichtlinie beachtet werden.
+Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollten bei Berechnungen immer die mögliche Sichtlinie beachtet werden und damit die plausabilität der Berechnung kontolliert und ggf. eingeschränkt werden.
 
 ## Notizen
 
