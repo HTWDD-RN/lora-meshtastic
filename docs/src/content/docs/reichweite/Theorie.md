@@ -66,8 +66,8 @@ Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
 
 ### Maximal mögliche Übertragunsstärke
 
-$ \text{Maximal 500mW ERP (1)} $
-$ \text{Maximal 2.15dBi Antenne (2)} $
+$ \text{Maximal 500mW ERP (2)} $
+$ \text{Maximal 2.15dBi Antenne (3)} $
 
 $$
 \begin{align*}
@@ -82,9 +82,9 @@ P(max)&=29.15dBm
 \end{align*}
 $$
 
-(1) <https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html>
+(2) <https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html>
 (Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)
-(2) <https://www.thethingsnetwork.org/forum/t/max-allowed-antenna-gain-for-lora/37182>
+(3) <https://www.thethingsnetwork.org/forum/t/max-allowed-antenna-gain-for-lora/37182>
 ## Überlegungen
 
 Mit einem Link Budget von 152dBm (Einstellung = long fast, mit 21dBm transmit Power und 0dBi Antenne) lässt sich unter optimalen Bedingungen(nur Freiraumdämpfung(Vakuum)) eine Distanz von mehr als 800km Überwinden.
@@ -163,7 +163,7 @@ $$
 ![Reichweite nach Hata-Modell bei 868MHz](../../../assets/images/Figure_1.png)
 Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 152dBm maximal eine Reichweite von ungefähr 6km möglich
 
-Die bereitgestellten Formeln decken nicht alle im Okumura-Modell vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt nur für folgende Einschränkungen:
+Die bereitgestellten Formeln decken nicht alle im Okumura-Modell vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt nur mit folgende Einschränkungen:
 
 |                       |              |
 | --------------------- | ------------ |
@@ -233,7 +233,7 @@ Für (Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und
 
 Für (Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget, wie anfänglich dargelegt, von 160.15dB.
 
-(150dB) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.
+(152dB) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.
 
 Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen Höhe arbeiten kann.  
 Die Empfängerantenne liegt auf 2Meter Höhe.
