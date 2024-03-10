@@ -172,16 +172,15 @@ Die bereitgestellten Formeln decken nicht alle im Okumura-Modell vorgeschlagenen
 | Höhe Senderantenne    | 30-200m      |
 | Höhe Empfängerantenne | 1-10m        |
 
+\\Mit folgenden Werten wurde im suburbanen gearbeitet:\\
 $$
-\text{Mit folgenden Werten wurde im suburbanen gearbeitet: }\\
-
 \begin{align*}
 h_s &= 30\mathrm{m} \\
 h_r &= 2\mathrm{m} \\
 f &= 869\mathrm{MHz} \\
 \end{align*}
 $$
-Somit können die gleichbleibenden Variablen A und B im Vorfeld bestimmt werden  
+\\Somit können die gleichbleibenden Variablen A und B im Vorfeld bestimmt werden  \\
 $$
 \begin{align*}
 A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
