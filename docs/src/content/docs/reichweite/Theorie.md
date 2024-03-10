@@ -158,7 +158,6 @@ C &= 0 \\
 \end{align*}
 
 
-$$
 
 ![Reichweite nach Hata-Modell bei 868MHz](../../../assets/images/Figure_1.png)
 Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 152dBm maximal eine Reichweite von ungefähr 6km möglich
