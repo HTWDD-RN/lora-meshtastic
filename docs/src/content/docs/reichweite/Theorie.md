@@ -89,7 +89,7 @@ Da im sub-GHz Bereich eine quasioptische Ausbreitung für Radiowellen gilt. ist 
 
 Im nächsten Schritt betrachten wir die Wellenausbreitung mit dem Hata-Okumura-Modell (Hata-Modell).
 
-Das Hata-Modell verwendet verschiedene Begriffe uin der Dämpfungsformel, um zwischen verschiedenen Landnutzungen zu unterscheiden, von ländlicher bis zu dicht besiedelten Region.
+Das Hata-Modell verwendet verschiedene Begriffe in der Dämpfungsformel, um zwischen verschiedenen Typen von Landoberflächen zu unterscheiden. Es werden ländliche bis zu dicht besiedelten Region unterschieden.
 
 Hata-Ausbreitungsformel
 
@@ -125,11 +125,11 @@ $$
 $$
 \begin{align*}
 
-\text{Mittlere Stadt - kleine Stadt} K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8 \\
+\text{Suburbanes Gebiet} K(h_r) &= (1.1 \cdot log_{10}{f} - 0.7) \cdot h_r - (1.56 \cdot \log{10}{f} - 0.8 \\
 
-\text{Großstadt, f <= 300 MHz: }K(h_r) &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
+\text{Urbanes Gebiet, f <= 300 MHz: }K(h_r) &= 8.29 \cdot (\log_{10}{1.54 \cdot h_r})^2  - 1.1 \\
 
-\text{Großstadt, f > 300 MHz: }K(h_r) &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97
+\text{Urbanes Gebiet, f > 300 MHz: }K(h_r) &= 3.2 \cdot (\log_{10}{11.75 \cdot h_r})^2 - 4.97
 
 \end{align*}
 
@@ -139,29 +139,29 @@ $$
 ![Reichweite nach Okumara Hata](../../../assets/images/OkumuraHataSmallMedium.png)
 [[1](https://www.researchgate.net/figure/Okumura-Hata-Model-for-path-loss-for-small-and-medium-sized-cities-The-red-shaded-area_fig3_327211499)]
 
-Die Grafik zeigt die Reichweite nach dem Okumura Hata Modell für Vororte und Kleinstädte. Der Rote Bereich überschreitet das totale link budget welches mit LoRa transceivern erlaubt ist.
+Die Grafik zeigt die Reichweite nach dem Okumura Hata Modell für ein Suburbanes Gebiet. Der Rote Bereich überschreitet das totale link budget welches mit LoRa transceivern erlaubt ist.
 
-Die bereitgestellten Formeln decken nicht alle im Okumuras-Bericht vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt für folgende Einschränkungen:
+Die bereitgestellten Formeln decken nicht alle im Okumuras vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt für folgende Einschränkungen:
 
 |                       |              |
 | --------------------- | ------------ |
 | Frequenz              | 100-1500 MHz |
 | Distanz               | 1-20km       |
-| Höhe Senderantenne    | 25-200m      |
+| Höhe Senderantenne    | 30-200m      |
 | Höhe Empfängerantenne | 1-10m        |
 
 Weil Hatas Modell nur für Entfernungen größer als 1km gilt, nutzen Simulatoren Freiraumausbreitung bis zu dieser Entfernung.
 
-Für die folgende Reichweitenanalyse wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für Fading angenommen. Das bedeutet, dass es an die Bedingungen für Sender innerhalb von Gebäuden angepasst ist. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
+Für die folgende Reichweitenanalyse [Range City(-28dB loss)] wird eine Dämpfung von 20 dB für das Eindringen in Gebäude und ein Verlust von 8 dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 28 dB reduziert um die Abdeckung in dicht bebauten Umgebungen zu simulieren.
 
 | LinkBudget             | 154dBm |
 | ---------------------- | ------ |
-| Range Hata Open        | 35,3km |
-| Range Hata City        | 5,2km  |
-| Range City(-28dB loss) | 0,85km |
-| Line of sight          | 22,7km |
+| Range Hata Open        |  |
+| Range Hata City        |  |
+| Range City(-28dB loss) |  |
+| Line of sight          |  |
 
-Das Hata-Modell beachtet keine Sichtlinie, deswegen habe ich die Höhe der Antenne des Senders auf 25Meter festgelegt, da die die übliche Antennenhöhe einer LTE-Antenne im innerstädtischem Gebiet darstellt und die Sichtlinie seperat mit 22,7km berechnet.
+Das Hata-Modell beachtet keine Sichtlinie, deswegen habe ich die Höhe der Antenne des Senders auf 30Meter festgelegt, da dass Hata Modell nur mit dieser einschränkung genutzt werden kann.
 
 Hata Open bedeutet, dass sich nichts zwischen der Sender und Empfengerantenne befindet. Die Radiowelle wird nur durch die Freifeld-Dämpfung und die Erdoberfläche abgeschwächt. Daher sind die im obigen Tabella angegebene Reichweite von 35,3km nur theoretische Werte.
 Das einfache Hata-Modell unterscheidet nicht zwischen Wasseroberflächen, Wiesen, Ackerland oder offenen Flächen mit geringer Vegetation welche das Signal unterschiedlich beeinflussen würden.
