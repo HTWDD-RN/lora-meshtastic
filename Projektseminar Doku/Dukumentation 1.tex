@@ -232,8 +232,74 @@ Placeholder
 Placeholder
 \subsubsection{Embedding-Layer}
 Placeholder
-\section{Codevorstellung und Beschreibung$(Einzelschritte?)$}
-Placeholder incl. Auswertungsgrafiken
+\newpage
+\section{Theorie}
+
+\subsection{Link-Budget}
+
+Die Reichweite einer Funkverbindung lässt sich mittel des Link-Budgets (Leistungsübertragungsbilanz) darstellen und gibt die Qualität eines Funk-Übertragungskanals an.
+Eines der einfachsten Modelle um ein Linkbudget zu errechnen ist mittels Addition der Sendeleistung (Transmitter Power, Tx), der Empfängerempfindlichkeit (Receiver Power, Rx), des Antennengewinns und der Freiraumdämpfung (Free Space Path Loss, FSPL).
+
+\subsection{Kenngrößen}
+
+Der Spreading Faktor und somit die Reichweite eines Senders sind von den Ausbreitungsbedingungen abhängig.
+Die Empfängerempfindlichkeit hängt von Signal-Rausch-Verhältnis (SNR), Rauschfaktor (NF) und Bandbreite (BW) ab.
+
+Die Freiraumdämpfung beeinträchtigt die Reichweite. Durch die Verdopplung der Entfernung nimmt die Freiraumdämpfung um 6 dB zu.
+Reflektionen und Brechungen der Funkwellen an Hindernissen und Boden beeinflussen Signalpegel und Reichweite. Im LoRaWAN-Netzwerk befindet sich eine Seite der Funkverbindung in der Regel in Bodennähe.
+Hindernisse in der ersten Fresnelzone beeinflussen den Signalpegel auf der Rx-Seite und verkürzen die Reichweite.
+SF-Werte und somit die Reichweite eines Senders hängen von den Ausbreitungsbedingungen ab. LoRaWAN erlaubt mittels ADR ein automatisches Netzmanagement und regelt damit die Reichweiten der Sender.
+
+\subsection{dB}
+
+Die Einheit dB (Dezibel) wird im Zusammenhang mit Funkverbindungen verwendet, um die Signalstärke, Dämpfung oder Verstärkung von elektromagnetischen Signalen zu messen. dB ist eine logarithmische Einheit, die das Verhältnis zwischen zwei Größen ausdrückt. In Bezug auf Funkverbindungen sind die beiden häufigsten Anwendungen die Messung der Signalstärke und die Angabe von Dämpfung oder Verstärkung.
+
+1. **Signalstärke in dBm (Dezibel Milliwatt):**
+
+   - dBm misst die absolute Leistung eines Signals im Vergleich zu einem Referenzwert von 1 Milliwatt.
+   - Ein positives dBm-Wert zeigt an, dass das Signal stärker ist als 1 Milliwatt, während ein negativer Wert darauf hinweist, dass es schwächer ist.
+   - Beispiel: Ein Signal mit -50 dBm ist stärker als ein Signal mit -60 dBm.
+
+2. **Dämpfung und Verstärkung in dB:**
+   - dB wird auch verwendet, um die Dämpfung oder Verstärkung von Signalen in einer Leitung oder einem System auszudrücken.
+   - Eine positive dB-Angabe deutet auf Verstärkung hin, während eine negative dB-Angabe auf Dämpfung hinweist.
+   - Beispiel: Ein Verstärker, der das Signal um 20 dB verstärkt, erhöht die Signalstärke um das 100-fache.
+
+Bei Funkverbindungen wird die Signalstärke oft in dBm gemessen, während Dämpfung oder Verstärkung von Antennen, Kabeln oder Verstärkern in einfachen dB-Angaben ausgedrückt werden. Dies ermöglicht eine präzise und effektive Kommunikation über die Leistung von Funksignalen und die Leistung von Komponenten in drahtlosen Netzwerken.
+
+\subsection{Channelsettings}
+
+|                           |                     |
+| ------------------------- | ------------------- |
+| Channelsetting            | Long Range / Fast   |
+| Alt Channelname           | Long Fast           |
+| Data Rate                 | 1.07 kbps (default) |
+| Spreading Factor/ Symbols | 11 / 2048           |
+| Coding Rate               | 4/5                 |
+| Bandwith                  | 250                 |
+
+\subsection{Transceiverwerte}
+
+|                |         |
+| -------------- | ------- |
+| transmit Power | 21dBm   |
+| Antenna gain   | 0dBi  |
+| RX sensitivity | -131dBm |
+| RX antenna     | 0dBi    |
+| Link Budget    | 152dB   |
+
+WiFi LoRa 32 v3 (SX1262 Lora Chip)
+P(dBm) = 21dBm
+Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
+
+(1)<https://www.semtech.com/design-support/lora-calculator>
+
+\subsection{Maximal mögliche Übertragunsstärke}
+
+
+
+
+
 \newpage
 
 \section{Discussion}
