@@ -201,6 +201,53 @@ https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ Beim diesen
 	\item USB-C → USB-C funktioniert manchmal nicht. Dies könnte an einem Fehler bei USB-C Power Delivery liegen. Adapter USB-C → USB-A (findet man meist als OTG-Adapter) schafft Abhilfe.
 \end{itemize}
 
+\section{Simulation}
+TODO LINKS einfügen @goeranh
+
+Die Wartung vieler Meshtastic Nodes für den Zweck des Experimentierens mit der Software bzw. dem Protokoll kommt mit einem größeren Aufwand einher. Dafür kann sich eine Simulation besser eignen, um Resultate ohne Aufwand direkt beobachten zu können.
+
+Mit der Software Meshtasticator ist es möglich, ein Meshtastic Netzwerk zu simulieren. Diese basiert auf zwei vorherigen Simulatoren (lora-network-simulator und LoRaSim) und nutzt unterliegend die Meshtastic Linux Anwendung, weswegen die Verwendung eines Linux Betriebsystems Voraussetzung ist.
+
+Wir haben den Simulator in einer Ubuntu-VM installiert. Einige Pakete mussten installiert werden.
+\begin{lstlisting}
+	sudo apt install git python3-tk python3-pip \
+	python3-venv gpiod libgpiod gpiod libgpiod-dev \
+	libgpiod2 libyaml-cpp-dev libbluetooth-dev
+\end{lstlisting}
+
+Danach musste man das Meshtasticator und Meshtastic-Firmware Repository herunterladen.
+
+Um die Firmware zu compilieren, benötigt man PlatformIO. Das Tool lässt sich mit dem System Paketmanager wie z.B. apt installieren, häufig bekommt man eine veraltete Version, da die Paketquellen der meisten Betriebsysteme nur langsam aktualisiert werden.
+
+Deshalb empfehlen wir, den Paketmanager von Python zu nutzen:
+\begin{lstlisting}
+	pip install platformio
+\end{lstlisting}
+
+Der Installationspfad liegt in ~/.local/bin, welcher nicht standardmäßig in der Systemvariable PATH enthalten sein kann. Falls der Befehl pio beim Aufruf nicht gefunden wird, reicht es aus, den Installiationspfad zum System-PATH hinzuzufügen:
+\begin{lstlisting}
+	export PATH="$HOME/.local/bin:$PATH"
+\end{lstlisting}
+
+Die Meshtastic Firmware, welche normalerweise für IoT Hardware kompiliert wird, kann auch nativ auf einem Linux Betriebsystem mithilfe von Portduino ausgeführt werden.
+
+Mit Environment-Parameter native baut PlatformIO die Firmware für ein Linux Betriebsystem.
+\begin{lstlisting}
+	pio run --environment native
+\end{lstlisting}
+
+Tipp
+
+Die PlatformIO Extension für VSCode bietet eine praktische GUI, mit der die Befehle ausgeführt werden können.
+
+Das kompilierte Binary befindet sich dann im Ordner \lstinline{firmware/.pio/build/native}.
+Damit der Meshtasticator die gewünschten Anordnungen simulieren kann, muss die Binary in den Ordner von Meshtasticator kopiert werden. Bevor die Abhängigkeiten von Meshtasticator installiert werden können, sollte in dem Ordner eine Python-Umgebung aktiviert werden:
+\begin{lstlisting}
+	python3 -m venv venv
+	source venv/bin/activate
+\end{lstlisting}
+Die Abhängigkeiten können mit \lstinline{pip3 install -r requirements.txt} installiert werden.
+
 \section{Werkzeuge}
 \begin{description}
 
