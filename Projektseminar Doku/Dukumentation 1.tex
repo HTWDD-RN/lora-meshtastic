@@ -11,6 +11,11 @@
 \usepackage{epstopdf}
 \usepackage{tabto}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{listings}
+\lstset{
+	language=bash,
+	basicstyle=\ttfamily
+}
 \author{Christian Grieß}
 \begin{document}
 \begin{titlepage}
@@ -148,6 +153,53 @@ max TX power: +21dBm
 	\includegraphics[scale=0.1]{t-deck.jpg}
 \end{figure}
 
+\section{Firmware flashen}
+Geräte brauchen Firmware
+
+\subsection{Hardware identifizieren oder auswählen}
+Achtung!
+Vorweg, Geräte nur mit angeschlossener Antenne einschalten! Anderenfalls kann das Gerät sich im schlimmsten Fall selber zerstören.
+
+Meshtastic wird offiziell nur von bestimmten Geräten welche ein LoRa Modul innehaben supportet.
+
+Es ist darauf zu achten, dass jedes Gerät welches im Meshnetz betrieben werden soll auf der gleichen Frequenz arbeitet. Hier gibt es unterschiede!
+
+In deutschland können die freien Frequenzbänder 433 MHz und 868MHz, auf welchen Lora operiert, ohne Lizenzkosten oder Amateurfunklizenz genutzt werden.
+
+Solange WLAN Verbindung zu einem Device nicht notw. ist und Bluetooth ausreicht, sollte ein nRF52 Chip gewählt werden, da diese energieffizienter als ESP32 Chips und einfacher zu flashen sind. Es gibt auch noch Geräte auf Basis des RP2040, diese haben wir allerdings nicht getestet.
+
+Eine Liste mit unterstützer Hardware findet sich hier:
+
+https://meshtastic.org/docs/hardware/devices/
+
+\subsubsection{Serial Treiber für ESP32}
+Einen für das eigene Betriebssystem passenden Treiber auf folgender Seite identifizieren, herunterladen und Installieren:
+
+https://meshtastic.org/docs/getting-started/serial-drivers
+
+\subsubsection{Serial Treiber für nRF52}
+nRF52 Chips benötigen normalerweise keinen Serial Treiber. Sie benutzen einen UF2 bootloader, welche das Gerät als USB-Stick vom Betriebssystem erkennen lassen.
+
+Auf keinen Fall folgenden USB geräte treiber herunterladen, es sei denn es wird UF2 support benötigt
+
+https://meshtastic.org/docs/getting-started/serial-drivers/nrf52
+
+\subsection{Firmware für ESP32 flashen}
+https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/ Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux eine Nix-Flake erstellt, die Python mit den richtigen Paketen installiert und eine kleine Anleitung (auch zum selber Compilieren der Firmware) für esp32 und nRF52 Geräte enthät.
+
+\subsection{Firmware für ESP32 nRF52}
+https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ Beim diesen Geräten ist es bei uns manchmal vorgekommen, dass das Flashen von Firmware zwar bis zu dem “Drag und Drop”-Schritt funktioniert und dann aber nicht wirklich mit der neuen Version neu startet. Falls das passiert muss man sich mit einer seriellen Konsole mit dem Gerät verbinden und einfach nur einmal Enter drücken, besonders nachdem Factory-Erase. Das steht unter dem Punkt Factory-Erase auch dokumentiert, aber man benötigt nicht zwingend die Meshtastic CLI, sondern lediglich ein Programm wie z. B. minicom unter Linux.
+
+\section{Häufige Probleme - Kommunikation mit Gerät über USB}
+\begin{itemize}
+	\item Die Gerät-Datei /dev/ttyUSB0 gehört der Nutzergruppe dialout. Damit der Nutzer Schreibrechte erhalten kann, muss er zur Gruppe hinzugefügt werden:
+	
+	\lstinline{sudo usermod -aG dialout <user-name>}
+	
+	Der Nutzer muss sich ausloggen und wieder einloggen, damit er in der Gruppe enthalten ist.
+	\item Prüfen, ob das Kabel zwischen Computer und Gerät auch wirklich Daten übertragen kann.
+	\item USB-C → USB-C funktioniert manchmal nicht. Dies könnte an einem Fehler bei USB-C Power Delivery liegen. Adapter USB-C → USB-A (findet man meist als OTG-Adapter) schafft Abhilfe.
+\end{itemize}
 
 \section{Werkzeuge}
 \begin{description}
