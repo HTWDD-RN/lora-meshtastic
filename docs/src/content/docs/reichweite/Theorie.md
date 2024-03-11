@@ -211,7 +211,7 @@ d &= 10^\frac{Loss(dB) - A + K - C}{B} \\
 $$
 |             |  |
 | ---------------------- | ------ |
-| Freifläche(Max)        | 64.640km (begrenzt auf Sichtlinie 24.6km) |
+| Freifläche(Max)        | 64.640km (Begrenzung! Sichtlinie 24.6km) |
 | Suburban(Max)          | 10.130km|
 | Urban(Max)             | 9.975km |
 |||
@@ -224,7 +224,9 @@ $$
 | Urban(Gebäude)         | 1.018km |
 |||
 |Sichtlinie              | 24.6km  |
-
+  
+Es darf nicht vergessen werden, dass das Hata-Modell nur eine annäherung im Bereich bei Entfernungen um die 1-20km ist. Alle Werte die darüber Berechnet werden sollten mit anderen Werkzeugen überprüft werden.  
+  
 Für (Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB auf 128dB reduziert.
 
 Für (Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget, wie anfänglich dargelegt, von 160.15dB.
