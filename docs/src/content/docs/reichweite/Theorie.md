@@ -225,7 +225,7 @@ $$
 |||
 |Sichtlinie              | 24.6km  |
   
-Es darf nicht vergessen werden, dass das Hata-Modell nur eine annäherung im Bereich bei Entfernungen um die 1-20km ist. Alle Werte die darüber Berechnet werden sollten mit anderen Werkzeugen überprüft werden.  
+Es darf nicht vergessen werden, dass das Hata-Modell nur eine annäherung im Bereich bei Entfernungen um die 1-20km ist. Alle Werte die darüber berechnet werden sollten mit anderen Werkzeugen überprüft werden. Wie in unserem Fall Freifläche(Max) und Freufläche(Gebäude).
   
 Für (Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB auf 128dB reduziert.
 
