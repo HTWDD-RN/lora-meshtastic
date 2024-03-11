@@ -72,9 +72,7 @@ $ \text{Maximal 2.15dBi Antenne (3)} $
 $$
 \begin{align*}
 P(dBm) &= 10 ⋅ \log_{10} (P(500 \ \mathrm{mW}) \div 1 \ \mathrm{mW}) \\
-
 &= 26.9897000434 \\
-
 &= 27\mathrm{dBm} \\
 \\
 P(max)&=P(dBm)+2.15\mathrm{dBi}\\
@@ -103,23 +101,17 @@ Hata-Ausbreitungsformel:
 $$
 \begin{align*}
 Loss(dB) &= A + B \cdot \log_{10}{(d)} - K + C \\
-
 d &= \text{Distanz zwischen Sender und Empfänger (km)} \\
 h_s &= \text{Höhe der Senderantenne (m)} \\
 h_r &= \text{Empfängerantennenhöhe (m)} \\
 K &= \text{Korrekturfaktor} \\
 f &= \text{Übertragungsfrequenz  [MHz]} \\
-
 \end{align*}
-
 \\[2em]
-
 \begin{align*}
 A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
 B &= 44.9 - 6.55 \log_{10}{(h_s)} \\
 \end{align*}
-
-
 $$
 
 
@@ -134,30 +126,22 @@ $$
 
 $$
 \begin{align*}
-
 \text{Freifläche:} \\
 K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
 C &= -4.78 \cdot (\log_{10}{(f)})^2 + 18.33 \cdot \log_{10}{(f)} - 40.94\\
-
 \text{Suburban:} \\
 K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
 C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
-
 \text{Medium:} \\
 K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
 C &= 0 \\
-
 \text{Urban, 150 <= f <= 200 MHz:} \\ 
 K &= 8.29 \cdot (\log_{10}{(1.54 \cdot h_r)})^2  - 1.1 \\
 C &= 0 \\
-
 \text{Urban, 200 < f <= 1500 MHz:} \\
 K &= 3.2 \cdot (\log_{10}{(11.75 \cdot h_r)})^2 - 4.97 \\
 C &= 0 \\
-
 \end{align*}
-
-
 $$
 ![Hata, Suburban, 868MHz](../../../assets/images/Figure_2.png)
 Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 152dBm maximal eine Reichweite von ungefähr 6km möglich
@@ -225,7 +209,7 @@ $$
 |||
 |Sichtlinie              | 24.6km  |
   
-Es darf nicht vergessen werden, dass das Hata-Modell nur eine annäherung im Bereich bei Entfernungen um die 1-20km ist. Alle Werte die darüber berechnet werden sollten mit anderen Werkzeugen überprüft werden. Wie in unserem Fall Freifläche(Max) und Freufläche(Gebäude).
+Es darf nicht vergessen werden, dass das Hata-Modell nur eine annäherung im Bereich bei Entfernungen um die 1-20km ist. Alle Werte die darüber berechnet werden sollten mit anderen Werkzeugen überprüft werden. Wie in unserem Fall Freifläche(Max) und Freifläche(Gebäude).
   
 Für (Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB auf 128dB reduziert.
 
@@ -245,12 +229,9 @@ Fazit: Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung
 ### Link-Budget Formel
 
 $$
-
 \begin{align*}
 PRX &= PTX + GTX + GRX − LTX − LFS − LP − LRX \\
-
 \\
-
 PRX &= \text{received power (dBm)} \\
 PTX &= \text{transmitter output power (dBm)} \\
 GTX &= \text{transmitter antenna gain (dBi)} \\
@@ -261,9 +242,7 @@ LP  &= \text{miscellaneous signal propagation losses} \\
     &\phantom{=} \text{(these include fading margin, polarization mismatch, losses associated with} \\
    &\phantom{=} \text{medium through which signal is travelling, other losses...) (dB)} \\
 LRX &= \text{receiver feeder and associated losses (feeder, connectors, etc.) (d)B} \\
-
 \\[2em]
-
 FSPL \mathrm{(dB)} &= 20\log_{10}(d) + 20\log_{10}(f) - 147.55 \\
 FSPL &= (4πd/λ) \cdot 2 = (4πdf/c) \cdot 2 \\
 \\
@@ -275,11 +254,8 @@ f &= \text{Frequenz in Hertz} \\
 BW &= \text{Bandbreite in Hz} \\
 NF &= \text{Rauschfaktor in dB} \\
 SNR &= \text{Signal-Rausch-Verhältnis (signal to noise ratio).} \\
-    &\phantom{=} \text{Es gibt an, wie weit das Signal über dem Rauschen liegen muss.}
-
+    &\phantom{=} \text{Es gibt an, wie weit das Signal über dem Rauschen liegen muss.}\\
 \end{align*}
-
-
 $$
 
 ### Line of Sight tool
