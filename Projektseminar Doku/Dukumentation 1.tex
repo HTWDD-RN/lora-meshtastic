@@ -164,82 +164,11 @@ Maschinelles Lernen ist das Fachgebiet, das Computern die Fähigkeit zu lernen v
 \begin{flushright} - Arthur Samuel 1959  \end{flushright}
 
 \section{Was sind Rekurrente Neurale Netzwerke?}
-Ein Rekurrentes Neurales Netzwerk hat im gegensatz zu anderen neuralen Netzen (z.B. Feedforward Neural Network) Rückwärts gerichtete Neuronen. 
-Die einfachste Variante besteht aus nur einem Neuron, dass Eingaben erhält, eine Ausgabe produziert und diese Ausgabe wieder an sich selbst schickt.\newline
-
-\begin{tikzpicture}
-  \path 
-  
-  	(-1,2) node (y0){y}
-    	(5,2) node (y1){$y_{(t-2)}$}
-	(9,2) node (y2){$y_{(t-1)}$}
-	(13,2) node (y3){$y_{(t)}$}
-	
-	(-1,-2) node (x0) {x}
-	(5,-2) node (x1) {$x_{(t-2)}$}  	
-	(9,-2) node (x2) {$x_{(t-1)}$}
-	(13,-2) node (x3) {$x_{(t)}$}
-	
-	(13,-3) node (t) {$t$}
-	
-    	(-1,0) node[circle split,draw,double,fill=red!20](z0)
-  		{
-    		$Ausgabe$
-    		\nodepart{lower}
-    		$Eingabe$
-  		}
-  	(5,0) node[circle split,draw,double,fill=red!20](z1)
-  		{
-    		$Ausgabe$
-    		\nodepart{lower}
-    		$Eingabe$
-  		}
-	(9,0) node[circle split,draw,double,fill=red!20](z2)
-  		{
-		$Ausgabe$
-    		\nodepart{lower}
-    		$Eingabe$
-  		}
-	(13,0) node[circle split,draw,double,fill=red!20](z3)
-  		{
-    		$Ausgabe$
-    		\nodepart{lower}
-    		$Eingabe$
-  		};
-  \draw[-latex] (3,0) -- (z1.south west);
-
-  \draw[-latex] (z1.north east) -- (z2.south west);
-  \draw[-latex] (z2.north east) -- (z3.south west);
-  
-  \draw[-latex] (z3.north east) -- (15,0);
-	
-  \draw[->, black] (z0) -- (y0);
-  \draw[->, black] (x0) -- (z0);  
-  
-  \draw[->, black] (z1) -- (y1);
-  \draw[->, black] (x1) -- (z1);
-
-  \draw[->, black] (z2) -- (y2);
-  \draw[->, black] (x2) -- (z2);
-  
-  \draw[->, black] (z3) -- (y3);
-  \draw[->, black] (x3) -- (z3);	
-  
-  \draw[->, black] (5,-3) -- (t);
- 
-  
-  \end{tikzpicture}
- 
-Einzelnes Neuron links       \tab    entlang der Zeitachse aufgerollt rechts
-
-
-Durch die Rückkopplungen können lokale Optima entstehen, die zu unübersichtlichen Netzzuständen führen. Rekurrente neuronale Netze sind nicht in der Lage, weit entfernte oder zurückliegende Informationen miteinander zu verknüpfen. Netze mit sogenannten LSTM-Zellen (Long Short Term Memory) lösen dieses Problem, indem die Zellen neben einem Eingang und einem Ausgang ein Merk- und Vergesstor besitzen. Es entsteht eine Art Kurzzeitgedächtnis, das Informationen relativ lange vorhalten kann und sich an früher gemachte Erfahrungen erinnert.
-
-Rekurrente neuronale Netze eignen sich im Gegensatz zu den Feedforward-Netzen nicht nur für die einfache Mustererkennung. Sie sind in der Lage, komplexere Sequenzen zu verarbeiten. 
+Placeholder
 
 \subsection{ML-Modell}
 $<Grafik>$ \newline
-Grobe Beschreibung, was, warum, in welcher Reihenfolge gemacht wird.
+Placeholder
 \subsubsection{GRU-Layer}
 Why GRU (Vorteile, Nachteile) \newline
 Verallgemeinerte(vereinfachte) Grafik (Update Gate, Reset Gate, Current Memory)\newline
