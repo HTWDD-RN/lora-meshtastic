@@ -20,3 +20,8 @@ pnpm-debug.log*
 .DS_Store
 
 .idea/
+Projektseminar\ Doku/*.aux
+Projektseminar\ Doku/*.log
+Projektseminar\ Doku/*.pdf
+Projektseminar\ Doku/*.synctex.gz
+Projektseminar\ Doku/*.toc
