@@ -86,13 +86,31 @@ Es ist für große Reichweite, kleine Bandbreite und Niedrigenergiekommunikation
 	\item Wetterstationen die nur ab und zu Informationen übertragen
 \end{itemize}
 
-\subsubsection{LoRa und LoRaWAN}
+\subsection{LoRa und LoRaWAN}
 
 LoRaWAN ist über LoRa angesiedelt und definiert das Kommunikationsprotokoll und die Systemarchitektur.
 
 Es ist wichtig zu verstehen, dass es möglich ist LoRa ohne LoRaWAN zu benutzen. Andere LoRa basierte Netzwerke sind Helium, The Things Network Disaster.radio und, was wir weiter betrachten werden, Meshtastic.
 
+\subsection{Meshtastic}
+Wie im vorherigen Absatz erwähnt, baut Meshtastic auf LoRa auf und schafft ein dezentralisiertes Mesh-Netzwerk.
 
+Es bringt folgende Eigenschaften mit sich:
+\begin{itemize}
+	\item Verschlüsselte und Textbasierte Kommunikation
+	\item Plattformunabhängig
+	\begin{itemize}
+		\item Computer (unabhänging vom Betriebssystem)
+		\item Android (dedizierte Chat-App)
+		\item iOS (dedizierte Chat-App)
+	\end{itemize}
+	\item Dezentralisiert
+	\item Geringer Stromverbrauch
+	\item Optionales Standort teilen
+	\item Open-source
+\end{itemize}
+
+Anders als traditionelle Mobilfunknetzwerke, verbindet sich jedes Endnutzergerät mit einem LoRa Radio und alle LoRa Radios, welche Meshtastic nutzen, können Nachrichten, selbst wenn die Radios nicht im gleichen Mesh sind, weiterleiten. Das passiert so lange, bis die Nachricht Ihr Ziel erreicht oder die voreingestellten “Hops” ausgeschöpft werden.
 
 
 \section{Werkzeuge}
