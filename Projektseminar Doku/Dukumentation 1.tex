@@ -1,0 +1,162 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{arrows ,automata ,positioning}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{tabto}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Christian Grieß}
+\begin{document}
+\begin{titlepage}
+\begin{figure}
+	\centering \includegraphics[scale=1]{HTW_LOGO.png}
+\end{figure}
+
+	
+	\centering
+	{\scshape\LARGE hochschule für Technik und Wirtschaft Dresden \par}
+	\vspace{2cm}
+	{\scshape\Large Sprachverarbeitung mit Python\par}
+	\vspace{0cm}
+	{\scshape\Large Projektseminar \par}
+	\vspace{1.5cm}
+	{\huge\bfseries Textgeneration\par}
+	{\huge\bfseries mithilfe von Keras und Tensorflow\par}
+	\vspace{1.5cm}
+	{\huge\bfseries {Dokumentation}\par}	
+	\vspace{4cm}
+	{\Large\itshape Christian Grieß\par}
+	\vfill
+	unter Aufsicht von\par
+	Prof. Dr. rer. nat. ~Boris \textsc{Hollas}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+\newpage
+\tableofcontents
+
+\newpage
+\section{Aufgabenstellung}
+
+Es soll als Maschinelles Lernverfahren ein zeichenbasiertes, Rekurrentes Neurales Netzwerk erstellt werden, welches anhand von selbst gewählten und beschafften Trainingsdaten das nächste Zeichen einer Sequenz errät.\newline \newline
+Who is the Audience? (scientific background or no point of contact before or just a bit?)
+
+\section{Werkzeuge}
+\begin{description}
+
+
+    \item [Programmiersprache]\tab Python
+    \item [Open-Source Bibliotheken]\tab Keras \newline \tab \tab Tensorflow
+ 
+ 
+\end{description}
+
+\section{Was ist Maschinelles Lernen?}
+Maschinelles Lernen ist das Fachgebiet, das Computern die Fähigkeit zu lernen verleiht ohne explizit programmiert zu werden
+\begin{flushright} - Arthur Samuel 1959  \end{flushright}
+
+\section{Was sind Rekurrente Neurale Netzwerke?}
+Ein Rekurrentes Neurales Netzwerk hat im gegensatz zu anderen neuralen Netzen (z.B. Feedforward Neural Network) Rückwärts gerichtete Neuronen. 
+Die einfachste Variante besteht aus nur einem Neuron, dass Eingaben erhält, eine Ausgabe produziert und diese Ausgabe wieder an sich selbst schickt.\newline
+
+\begin{tikzpicture}
+  \path 
+  
+  	(-1,2) node (y0){y}
+    	(5,2) node (y1){$y_{(t-2)}$}
+	(9,2) node (y2){$y_{(t-1)}$}
+	(13,2) node (y3){$y_{(t)}$}
+	
+	(-1,-2) node (x0) {x}
+	(5,-2) node (x1) {$x_{(t-2)}$}  	
+	(9,-2) node (x2) {$x_{(t-1)}$}
+	(13,-2) node (x3) {$x_{(t)}$}
+	
+	(13,-3) node (t) {$t$}
+	
+    	(-1,0) node[circle split,draw,double,fill=red!20](z0)
+  		{
+    		$Ausgabe$
+    		\nodepart{lower}
+    		$Eingabe$
+  		}
+  	(5,0) node[circle split,draw,double,fill=red!20](z1)
+  		{
+    		$Ausgabe$
+    		\nodepart{lower}
+    		$Eingabe$
+  		}
+	(9,0) node[circle split,draw,double,fill=red!20](z2)
+  		{
+		$Ausgabe$
+    		\nodepart{lower}
+    		$Eingabe$
+  		}
+	(13,0) node[circle split,draw,double,fill=red!20](z3)
+  		{
+    		$Ausgabe$
+    		\nodepart{lower}
+    		$Eingabe$
+  		};
+  \draw[-latex] (3,0) -- (z1.south west);
+
+  \draw[-latex] (z1.north east) -- (z2.south west);
+  \draw[-latex] (z2.north east) -- (z3.south west);
+  
+  \draw[-latex] (z3.north east) -- (15,0);
+	
+  \draw[->, black] (z0) -- (y0);
+  \draw[->, black] (x0) -- (z0);  
+  
+  \draw[->, black] (z1) -- (y1);
+  \draw[->, black] (x1) -- (z1);
+
+  \draw[->, black] (z2) -- (y2);
+  \draw[->, black] (x2) -- (z2);
+  
+  \draw[->, black] (z3) -- (y3);
+  \draw[->, black] (x3) -- (z3);	
+  
+  \draw[->, black] (5,-3) -- (t);
+ 
+  
+  \end{tikzpicture}
+ 
+Einzelnes Neuron links       \tab    entlang der Zeitachse aufgerollt rechts
+
+
+Durch die Rückkopplungen können lokale Optima entstehen, die zu unübersichtlichen Netzzuständen führen. Rekurrente neuronale Netze sind nicht in der Lage, weit entfernte oder zurückliegende Informationen miteinander zu verknüpfen. Netze mit sogenannten LSTM-Zellen (Long Short Term Memory) lösen dieses Problem, indem die Zellen neben einem Eingang und einem Ausgang ein Merk- und Vergesstor besitzen. Es entsteht eine Art Kurzzeitgedächtnis, das Informationen relativ lange vorhalten kann und sich an früher gemachte Erfahrungen erinnert.
+
+Rekurrente neuronale Netze eignen sich im Gegensatz zu den Feedforward-Netzen nicht nur für die einfache Mustererkennung. Sie sind in der Lage, komplexere Sequenzen zu verarbeiten. 
+
+\subsection{ML-Modell}
+$<Grafik>$ \newline
+Grobe Beschreibung, was, warum, in welcher Reihenfolge gemacht wird.
+\subsubsection{GRU-Layer}
+Why GRU (Vorteile, Nachteile) \newline
+Verallgemeinerte(vereinfachte) Grafik (Update Gate, Reset Gate, Current Memory)\newline
+Grafik Update Gate\newline
+etc.
+\subsubsection{LSMT-Layer}
+Placeholder
+\subsubsection{Dense-Layer}
+Placeholder
+\subsubsection{Embedding-Layer}
+Placeholder
+\section{Codevorstellung und Beschreibung$(Einzelschritte?)$}
+Placeholder incl. Auswertungsgrafiken
+\newpage
+
+\section{Discussion}
+\section{Summary}
+\section{References}
+\end{document}
