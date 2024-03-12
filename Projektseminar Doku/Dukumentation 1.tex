@@ -19,7 +19,7 @@
 \begin{document}
 \begin{titlepage}
 \begin{figure}
-	\centering \includegraphics[scale=0.5]{HTWD.png}
+	\centering \includegraphics[scale=0.5]{./Bilder/HTWLogo/HTWD.png}
 \end{figure}
 
 	
@@ -76,7 +76,7 @@ In Europa - 863–870MHz (normalerweise 868MHz).
 LoRa versucht die Lücke zwischen zwischen Kommunikationstechnologien wie WiFi, Bluetooth und LTE zu schließen.\\
 
 \begin{figure}[h]
-	\includegraphics[scale=0.7]{bandwidth-vs-range.png}
+	\includegraphics[scale=0.7]{./Bilder/Technologie/bandwidth-vs-range.png}
 \end{figure}
 \url{https://www.semtech.com/uploads/images/LoRa_Why_Range.png}\\ \\
 Es ist für große Reichweite, kleine Bandbreite und Niedrigenergiekommunikation gemacht. Alles in allem also extrem nützlich für IoT Geräte. Einige Beispiele sind:
@@ -114,6 +114,10 @@ Es bringt folgende Eigenschaften mit sich:
 \end{itemize}
 
 Anders als traditionelle Mobilfunknetzwerke, verbindet sich jedes Endnutzergerät mit einem LoRa Radio und alle LoRa Radios, welche Meshtastic nutzen, können Nachrichten, selbst wenn die Radios nicht im gleichen Mesh sind, weiterleiten. Das passiert so lange, bis die Nachricht Ihr Ziel erreicht oder die voreingestellten “Hops” ausgeschöpft werden.
+\begin{figure}[h]
+	\includegraphics[scale=0.4]{./Bilder/Technologie/meshtastic-connections.png}
+\end{figure}\\
+\url{https://loganmarchione.com/2023/05/lora-and-meshtastic/20230510_003.png}
 \newpage
 \section{Geräte}
 
@@ -123,27 +127,24 @@ Folgende Geräte haben wir für das Projekt genutzt:
 
 max TX power: +21dBm\\
 \begin{figure}[h]
-	\includegraphics[scale=0.1]{heltec-lora32-v3.png}
+	\includegraphics[scale=0.1]{./Bilder/Devices/heltec-lora32-v3.png}
 \end{figure}\\
 \url{https://heltec.org/project/wifi-lora-32-v3}\\
-
-
-
 
 \subsection{LILYGO T-Echo}
 max TX power: +21dBm\\
 \begin{figure}[h]
-	\includegraphics[scale=0.1]{t-echo.jpg}
+	\includegraphics[scale=0.1]{./Bilder/Devices/t-echo.jpg}
 \end{figure}\\
 \url{https://www.lilygo.cc/products/t-echo}\\
 
 \subsection{LILYGO T-Deck}
 max TX power: +21dBm\\
 \begin{figure}[h]
-	\includegraphics[scale=0.1]{t-deck.jpg}
+	\includegraphics[scale=0.1]{./Bilder/Devices/t-deck.jpg}
 \end{figure}\\
 \url{https://www.lilygo.cc/products/t-deck}
-
+\newpage
 \section{Firmware flashen}
 Geräte brauchen Firmware
 
@@ -379,7 +380,7 @@ C &= 0 \\
 \end{align*}
 \newpage
 \begin{figure}[h]
-	\centering \includegraphics[scale=0.7]{Figure_2.png}
+	\centering \includegraphics[scale=0.7]{./Bilder/Theorie/Hata_Suburban_868MHz.png}
 \end{figure}
 Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 152dBm maximal eine Reichweite von ungefähr 6km möglich\\
 
