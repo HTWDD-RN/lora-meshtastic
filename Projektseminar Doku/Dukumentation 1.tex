@@ -193,19 +193,42 @@ Android  & \href{https://play.google.com/store/apps/details?id=com.geeksville.me
 \hline
 iOS & \href{https://apps.apple.com/us/app/meshtastic/id1586432531}{App Store} & \href{https://github.com/meshtastic/Meshtastic-Apple}{Github}  \\
 \hline
-Web & \href{https://client.meshtastic.org/}{Web App} & \href{https://github.com/meshtastic/web}{Github} )\\
+Web & \href{https://client.meshtastic.org/}{Web App} & \href{https://github.com/meshtastic/web}{Github} \\
 \end{tabular}\\
 \\
 
 Die Apps werden regelmäßig geupdated und sind modern aufgebaut.\\ \\
 Ursprünglich sollte hier ein Vergleich der Funktionalitäten erfolgen, es gibt aber keine erkennbaren Unterschiede, außer kleinere in der Bennennung und Bedienung.\\
 
-\begin{tabular}[h]{l | l | l}
-\includegraphics[scale=0.1]{./Bilder/Praxistest/IMG_5287.png} & \includegraphics[scale=0.1]{./Bilder/Praxistest/IMG_5289.png} & \includegraphics[scale=0.1]{./Bilder/Praxistest/IMG_5290.png}\\
-TEXT & TEXT & TEXT\\
+\subsection{Ui}
+\subsubsection{iOS}
+\begin{tabular}[h]{l  l  l}
+\includegraphics[scale=0.2]{./Bilder/Software/ios/messages.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_channels.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_channels.png}\\
+Nachrichten Tab & Nachrichten in Channels & Direktnachrichten mit \\
+ & & anderen Nodes\\
+\includegraphics[scale=0.2]{./Bilder/Software/ios/bluetooth.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/nodes.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/mesh_map.png}\\
+Bluetooth-Verbindung zum & Übersicht der verbundenen & Kartenansicht \\
+eigenen Node  & Nodes \\
+\end{tabular}\\
+\begin{tabular}[h]{l  l}
+\includegraphics[scale=0.2]{./Bilder/Software/ios/config_module.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/config_radio.png}  \\
+Modul-Konfiguration & Radio-Konfiguration\\
 \end{tabular}\\
 
+\subsubsection{Web}
 
+\begin{tabular}[h]{l }
+\includegraphics[scale=0.2]{./Bilder/Software/web/connection_bluetooth.png}  \\
+Blluetooth-Verbindung mit Node
+\end{tabular}\\
+\begin{tabular}[h]{l l}
+\includegraphics[scale=0.08]{./Bilder/Software/web/messages.png} & \includegraphics[scale=0.08]{./Bilder/Software/web/messages.png}\\
+Nachrichten & Übersicht der Verbundenen Nodes\\
+\includegraphics[scale=0.08]{./Bilder/Software/web/config_channels.png} & \includegraphics[scale=0.08]{./Bilder/Software/web/config_module.png}\\
+Channel-Konfiguration & Modul-Konfiguration\\
+\includegraphics[scale=0.08]{./Bilder/Software/web/config_channels.png} & \\
+Radio-Konfiguration
+\end{tabular}\\
 \section{Häufige Probleme - Kommunikation mit Gerät über USB}
 \begin{itemize}
 	\item Die Gerät-Datei /dev/ttyUSB0 gehört der Nutzergruppe dialout. Damit der Nutzer Schreibrechte erhalten kann, muss er zur Gruppe hinzugefügt werden:
@@ -562,4 +585,19 @@ Let's consider a simplified example of a LoRa link budget for a point-to-point c
 The calculated received power should be compared with the receiver's sensitivity specification. If the received power is higher than the sensitivity threshold, the link is expected to work under the specified conditions.
 
 Keep in mind that this is a simplified example, and in a real-world scenario, additional factors such as atmospheric conditions, interference, and fading effects should be considered for a more accurate link budget analysis.
+\newpage
+\section{Fazit}
+Meshtastic ist ein gut voranschreitendes Projekt, dass eine solide Software-Plattform für die Kommunikation zwischen LoRa-fähigen Geräten ermöglicht.\\
+\\
+Damit aber Meshtastic als Katastrophennetz eingesetzt werden könnte, sind aktuell noch einige Hürden im Weg.\\
+\\
+Für den Einsatz als Katastrophennetz müssten erstmal genug solcher Meshtastic- und LoRa-fähigen Geräte angeschafft werden, sodass ein zuverlässiges Mesh-Netzwerk innerhalb der Stadt aufgebaut werden könnte. Dies müsste am Besten mit einer Großbestellung geschehen, da sonst der Markt überlastet werden und die Preise steigen könnten.\\
+\\
+Es müssten genug Geräte innerhalb der Stadt hoch positioniert werden, da die Reichweite von LoRa durch Gebäude wesentlich begrenzt ist. Nur bei freier Luftlinie sind Verbindungen über mehrere Kilometer möglich. Andere Funktechnologien mit mehr Sendeleistung, sind durch Gebäude weniger beeinträchtigt.
+Aber im Katastrophenfall mit zusammengebrochener Infrastruktur (Black-Out), ist LoRa mit geringem Energieverbrauch besser geeignet.\\
+\\
+Aktuell ist Meshtastic noch softwareseitig auf Netzwerke mit bis zu 80 Nodes limitiert. Das reicht bei Weitem nicht, um den Raum Dresden vollständig abzudecken.
+Das Protokoll scheint auch nicht für solche Mega-Meshes ausgelegt zu sein, was man am maximalen Hop Count von 7 erkennen kann. Ein limitierter Hop Count könnte eine weitreichende Zustellung verhindern.\\
+\\
+Die Software ist für ein Open Source Projekt ohne große Finanzierung auf einem guten Niveau, aber noch nicht für allgemeine Nutzung ausgereift. Dafür würde es einen Feinschliff in User Experience und Stabilität benötigen.\\
 \end{document}
