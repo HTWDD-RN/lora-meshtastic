@@ -1,0 +1,87 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
+
+import Projektbeschreibung from '../content/docs/einfuehrung/Projektbeschreibung.md'
+import Technologie from '../content/docs/einfuehrung/Technologie.md'
+import Geraete from '../content/docs/einfuehrung/Geraete.mdx'
+import FirmwareFlashen from '../content/docs/einfuehrung/Firmware_flashen.md'
+
+import Software from '../content/docs/anwendung/Software.mdx'
+
+import HaeufigeProbleme from '../content/docs/faq/Haeufige_Probleme.md'
+
+import Theorie from '../content/docs/reichweite/Theorie.md'
+import Praxistest from '../content/docs/reichweite/Praxistest.mdx'
+import Simulation from '../content/docs/reichweite/Simulation.md'
+
+import Fazit from '../content/docs/fazit/index.md'
+---
+
+<style>
+  h1 {
+    @apply print:break-before-page;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply print:!break-after-avoid-page;
+  }
+
+  .expressive-code {
+    @apply print:break-before-page;
+  }
+</style>
+
+<StarlightPage frontmatter={{ title: '' }} hasSidebar={false}>
+  <h1>1. Einführung</h1>
+
+  <h2>1.1 Projektbeschreibung</h2>
+  <Projektbeschreibung />
+  <h2>1.2 Technologie</h2>
+  <Technologie />
+  <h2>1.3 Geräte</h2>
+  <Geraete />
+  <h2>1.4 Flashen der Firmware</h2>
+  <FirmwareFlashen />
+
+  <h1>2. Anwendung</h1>
+  <h2>2.1 Software</h2>
+  <Software />
+
+  <h1>3. FAQ</h1>
+  <h2>3.1 Häufige Probleme</h2>
+  <HaeufigeProbleme />
+
+  <h1>4. Reichweite</h1>
+  <h2>4.1 Theorie</h2>
+  <Theorie />
+  <h2>4.2 Praxistest</h2>
+  <Praxistest />
+  <h2>4.3 Simulation</h2>
+  <Simulation />
+
+  <h1>5. Fazit</h1>
+  <Fazit />
+</StarlightPage>
+
+<script type="module">
+  document.querySelector('.header')?.remove()
+  document.querySelector('.right-sidebar-container')?.remove()
+  document.querySelector('.content-panel:first-child')?.remove()
+  document.querySelector('footer')?.remove()
+  setTimeout(() => {
+    document.querySelector('astro-dev-toolbar')?.remove()
+  }, 1000)
+
+  // get all h tags with an id and decrement the level by 1
+  const hTags = document.querySelectorAll('h2[id], h3[id], h4[id], h5[id], h6[id]')
+  for (const hTag of hTags) {
+    const level = parseInt(hTag.tagName[1])
+    const newHtag = document.createElement(`h${level + 1}`)
+    newHtag.id = hTag.id
+    newHtag.innerHTML = hTag.innerHTML
+    hTag.replaceWith(newHtag)
+  }
+</script>

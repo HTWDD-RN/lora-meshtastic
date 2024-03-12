@@ -64,6 +64,10 @@ export default defineConfig({
           label: 'Fazit',
           link: '/fazit/',
         },
+        {
+          label: 'Print',
+          link: '/print/',
+        },
       ],
     }),
     tailwind({

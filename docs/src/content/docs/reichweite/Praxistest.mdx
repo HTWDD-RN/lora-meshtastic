@@ -25,8 +25,8 @@ haben unsere Meshtastic Geräte im Rucksack mitgenommen.
 Für den kontinierlichen Sendetest, haben wir in den Moduleinstellungen den Range Test aktiviert
 und auf ein Interval von 1min gestellt.
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-  <Image class="md:col-span-2" src={ImgNodesBegin} alt="Node Übersicht" />
+<div class="grid grid-cols-1 print:grid-cols-3 md:grid-cols-3 gap-8">
+  <Image class="md:col-span-2 print:col-span-2" src={ImgNodesBegin} alt="Node Übersicht" />
   <div>
     Mithilfe eines Setup QR Codes, konnten wir unser Mesh aufbauen. <br />
     Node "Meshtastic 45b0" war noch von einem vorherigem Versuch im Mesh enthalten, aber nicht am Experiment
@@ -35,7 +35,7 @@ und auf ein Interval von 1min gestellt.
   <Image src={Img1} alt="" />
   <Image src={Img2} alt="" />
   <Image src={Img3} alt="" />
-  <div class="md:col-span-3">
+  <div class="md:col-span-3 print:col-span-3">
     Startpunkt: Blaues Wunder. Göran stand auf der Brücke und hat die Nachrichten empfangen. <br />
     Christian (Sventastic) ist nach Westen Richtung Stadt gefahren. Julian nach Osten Richtung Pillnitz.
   </div>
@@ -48,11 +48,15 @@ und auf ein Interval von 1min gestellt.
   <Image src={Img6} alt="" />
   <Image src={Img7} alt="" />
   <Image src={Img8} alt="" />
-  <div class="md:col-span-3">
+  <div class="md:col-span-3 print:col-span-3">
     Bei ~3.2km Distanz (Luftlinie), begann die Verbindung von Göran zu Christian schlechter zu
     werden.
   </div>
-  <Image class="md:col-span-3" src={ImageElbe} alt="Blick vom Blauen Wunder Richung Pillnitz" />
+  <Image
+    class="md:col-span-3 print:col-span-3"
+    src={ImageElbe}
+    alt="Blick vom Blauen Wunder Richung Pillnitz"
+  />
 </div>
 
 ## Logfiles
@@ -68,6 +72,7 @@ Die Logfiles der Nodes wurden aufgezeichnet und können hier eingesehen werden:
 | Sventastic | Metrics  | [Download](../../logs/Sventastic%20Device%20Metrics%20Log.csv) |
 |            | Position | [Download](../../logs/Sventastic%20Position%20Log.csv)         |
 
+<div class="print:break-before-page"></div>
 ## Fazit
 
 Dieser Test konnte zeigen, dass Meshtastic mit batteriebetriebenen Geräten ohne besondere Ausrichtung
