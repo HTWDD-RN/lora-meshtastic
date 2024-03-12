@@ -70,16 +70,15 @@ Es eignet sich ideal für Anwendungen, die kleine Datenmengen mit niedrigen Bitr
 Außerdem arbeitet LoRa in einem lizenzfreien Sub-Gigahertz-Frequenzband (d.h. unter 1 GHz), aber die zu verwendenden Frequenzen variieren von Region zu Region aufgrund regulatorischer Anforderungen. Wenn Sie ein LoRa-Gerät kaufen, muss sichergestellt sein, dass das richtige Frequenzband unterstützt wird.
 
 In Europa - 863–870MHz (normalerweise 868MHz).
-
+\newpage
 \subsection{Warum LoRa?}
 
 LoRa versucht die Lücke zwischen zwischen Kommunikationstechnologien wie WiFi, Bluetooth und LTE zu schließen.\\
 
-\begin{figure}
+\begin{figure}[h]
 	\includegraphics[scale=0.7]{bandwidth-vs-range.png}
 \end{figure}
-Semtech
-
+\url{https://www.semtech.com/uploads/images/LoRa_Why_Range.png}\\ \\
 Es ist für große Reichweite, kleine Bandbreite und Niedrigenergiekommunikation gemacht. Alles in allem also extrem nützlich für IoT Geräte. Einige Beispiele sind:
 
 \begin{itemize}
@@ -89,7 +88,7 @@ Es ist für große Reichweite, kleine Bandbreite und Niedrigenergiekommunikation
 	\item Verbrauchsmessungen bei Endkunden (Gas, Strom)
 	\item Wetterstationen die nur ab und zu Informationen übertragen
 \end{itemize}
-
+\newpage
 \subsection{LoRa und LoRaWAN}
 
 LoRaWAN ist über LoRa angesiedelt und definiert das Kommunikationsprotokoll und die Systemarchitektur.
@@ -115,42 +114,35 @@ Es bringt folgende Eigenschaften mit sich:
 \end{itemize}
 
 Anders als traditionelle Mobilfunknetzwerke, verbindet sich jedes Endnutzergerät mit einem LoRa Radio und alle LoRa Radios, welche Meshtastic nutzen, können Nachrichten, selbst wenn die Radios nicht im gleichen Mesh sind, weiterleiten. Das passiert so lange, bis die Nachricht Ihr Ziel erreicht oder die voreingestellten “Hops” ausgeschöpft werden.
-
+\newpage
 \section{Geräte}
 
 Folgende Geräte haben wir für das Projekt genutzt:
 
 \subsection{Heltec LoRa32 v3}
 
-https://heltec.org/project/wifi-lora-32-v3
-
-max TX power: +21dBm
-
-\begin{figure}
+max TX power: +21dBm\\
+\begin{figure}[h]
 	\includegraphics[scale=0.1]{heltec-lora32-v3.png}
-\end{figure}
+\end{figure}\\
+\url{https://heltec.org/project/wifi-lora-32-v3}\\
+
+
+
 
 \subsection{LILYGO T-Echo}
-
-https://www.lilygo.cc/products/t-echo
-
-
-max TX power: +21dBm
-
-\begin{figure}
+max TX power: +21dBm\\
+\url{https://www.lilygo.cc/products/t-echo}\\
+\begin{figure}[h]
 	\includegraphics[scale=0.1]{t-echo.jpg}
-\end{figure}
+\end{figure}\\ \\
 
 \subsection{LILYGO T-Deck}
-
-https://www.lilygo.cc/products/t-deck
-
-
-max TX power: +21dBm
-
-\begin{figure}
+max TX power: +21dBm\\
+\begin{figure}[h]
 	\includegraphics[scale=0.1]{t-deck.jpg}
-\end{figure}
+\end{figure}\\ \\
+\url{https://www.lilygo.cc/products/t-deck}\\
 
 \section{Firmware flashen}
 Geräte brauchen Firmware
@@ -169,19 +161,19 @@ Solange WLAN Verbindung zu einem Device nicht notw. ist und Bluetooth ausreicht,
 
 Eine Liste mit unterstützer Hardware findet sich hier:
 
-https://meshtastic.org/docs/hardware/devices/
+\url{https://meshtastic.org/docs/hardware/devices/}
 
 \subsubsection{Serial Treiber für ESP32}
 Einen für das eigene Betriebssystem passenden Treiber auf folgender Seite identifizieren, herunterladen und Installieren:
 
-https://meshtastic.org/docs/getting-started/serial-drivers
+\url{https://meshtastic.org/docs/getting-started/serial-drivers}
 
 \subsubsection{Serial Treiber für nRF52}
 nRF52 Chips benötigen normalerweise keinen Serial Treiber. Sie benutzen einen UF2 bootloader, welche das Gerät als USB-Stick vom Betriebssystem erkennen lassen.
 
 Auf keinen Fall folgenden USB geräte treiber herunterladen, es sei denn es wird UF2 support benötigt
 
-https://meshtastic.org/docs/getting-started/serial-drivers/nrf52
+\url{https://meshtastic.org/docs/getting-started/serial-drivers/nrf52}
 
 \subsection{Firmware für ESP32 flashen}
 https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/ Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux eine Nix-Flake erstellt, die Python mit den richtigen Paketen installiert und eine kleine Anleitung (auch zum selber Compilieren der Firmware) für esp32 und nRF52 Geräte enthät.
@@ -199,7 +191,7 @@ https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ Beim diesen
 	\item Prüfen, ob das Kabel zwischen Computer und Gerät auch wirklich Daten übertragen kann.
 	\item USB-C → USB-C funktioniert manchmal nicht. Dies könnte an einem Fehler bei USB-C Power Delivery liegen. Adapter USB-C → USB-A (findet man meist als OTG-Adapter) schafft Abhilfe.
 \end{itemize}
-
+\newpage
 \section{Simulation}
 TODO LINKS einfügen @goeranh
 
