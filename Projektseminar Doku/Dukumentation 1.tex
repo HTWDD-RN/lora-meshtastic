@@ -315,41 +315,265 @@ Die Einheit dB (Dezibel) wird im Zusammenhang mit Funkverbindungen verwendet, um
 Bei Funkverbindungen wird die Signalstärke oft in dBm gemessen, während Dämpfung oder Verstärkung von Antennen, Kabeln oder Verstärkern in einfachen dB-Angaben ausgedrückt werden. Dies ermöglicht eine präzise und effektive Kommunikation über die Leistung von Funksignalen und die Leistung von Komponenten in drahtlosen Netzwerken.
 
 \subsection{Channelsettings}
-
-|                           |                     |
-| ------------------------- | ------------------- |
-| Channelsetting            | Long Range / Fast   |
-| Alt Channelname           | Long Fast           |
-| Data Rate                 | 1.07 kbps (default) |
-| Spreading Factor/ Symbols | 11 / 2048           |
-| Coding Rate               | 4/5                 |
-| Bandwith                  | 250                 |
+\begin{tabular}[h]{l | l}
+Channelsetting  & Long Range / Fast \\
+\hline
+Alt Channelname & Long Fast \\
+\hline
+Data Rate & 1.07 kbps (default)\\
+\hline
+Spreading Factor/ Symbols & 11 / 2048 \\
+\hline
+Coding Rate & 4/5 \\
+\hline
+Bandwith & 250
+\end{tabular}
 
 \subsection{Transceiverwerte}
 
-|                |         |
-| -------------- | ------- |
-| transmit Power | 21dBm   |
-| Antenna gain   | 0dBi  |
-| RX sensitivity | -131dBm |
-| RX antenna     | 0dBi    |
-| Link Budget    | 152dB   |
-
-WiFi LoRa 32 v3 (SX1262 Lora Chip)
-P(dBm) = 21dBm
-Max Receiving sensitivity = -136dBm@SF12 BW=125KHz
-
-(1)<https://www.semtech.com/design-support/lora-calculator>
+\begin{tabular}[h]{l | l}
+transmit Power  & 21dBm \\
+\hline
+Antenna gain & 0dBi \\
+\hline
+RX sensitivity & -131dBm\\
+\hline
+RX antenna & 0dBi \\
+\hline
+Linkbudget & 152dB \\
+\end{tabular} \\ \\ \\
+WiFi LoRa 32 v3 (SX1262 Lora Chip)\\
+P(dBm) = 21dBm\\
+Max Receiving sensitivity = -136dBm@SF12 BW=125KHz\\
+\\
+(1)\url{https://www.semtech.com/design-support/lora-calculator}
 
 \subsection{Maximal mögliche Übertragunsstärke}
+\begin{align*}
+\text{Maximal 500mW ERP (2)} \\
+\text{Maximal 2.15dBi Antenne (3)} \\
+\\
+P(dBm) &= 10 \cdot \log_{10} (P(500 \ \mathrm{mW}) \div 1 \ \mathrm{mW}) \\
+&= 26.9897000434 \\
+&= 27\mathrm{dBm} \\
+\\
+P(max)&=P(dBm)+2.15\mathrm{dBi}\\
+P(max)&=29.15dBm\\
+\end{align*}
+(2) \url{https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html}\\
+(Stand März 2022) Eintrag 251004 (Frequenznutzungsbedingungen)\\
+(3) \url{https://www.thethingsnetwork.org/forum/t/max-allowed-antenna-gain-for-lora/37182}\\
+\newpage
+\subsection{Überlegungen}
 
+Mit einem Link Budget von 152dBm (Einstellung = long fast, mit 21dBm transmit Power und 0dBi Antenne) lässt sich unter optimalen Bedingungen(nur Freiraumdämpfung(Vakuum)) eine Distanz von mehr als 800km Überwinden.
+Da dies nur unter optimalen Bedingungen möglich ist werden solche Werte natürlich nicht erreicht.\\
 
+Im Weltraum können Funksignale tatsächlich viel weiter reisen. Unter Normalbedingungen, auf unserem Planeten spielt die Sichtlinie eine bedeutende Rolle.
+Aufgrund der Tatsache, dass die Welt eine Kugel ist, ist es möglich mit 1,7m Höhe 4,7km weit zu sehen.
+Da im sub-GHz Bereich eine quasioptische Ausbreitung für Radiowellen gilt, ist der Horizont auch gleichzeitig eine Begrenzung für Funksignale.\\
 
+Im nächsten Schritt betrachten wir die Wellenausbreitung mit dem Hata-Okumura-Modell (Hata-Modell).\\
 
+Das Hata-Modell verwendet verschiedene Begriffe in der Dämpfungsformel, um zwischen verschiedenen Typen von Landoberflächen zu unterscheiden. Es werden ländliche bis zu dicht besiedelte Regionen unterschieden.\\
 
+Hata-Ausbreitungsformel:\\
+
+\begin{align*}
+Loss(dB) &= A + B \cdot \log_{10}{(d)} - K + C \\ 
+A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
+B &= 44.9 - 6.55 \log_{10}{(h_s)} \\ \\
+d &= \text{Distanz zwischen Sender und Empfänger (km)} \\
+h_s &= \text{Höhe der Senderantenne (m)} \\
+h_r &= \text{Empfängerantennenhöhe (m)} \\
+K &= \text{Korrekturfaktor} \\
+C &= \text{Korrekturfaktor}\\
+f &= \text{Übertragungsfrequenz  [MHz]} \\
+\end{align*} 
+\newpage
+\textbf{\emph{Urban:  }}Große Stadt mit großen Gebäuden welche zwei oder mehreren Stockwerken besitzen oder größere Dörfer mit sehr nahe stehenden Häusern
+
+\textbf{\emph{Medium:  }}  Mittelgroße Stadt
+
+\textbf{\emph{Suburban:  }} Vorort
+
+\textbf{\emph{Freifläche:  }} Keine großen Bäume oder Gebäude in Sichtlinie
+
+\begin{align*}
+\text{Freifläche:} \\
+K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
+C &= -4.78 \cdot (\log_{10}{(f)})^2 + 18.33 \cdot \log_{10}{(f)} - 40.94\\
+\text{Suburban:} \\
+K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
+C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
+\text{Medium:} \\
+K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
+C &= 0 \\
+\text{Urban, 150 $\leq$ f $\leq$ 200 MHz:} \\ 
+K &= 8.29 \cdot (\log_{10}{(1.54 \cdot h_r)})^2  - 1.1 \\
+C &= 0 \\
+\text{Urban, 200 $\l <$ f $\leq $ 1500 MHz:} \\
+K &= 3.2 \cdot (\log_{10}{(11.75 \cdot h_r)})^2 - 4.97 \\
+C &= 0 \\
+\end{align*}
+\newpage
+\begin{figure}[h]
+	\centering \includegraphics[scale=0.7]{Figure_2.png}
+\end{figure}
+Die Grafik zeigt die Reichweite nach dem Okumura-Hata-Modell für ein Suburbanes Gebiet bei Nutzung einer 868MHz frequenz. Wie der Grafik zu entnehmen, wird bei unsererem Linkbudget von 152dBm maximal eine Reichweite von ungefähr 6km möglich\\
+
+Die bereitgestellten Formeln decken nicht alle im Okumura-Modell vorgeschlagenen Bedingungen ab. Hatas Ansatz gilt nur mit folgende Einschränkungen:\\
+\\ \\
+\begin{tabular}[h]{l | l}
+Frequenz  & 150-1500 MHz \\
+\hline
+Distanz  & 1-20km\\
+\hline
+Höhe Senderantenne  & 30-200m\\
+\hline
+Höhe Empfängerantenne & 1-10m \\
+\end{tabular} \\ \\ \\
+\newpage
+\text{Mit folgenden Werten wurde im suburbanen gearbeitet: }\\
+\begin{align*}
+\\
+h_s &= 30\mathrm{m} \\
+h_r &= 2\mathrm{m} \\
+f &= 869\mathrm{MHz} \\
+\\
+A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
+&= 69.55 + 26.16 \cdot \log_{10}{(868)} - 13.82 \cdot \log_{10}{(30)} \\
+&\thickapprox 126.008 \\
+\\
+B &= 44.9 - 6.55 \log_{10}{(h_s)} \\
+&= 44.9 - 6.55 \log_{10}{(30)}\\
+&\thickapprox 35.225\\
+\\
+K &= (1.1 \cdot log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
+&= (1.1 \cdot log_{10}{(868)} - 0.7) \cdot 2 - (1.56 \cdot \log_{10}{(868)} - 0.8) \\
+&\thickapprox 1.281 \\
+\\
+C &= 0 \\
+\end{align*}
+\\
+\begin{align*}
+Loss(dB) &= A + B \cdot log_{10}{(d)} - K + C \\
+log_{10}{(d)} &= \frac{Loss(dB) - A + K - C}{B} \\
+d &= 10^\frac{Loss(dB) - A + K - C}{B} \\
+&= 10^\frac{Loss(dB) - 126.008 + 1.281 - 0}{35.225}\\
+&= 10^\frac{Loss(dB) - 124.727}{35.225}\\
+\end{align*}
 \newpage
 
-\section{Discussion}
-\section{Summary}
-\section{References}
+\begin{tabular}[h]{l | l}
+Freifläche(Max)  & 64.640km (Begrenzung! Sichtlinie 24.6km) \\
+\hline
+Suburban(Max) & 10.130km \\
+\hline
+Urban(Max) & 9.975km\\
+\hline
+\hline
+\hline
+Freifläche(152dB) & 37.943km (begrenzt auf Sichtlinie 24.6km) \\
+\hline
+Suburban(152dB) & 5.946km \\
+\hline
+Urban(152dB) & 15.855km \\
+\hline
+\hline
+\hline
+Freifläche(Gebäude) & 12.612km\\
+\hline
+Suburban(Gebäude) & 1.220km\\
+\hline
+Urban(Gebäude) & 1.018km\\
+\hline
+\hline
+\hline
+Sichtlinie & 24.6km
+\end{tabular} \\ \\ 
+\\
+Es darf nicht vergessen werden, dass das Hata-Modell nur eine annäherung im Bereich bei Entfernungen um die 1-20km ist. Alle Werte die darüber berechnet werden sollten mit anderen Werkzeugen überprüft werden. Wie in unserem Fall Freifläche(Max) und Freifläche(Gebäude).\\
+  \\
+Für (Gebäude) wird eine Dämpfung von 17dB für das Eindringen in Gebäude und ein Verlust von 8dB für das Fading angenommen. Das bedeutet, dass die Analyse an die Bedingungen für Sender innerhalb von Gebäuden angepasst wurde. Das Link-Budget wird daher um 25 dB auf 128dB reduziert.\\
+\\
+Für (Max) wird das maximal mögliche legale Limit für Sendeleistung und Antennenverstärkung ausgereizt und liegt bei einem Linkbudget, wie anfänglich dargelegt, von 160.15dB.\\
+\\
+(152dB) beschreibt die maximal mögliche ausbreitung des Signals bei der Sendeleistung der von uns verwendeten Geräte.\\
+\\
+Die Höhe der Antenne des Senders wurde auf 30Meter festgelegt, da dass Hata Modell nur mit dieser minimalen Höhe arbeiten kann.  \\
+Die Empfängerantenne liegt auf 2Meter Höhe.
+
+\subsection{Fazit}
+
+Das Hata-Modell kennt keine Erdkrümmung und ist nur eine erste Näherung. Als Kontrolle sollten bei Berechnungen immer die Sichtlinie beachtet werden und damit die plausabilität der Berechnung kontolliert und ggf. eingeschränkt werden. Die minimale Höhe der Senderantenne macht die Anwendung des Hata-Modells für unser Projekt weniger praktikabel gibt jedoch einen ersten Anhaltspunkt um mit unseren Messwerten zu vergleichen.
+\newpage
+\subsection{Notizen}
+\subsubsection{Link-Budget Formel}
+\begin{align*}
+PRX &= PTX + GTX + GRX - LTX - LFS - LP - LRX \\
+PRX &= \text{received power (dBm)} \\
+PTX &= \text{transmitter output power (dBm)} \\
+GTX &= \text{transmitter antenna gain (dBi)} \\
+GRX &= \text{receiver antenna gain (dBi)} \\
+LTX &= \text{transmit feeder and associated losses (feeder, connectors, etc.) (dB)} \\
+LFS &= \text{free space loss or path loss (dB)} \\
+LP  &= \text{miscellaneous signal propagation losses} \\
+    &\phantom{=} \text{(these include fading margin, polarization mismatch, losses associated with} \\
+   &\phantom{=} \text{medium through which signal is travelling, other losses...) (dB)} \\
+LRX &= \text{receiver feeder and associated losses (feeder, connectors, etc.) (d)B} \\ 
+\\
+\\
+FSPL \mathrm{(dB)} &= 20\log_{10}(d) + 20\log_{10}(f) - 147.55 \\
+FSPL &= (4\pi d/ \lambda) \cdot 2 = (4\pi df/c) \cdot 2 \\
+FSPL &= \text{Free Space Path Loss (Freiraumdämpfung)} \\
+d &= \text{Abstand zwischen Tx und Rx in Metern} \\
+f &= \text{Frequenz in Hertz} \\
+\\
+\text{Rx-Empf.} &= -174 + 10\log_{10}(BW) + NF + SNR \\
+BW &= \text{Bandbreite in Hz} \\
+NF &= \text{Rauschfaktor in dB} \\
+SNR &= \text{Signal-Rausch-Verhältnis (signal to noise ratio).} \\
+    &\phantom{=} \text{Es gibt an, wie weit das Signal über dem Rauschen liegen muss.}\\
+\end{align*}
+
+\subsubsection{Line of Sight tool}
+
+\url{https://www.heywhatsthat.com}
+\newpage
+\subsubsection{Beispielrechnung}
+
+Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:
+
+1. **Transmit Power (Tx Power):** Let's assume the transmitter has a power output of 20 dBm.
+
+2. **Frequency (f):** Assume a frequency of 868 MHz.
+
+3. **Distance (d):** Let's consider a communication distance of 2 kilometers.
+
+4. **Antenna Gains (Gt and Gr):** Assume both the transmitter and receiver antennas have a gain of 2 dBi.
+
+5. **Free Space Path Loss (Lp):** Using the free space path loss formula:
+
+   $$
+   Lp = 20 \log_{10}{d} + 20 \log_{10}{(f)} + L_{FS}
+   $$
+
+   $$
+   Lp = 20 \log_{10}{2} + 20 \log_{10}{(868 \cdot 10^6)} + 20 \cdot \log_{10}{\frac{4\pi}{c}}
+   $$
+
+   Here, \(c\) is the speed of light. The result will be the path loss in dB.
+
+6. **Received Power (Rx Power):** Plug the values into the link budget equation:
+
+   $$
+   \text{Rx Power} = \text{Tx Power} + \text{Tx Antenna Gain} - \text{Path Loss} + \text{Rx Antenna Gain}
+   $$
+
+   Substitute the values and calculate the received power.
+
+The calculated received power should be compared with the receiver's sensitivity specification. If the received power is higher than the sensitivity threshold, the link is expected to work under the specified conditions.
+
+Keep in mind that this is a simplified example, and in a real-world scenario, additional factors such as atmospheric conditions, interference, and fading effects should be considered for a more accurate link budget analysis.
 \end{document}
