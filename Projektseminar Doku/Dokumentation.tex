@@ -12,6 +12,8 @@
 \usepackage{tabto}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{listings}
+\usepackage{awesomebox}
+
 \lstset{
 	language=bash,
 	basicstyle=\ttfamily
@@ -23,18 +25,18 @@
 	\centering \includegraphics[scale=0.5]{./Bilder/HTWLogo/HTWD.png}
 \end{figure}
 
-	
+
 	\centering
-	{\scshape\LARGE hochschule für Technik und Wirtschaft Dresden \par}
+	{\scshape\LARGE Hochschule für Technik und Wirtschaft Dresden \par}
 	\vspace{2cm}
-	{\scshape\Large Übertragung von Sensordaten mittels LoRaWAN\par}
+	{\scshape\Large Übertragung von Sensordaten mittels LoRa\par}
 	\vspace{0cm}
 	{\scshape\Large Projektseminar \par}
 	\vspace{1.5cm}
 	{\huge\bfseries Katastrophennetz\par}
 	{\huge\bfseries mithilfe von Meshtastic\par}
 	\vspace{1.5cm}
-	{\huge\bfseries {Dokumentation}\par}	
+	{\huge\bfseries {Dokumentation}\par}
 	\vspace{4cm}
 	{\Large\itshape Christian Grieß\par}
 	{\Large\itshape Göran Heinemann\par}
@@ -55,7 +57,9 @@
 \section{Aufgabenstellung}
 
 Ziel dieses Projekts war das Experimentieren mit Meshtastic auf LoRa-fähigen Geräten.
-Meshtastic ist ein Open-Source-Projekt, das es ermöglicht, ein Mesh-Netzwerk aufzubauen, das auf der LoRa-Technologie basiert. Es ist eine kostengünstige und energieeffiziente Möglichkeit, ein Netzwerk aufzubauen, das unabhängig von Internet und Mobilfunknetzen funktionieren kann.
+Meshtastic ist ein Open-Source-Projekt, das es ermöglicht, ein Mesh-Netzwerk aufzubauen, das auf der LoRa-Technologie basiert.
+Es ist eine kostengünstige und energieeffiziente Möglichkeit, ein Netzwerk aufzubauen, das unabhängig von Internet und
+Mobilfunknetzen funktionieren kann.
 
 \section{Fragestellung}
 
@@ -64,11 +68,19 @@ Ist Meshtastic als unabhängiges Kommunikations-Netzwerk für den Krisenfall im 
 \section{Technologie}
 \subsection{Was ist LoRa?}
 
-LoRa (von Long Range) ist eine proprietäre Funktechnologie im Besitz von Semtech. Sie ist für die Langstreckenübertragung (z.B. 10 km), schmalbandige Übertragung (gemessen in Kbps) und energiesparende Kommunikation konzipiert, hauptsächlich für Internet of Things (IoT)-Netzwerke. Dafür wird eine drahtlose Modulationstechnik, die aus der Chirp Spread Spectrum (CSS)-Technologie abgeleitet ist verwendet. Sie codiert Informationen auf Radiowellen mithilfe von Chirp-Impulsen! Die modulierte Übertragung von LoRa ist robust gegen Störungen und kann über große Entfernungen empfangen werden.
+LoRa (von Long Range) ist eine proprietäre Funktechnologie im Besitz von Semtech. Sie ist für die Langstreckenübertragung (z.B. 10 km),
+schmalbandige Übertragung (gemessen in Kbps) und energiesparende Kommunikation konzipiert, hauptsächlich für Internet of Things (IoT)-Netzwerke.
+Dafür wird eine drahtlose Modulationstechnik, die aus der Chirp Spread Spectrum (CSS)-Technologie abgeleitet ist, verwendet.
+Sie codiert Informationen auf Radiowellen mithilfe von Chirp-Impulsen. Die modulierte Übertragung von LoRa ist robust gegen Störungen
+und kann über große Entfernungen empfangen werden.
 
-Es eignet sich ideal für Anwendungen, die kleine Datenmengen mit niedrigen Bitraten übertragen. Daten können über eine längere Reichweite übertragen werden im Vergleich zu Technologien wie Wlan, Bluetooth oder ZigBee. Diese Eigenschaften machen LoRa besonders geeignet für Sensoren und Aktoren, die im Niedrigenergiemodus arbeiten.
+Es eignet sich ideal für Anwendungen, die kleine Datenmengen mit niedrigen Bitraten übertragen. Daten können über eine längere Reichweite
+übertragen werden im Vergleich zu Technologien wie WLAN, Bluetooth oder ZigBee. Diese Eigenschaften machen LoRa besonders geeignet für
+Sensoren und Aktoren, die im Niedrigenergiemodus arbeiten.
 
-Außerdem arbeitet LoRa in einem lizenzfreien Sub-Gigahertz-Frequenzband (d.h. unter 1 GHz), aber die zu verwendenden Frequenzen variieren von Region zu Region aufgrund regulatorischer Anforderungen. Wenn Sie ein LoRa-Gerät kaufen, muss sichergestellt sein, dass das richtige Frequenzband unterstützt wird.
+Außerdem arbeitet LoRa in einem lizenzfreien Sub-Gigahertz-Frequenzband (d.h. unter 1 GHz), aber die zu verwendenden Frequenzen variieren
+von Region zu Region aufgrund regulatorischer Anforderungen. Wenn Sie ein LoRa-Gerät kaufen, muss sichergestellt sein, dass das richtige
+Frequenzband unterstützt wird.
 
 In Europa - 863–870MHz (normalerweise 868MHz).
 \newpage
@@ -80,7 +92,8 @@ LoRa versucht die Lücke zwischen zwischen Kommunikationstechnologien wie WiFi, 
 	\includegraphics[scale=0.7]{./Bilder/Technologie/bandwidth-vs-range.png}
 \end{figure}
 \url{https://www.semtech.com/uploads/images/LoRa_Why_Range.png}\\ \\
-Es ist für große Reichweite, kleine Bandbreite und Niedrigenergiekommunikation gemacht. Alles in allem also extrem nützlich für IoT Geräte. Einige Beispiele sind:
+Es ist für große Reichweite, kleine Bandbreite und Niedrigenergiekommunikation gemacht. Alles in allem also extrem nützlich für IoT Geräte.
+Einige Beispiele sind:
 
 \begin{itemize}
 	\item Wassersensoren in einer entfernten Umgebung (Grundwasser)
@@ -94,7 +107,8 @@ Es ist für große Reichweite, kleine Bandbreite und Niedrigenergiekommunikation
 
 LoRaWAN ist über LoRa angesiedelt und definiert das Kommunikationsprotokoll und die Systemarchitektur.
 
-Es ist wichtig zu verstehen, dass es möglich ist LoRa ohne LoRaWAN zu benutzen. Andere LoRa basierte Netzwerke sind Helium, The Things Network Disaster.radio und, was wir weiter betrachten werden, Meshtastic.
+Es ist wichtig zu verstehen, dass es möglich ist LoRa ohne LoRaWAN zu benutzen. Andere LoRa-basierte Netzwerke sind Helium,
+The Things Network, Disaster.radio und was wir weiter betrachten werden, Meshtastic.
 
 \subsection{Meshtastic}
 Wie im vorherigen Absatz erwähnt, baut Meshtastic auf LoRa auf und schafft ein dezentralisiertes Mesh-Netzwerk.
@@ -105,21 +119,27 @@ Es bringt folgende Eigenschaften mit sich:
 	\item Plattformunabhängig
 	\begin{itemize}
 		\item Computer (unabhänging vom Betriebssystem)
-		\item Android (dedizierte Chat-App)
-		\item iOS (dedizierte Chat-App)
+		\item Android (native App)
+		\item iOS (native App)
 	\end{itemize}
 	\item Dezentralisiert
 	\item Geringer Stromverbrauch
 	\item Optionales Standort teilen
-	\item Open-source
+	\item Open-Source
 \end{itemize}
 
-Anders als traditionelle Mobilfunknetzwerke, verbindet sich jedes Endnutzergerät mit einem LoRa Radio und alle LoRa Radios, welche Meshtastic nutzen, können Nachrichten, selbst wenn die Radios nicht im gleichen Mesh sind, weiterleiten. Das passiert so lange, bis die Nachricht Ihr Ziel erreicht oder die voreingestellten “Hops” ausgeschöpft werden.
+Anders als traditionelle Mobilfunknetzwerke, verbindet sich jedes Endnutzergerät mit einem LoRa Radio
+und alle LoRa Radios, welche Meshtastic nutzen, können Nachrichten, selbst wenn die Radios nicht im gleichen Mesh sind, weiterleiten.
+Das passiert so lange, bis die Nachricht Ihr Ziel erreicht oder die voreingestellten “Hops” ausgeschöpft werden.
+
 \begin{figure}[h]
 	\includegraphics[scale=0.4]{./Bilder/Technologie/meshtastic-connections.png}
 \end{figure}\\
+
 \url{https://loganmarchione.com/2023/05/lora-and-meshtastic/20230510_003.png}
+
 \newpage
+
 \section{Geräte}
 
 Folgende Geräte haben wir für das Projekt genutzt:
@@ -147,25 +167,28 @@ max TX power: +21dBm\\
 \url{https://www.lilygo.cc/products/t-deck}
 \newpage
 \section{Firmware flashen}
-Geräte brauchen Firmware
+
+Meshtastic bietet eine Firmware für verschiede Geräte an. Je nach Gerät gibt es kleine Unterschiede
+in Funktionalität (Display-Support, Speicher, etc.) und im Flashvorgang.
 
 \subsection{Hardware identifizieren oder auswählen}
-Achtung!\\ \\
-Vorweg, Geräte nur mit angeschlossener Antenne einschalten! Anderenfalls kann das Gerät sich im schlimmsten Fall selber zerstören.\\
+\warningbox{Achtung! Vorweg, Geräte nur mit angeschlossener Antenne einschalten! Anderenfalls kann das Gerät sich im schlimmsten Fall selber zerstören.}
+
+Meshtastic wird offiziell nur von bestimmten Geräten unterstützt, welche ein LoRa Modul besitzen.
 \\
-Meshtastic wird offiziell nur von bestimmten Geräten welche ein LoRa Modul innehaben supportet.\\
-Es ist darauf zu achten, dass jedes Gerät welches im Meshnetz betrieben werden soll auf der gleichen Frequenz arbeitet. Hier gibt es unterschiede!\\
+Es ist darauf zu achten, dass jedes Gerät welches im Meshnetz betrieben werden soll, auf der gleichen Frequenz arbeitet. Hier gibt es Unterschiede!\\
 \\
-In deutschland können die freien Frequenzbänder 433 MHz und 868MHz, auf welchen Lora operiert, ohne Lizenzkosten oder Amateurfunklizenz genutzt werden.\\
+In Deutschland können die freien Frequenzbänder 433 MHz und 868MHz, auf welchen Lora operiert, ohne Lizenzkosten oder Amateurfunklizenz genutzt werden.\\
 \\
-Solange WLAN Verbindung zu einem Device nicht notw. ist und Bluetooth ausreicht, sollte ein nRF52 Chip gewählt werden, da diese energieffizienter als ESP32 Chips und einfacher zu flashen sind. Es gibt auch noch Geräte auf Basis des RP2040, diese haben wir allerdings nicht getestet.\\
+Solange eine WLAN-Verbindung zu einem Device nicht notwendig ist und Bluetooth ausreicht, sollte ein nRF52 Chip gewählt werden,
+da diese energieffizienter als ESP32 Chips und einfacher zu flashen sind. Es gibt auch noch Geräte auf Basis des RP2040,
+diese haben wir allerdings nicht getestet.\\
 \\
 Eine Liste mit unterstützer Hardware findet sich hier:\\
-\\
 \url{https://meshtastic.org/docs/hardware/devices/}
 
 \subsubsection{Serial Treiber für ESP32}
-Einen für das eigene Betriebssystem passenden Treiber auf folgender Seite identifizieren, herunterladen und Installieren:\\
+Einen für das eigene Betriebssystem passenden Treiber auf folgender Seite identifizieren, herunterladen und Installieren:
 \\
 \url{https://meshtastic.org/docs/getting-started/serial-drivers}
 
@@ -177,17 +200,25 @@ Auf keinen Fall folgenden USB geräte treiber herunterladen, es sei denn es wird
 \url{https://meshtastic.org/docs/getting-started/serial-drivers/nrf52}
 
 \subsection{Firmware für ESP32 flashen}
-\url{https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/}\\
-Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux eine Nix-Flake erstellt, die Python mit den richtigen Paketen installiert und eine kleine Anleitung (auch zum selber Compilieren der Firmware) für esp32 und nRF52 Geräte enthält.\\
+\url{https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/}
+\\
+Da es bei uns auf verschieden PCs probleme gab haben wir zum Flashen unter Linux eine Nix-Flake erstellt,
+die Python mit den richtigen Paketen installiert und eine kleine Anleitung (auch zum selber Compilieren der Firmware)
+für ESP32 und nRF52 Geräte enthält.\\
 
 \subsection{Firmware für ESP32 nRF52}
-\url{https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/}\\
-Beim diesen Geräten ist es bei uns manchmal vorgekommen, dass das Flashen von Firmware zwar bis zu dem “Drag und Drop”-Schritt funktioniert und dann aber nicht wirklich mit der neuen Version neu startet. Falls das passiert muss man sich mit einer seriellen Konsole mit dem Gerät verbinden und einfach nur einmal Enter drücken, besonders nachdem Factory-Erase. Das steht unter dem Punkt Factory-Erase auch dokumentiert, aber man benötigt nicht zwingend die Meshtastic CLI, sondern lediglich ein Programm wie z. B. minicom unter Linux.
-\section{Software}
-Zum aktuellen Zeitpunkt gibts es jeweils eine App für iOS und Android. Außerdem gibt es einen Web Client, der sich per Bluetooth, Wi-Fi und Serial verbinden kann.\\
+\url{https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/}
 \\
+Beim diesen Geräten ist es bei uns manchmal vorgekommen, dass das Flashen von Firmware zwar bis zu dem “Drag und Drop”-Schritt funktioniert und dann aber nicht wirklich mit der neuen Version neu startet. Falls das passiert muss man sich mit einer seriellen Konsole mit dem Gerät verbinden und einfach nur einmal Enter drücken, besonders nachdem Factory-Erase. Das steht unter dem Punkt Factory-Erase auch dokumentiert, aber man benötigt nicht zwingend die Meshtastic CLI, sondern lediglich ein Programm wie z. B. minicom unter Linux.
+
+\section{Software}
+
+Zum aktuellen Zeitpunkt gibts es jeweils eine App für iOS und Android. Außerdem gibt es einen Web Client,
+der sich per Bluetooth, Wi-Fi und Serial verbinden kann.\\
+
 \begin{tabular}[h]{l | l | l}
 App & Link & Quellcode \\
+
 \hline
 Android  & \href{https://play.google.com/store/apps/details?id=com.geeksville.mesh}{Playstore} & \href{https://github.com/meshtastic/Meshtastic-Android}{Github} \\
 \hline
@@ -203,7 +234,7 @@ Ursprünglich sollte hier ein Vergleich der Funktionalitäten erfolgen, es gibt 
 \subsection{Ui}
 \subsubsection{iOS}
 \begin{tabular}[h]{l  l  l}
-\includegraphics[scale=0.2]{./Bilder/Software/ios/messages.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_channels.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_channels.png}\\
+\includegraphics[scale=0.2]{./Bilder/Software/ios/messages.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_channels.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_contacts.png}\\
 Nachrichten Tab & Nachrichten in Channels & Direktnachrichten mit \\
  & & anderen Nodes\\
 \includegraphics[scale=0.2]{./Bilder/Software/ios/bluetooth.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/nodes.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/mesh_map.png}\\
@@ -232,9 +263,10 @@ Radio-Konfiguration
 \section{Häufige Probleme - Kommunikation mit Gerät über USB}
 \begin{itemize}
 	\item Die Gerät-Datei /dev/ttyUSB0 gehört der Nutzergruppe dialout. Damit der Nutzer Schreibrechte erhalten kann, muss er zur Gruppe hinzugefügt werden:
-	
-	\lstinline{sudo usermod -aG dialout <user-name>}
-	
+
+	\lstinline{sudo usermod -aG dialout <user-name>}\\
+	\lstinline{logout}
+
 	Der Nutzer muss sich ausloggen und wieder einloggen, damit er in der Gruppe enthalten ist.
 	\item Prüfen, ob das Kabel zwischen Computer und Gerät auch wirklich Daten übertragen kann.
 	\item USB-C → USB-C funktioniert manchmal nicht. Dies könnte an einem Fehler bei USB-C Power Delivery liegen. Adapter USB-C → USB-A (findet man meist als OTG-Adapter) schafft Abhilfe.
@@ -275,9 +307,7 @@ Mit Environment-Parameter native baut PlatformIO die Firmware für ein Linux Bet
 	pio run --environment native
 \end{lstlisting}
 
-Tipp
-
-Die PlatformIO Extension für VSCode bietet eine praktische GUI, mit der die Befehle ausgeführt werden können.
+\tipbox{Die PlatformIO Extension für VSCode bietet eine praktische GUI, mit der die Befehle ausgeführt werden können.}
 
 Das kompilierte Binary befindet sich dann im Ordner \lstinline{firmware/.pio/build/native}.
 Damit der Meshtasticator die gewünschten Anordnungen simulieren kann, muss die Binary in den Ordner von Meshtasticator kopiert werden. Bevor die Abhängigkeiten von Meshtasticator installiert werden können, sollte in dem Ordner eine Python-Umgebung aktiviert werden:
@@ -293,8 +323,10 @@ Die Abhängigkeiten können mit \lstinline{pip3 install -r requirements.txt} ins
 
 \subsection{Link-Budget}
 
-Die Reichweite einer Funkverbindung lässt sich mittel des Link-Budgets (Leistungsübertragungsbilanz) darstellen und gibt die Qualität eines Funk-Übertragungskanals an.
-Eines der einfachsten Modelle um ein Linkbudget zu errechnen ist mittels Addition der Sendeleistung (Transmitter Power, Tx), der Empfängerempfindlichkeit (Receiver Power, Rx), des Antennengewinns und der Freiraumdämpfung (Free Space Path Loss, FSPL).
+Die Reichweite einer Funkverbindung lässt sich mittel des Link-Budgets (Leistungs-übertragungsbilanz)
+darstellen und gibt die Qualität eines Funk-Übertragungskanals an.
+Eines der einfachsten Modelle um ein Linkbudget zu errechnen ist mittels Addition der Sendeleistung
+(Transmitter Power, Tx), der Empfängerempfindlichkeit (Receiver Power, Rx), des Antennengewinns und der Freiraumdämpfung (Free Space Path Loss, FSPL).
 
 \subsection{Kenngrößen}
 
@@ -310,18 +342,25 @@ SF-Werte und somit die Reichweite eines Senders hängen von den Ausbreitungsbedi
 
 Die Einheit dB (Dezibel) wird im Zusammenhang mit Funkverbindungen verwendet, um die Signalstärke, Dämpfung oder Verstärkung von elektromagnetischen Signalen zu messen. dB ist eine logarithmische Einheit, die das Verhältnis zwischen zwei Größen ausdrückt. In Bezug auf Funkverbindungen sind die beiden häufigsten Anwendungen die Messung der Signalstärke und die Angabe von Dämpfung oder Verstärkung.
 
-1. **Signalstärke in dBm (Dezibel Milliwatt):**
+\begin{enumerate}
+	\item \textbf{Signalstärke in dBm (Dezibel Milliwatt):}
+	\begin{itemize}
+		\item  dBm misst die absolute Leistung eines Signals im Vergleich zu einem Referenzwert von 1 Milliwatt.
+		\item  Ein positives dBm-Wert zeigt an, dass das Signal stärker ist als 1 Milliwatt, während ein negativer Wert darauf hinweist, dass es schwächer ist.
+		\item  Beispiel: Ein Signal mit -50 dBm ist stärker als ein Signal mit -60 dBm.
+	\end{itemize}
 
-   - dBm misst die absolute Leistung eines Signals im Vergleich zu einem Referenzwert von 1 Milliwatt.
-   - Ein positives dBm-Wert zeigt an, dass das Signal stärker ist als 1 Milliwatt, während ein negativer Wert darauf hinweist, dass es schwächer ist.
-   - Beispiel: Ein Signal mit -50 dBm ist stärker als ein Signal mit -60 dBm.
+	\item \textbf{Dämpfung und Verstärkung in dB:}
+	\begin{itemize}
+		\item dB wird auch verwendet, um die Dämpfung oder Verstärkung von Signalen in einer Leitung oder einem System auszudrücken.
+		\item Eine positive dB-Angabe deutet auf Verstärkung hin, während eine negative dB-Angabe auf Dämpfung hinweist.
+		\item Beispiel: Ein Verstärker, der das Signal um 20 dB verstärkt, erhöht die Signalstärke um das 100-fache.
+	\end{itemize}
+\end{enumerate}
 
-2. **Dämpfung und Verstärkung in dB:**
-   - dB wird auch verwendet, um die Dämpfung oder Verstärkung von Signalen in einer Leitung oder einem System auszudrücken.
-   - Eine positive dB-Angabe deutet auf Verstärkung hin, während eine negative dB-Angabe auf Dämpfung hinweist.
-   - Beispiel: Ein Verstärker, der das Signal um 20 dB verstärkt, erhöht die Signalstärke um das 100-fache.
-
-Bei Funkverbindungen wird die Signalstärke oft in dBm gemessen, während Dämpfung oder Verstärkung von Antennen, Kabeln oder Verstärkern in einfachen dB-Angaben ausgedrückt werden. Dies ermöglicht eine präzise und effektive Kommunikation über die Leistung von Funksignalen und die Leistung von Komponenten in drahtlosen Netzwerken.
+Bei Funkverbindungen wird die Signalstärke oft in dBm gemessen, während Dämpfung oder Verstärkung von Antennen, Kabeln oder
+Verstärkern in einfachen dB-Angaben ausgedrückt werden. Dies ermöglicht eine präzise und effektive Kommunikation über die
+Leistung von Funksignalen und die Leistung von Komponenten in drahtlosen Netzwerken.
 
 \subsection{Channelsettings}
 \begin{tabular}[h]{l | l}
@@ -389,7 +428,7 @@ Das Hata-Modell verwendet verschiedene Begriffe in der Dämpfungsformel, um zwis
 Hata-Ausbreitungsformel:\\
 
 \begin{align*}
-Loss(dB) &= A + B \cdot \log_{10}{(d)} - K + C \\ 
+Loss(dB) &= A + B \cdot \log_{10}{(d)} - K + C \\
 A &= 69.55 + 26.16 \cdot \log_{10}{(f)} - 13.82 \cdot \log_{10}{(h_s)} \\
 B &= 44.9 - 6.55 \log_{10}{(h_s)} \\ \\
 d &= \text{Distanz zwischen Sender und Empfänger (km)} \\
@@ -398,7 +437,7 @@ h_r &= \text{Empfängerantennenhöhe (m)} \\
 K &= \text{Korrekturfaktor} \\
 C &= \text{Korrekturfaktor}\\
 f &= \text{Übertragungsfrequenz  [MHz]} \\
-\end{align*} 
+\end{align*}
 \newpage
 \textbf{\emph{Urban:  }}Große Stadt mit großen Gebäuden welche zwei oder mehreren Stockwerken besitzen oder größere Dörfer mit sehr nahe stehenden Häusern
 
@@ -418,7 +457,7 @@ C &= -2 \cdot [\log_{10}{(f/28)}]^2 - 5.4\\
 \text{Medium:} \\
 K &= (1.1 \cdot \log_{10}{(f)} - 0.7) \cdot h_r - (1.56 \cdot \log_{10}{(f)} - 0.8) \\
 C &= 0 \\
-\text{Urban, 150 $\leq$ f $\leq$ 200 MHz:} \\ 
+\text{Urban, 150 $\leq$ f $\leq$ 200 MHz:} \\
 K &= 8.29 \cdot (\log_{10}{(1.54 \cdot h_r)})^2  - 1.1 \\
 C &= 0 \\
 \text{Urban, 200 $\l <$ f $\leq $ 1500 MHz:} \\
@@ -500,7 +539,7 @@ Urban(Gebäude) & 1.018km\\
 \hline
 \hline
 Sichtlinie & 24.6km
-\end{tabular} \\ \\ 
+\end{tabular} \\ \\
 \\
 Es darf nicht vergessen werden, dass das Hata-Modell nur eine annäherung im Bereich bei Entfernungen um die 1-20km ist. Alle Werte die darüber berechnet werden sollten mit anderen Werkzeugen überprüft werden. Wie in unserem Fall Freifläche(Max) und Freifläche(Gebäude).\\
   \\
@@ -530,7 +569,7 @@ LFS &= \text{free space loss or path loss (dB)} \\
 LP  &= \text{miscellaneous signal propagation losses} \\
     &\phantom{=} \text{(these include fading margin, polarization mismatch, losses associated with} \\
    &\phantom{=} \text{medium through which signal is travelling, other losses...) (dB)} \\
-LRX &= \text{receiver feeder and associated losses (feeder, connectors, etc.) (d)B} \\ 
+LRX &= \text{receiver feeder and associated losses (feeder, connectors, etc.) (d)B} \\
 \\
 \\
 FSPL \mathrm{(dB)} &= 20\log_{10}(d) + 20\log_{10}(f) - 147.55 \\
@@ -554,15 +593,15 @@ SNR &= \text{Signal-Rausch-Verhältnis (signal to noise ratio).} \\
 
 Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:
 
-1. **Transmit Power (Tx Power):** Let's assume the transmitter has a power output of 20 dBm.
+1. \textbf{Transmit Power (Tx Power):} Let's assume the transmitter has a power output of 20 dBm.
 
-2. **Frequency (f):** Assume a frequency of 868 MHz.
+2. \textbf{Frequency (f):} Assume a frequency of 868 MHz.
 
-3. **Distance (d):** Let's consider a communication distance of 2 kilometers.
+3. \textbf{Distance (d):} Let's consider a communication distance of 2 kilometers.
 
-4. **Antenna Gains (Gt and Gr):** Assume both the transmitter and receiver antennas have a gain of 2 dBi.
+4. \textbf{Antenna Gains (Gt and Gr):} Assume both the transmitter and receiver antennas have a gain of 2 dBi.
 
-5. **Free Space Path Loss (Lp):** Using the free space path loss formula:
+5. \textbf{Free Space Path Loss (Lp):} Using the free space path loss formula:
 
    $$
    Lp = 20 \log_{10}{d} + 20 \log_{10}{(f)} + L_{FS}
@@ -574,7 +613,7 @@ Let's consider a simplified example of a LoRa link budget for a point-to-point c
 
    Here, \(c\) is the speed of light. The result will be the path loss in dB.
 
-6. **Received Power (Rx Power):** Plug the values into the link budget equation:
+6. \textbf{Received Power (Rx Power):} Plug the values into the link budget equation:
 
    $$
    \text{Rx Power} = \text{Tx Power} + \text{Tx Antenna Gain} - \text{Path Loss} + \text{Rx Antenna Gain}
@@ -587,17 +626,25 @@ The calculated received power should be compared with the receiver's sensitivity
 Keep in mind that this is a simplified example, and in a real-world scenario, additional factors such as atmospheric conditions, interference, and fading effects should be considered for a more accurate link budget analysis.
 \newpage
 \section{Fazit}
-Meshtastic ist ein gut voranschreitendes Projekt, dass eine solide Software-Plattform für die Kommunikation zwischen LoRa-fähigen Geräten ermöglicht.\\
+Meshtastic ist ein gut voranschreitendes Projekt, dass eine solide Software-Plattform für die Kommunikation
+zwischen LoRa-fähigen Geräten ermöglicht.\\
 \\
 Damit aber Meshtastic als Katastrophennetz eingesetzt werden könnte, sind aktuell noch einige Hürden im Weg.\\
 \\
-Für den Einsatz als Katastrophennetz müssten erstmal genug solcher Meshtastic- und LoRa-fähigen Geräte angeschafft werden, sodass ein zuverlässiges Mesh-Netzwerk innerhalb der Stadt aufgebaut werden könnte. Dies müsste am Besten mit einer Großbestellung geschehen, da sonst der Markt überlastet werden und die Preise steigen könnten.\\
+Für den Einsatz als Katastrophennetz müssten erstmal genug solcher Meshtastic- und LoRa-fähigen Geräte angeschafft werden,
+sodass ein zuverlässiges Mesh-Netzwerk innerhalb der Stadt aufgebaut werden könnte. Dies müsste am Besten mit einer Großbestellung geschehen,
+da sonst der Markt überlastet werden und die Preise steigen könnten.\\
 \\
-Es müssten genug Geräte innerhalb der Stadt hoch positioniert werden, da die Reichweite von LoRa durch Gebäude wesentlich begrenzt ist. Nur bei freier Luftlinie sind Verbindungen über mehrere Kilometer möglich. Andere Funktechnologien mit mehr Sendeleistung, sind durch Gebäude weniger beeinträchtigt.
+Es müssten genug Geräte innerhalb der Stadt hoch positioniert werden, da die Reichweite von LoRa durch Gebäude wesentlich begrenzt ist.
+Nur bei freier Luftlinie sind Verbindungen über mehrere Kilometer möglich. Andere Funktechnologien mit mehr Sendeleistung, sind
+durch Gebäude weniger beeinträchtigt.
 Aber im Katastrophenfall mit zusammengebrochener Infrastruktur (Black-Out), ist LoRa mit geringem Energieverbrauch besser geeignet.\\
 \\
-Aktuell ist Meshtastic noch softwareseitig auf Netzwerke mit bis zu 80 Nodes limitiert. Das reicht bei Weitem nicht, um den Raum Dresden vollständig abzudecken.
-Das Protokoll scheint auch nicht für solche Mega-Meshes ausgelegt zu sein, was man am maximalen Hop Count von 7 erkennen kann. Ein limitierter Hop Count könnte eine weitreichende Zustellung verhindern.\\
+Aktuell ist Meshtastic noch softwareseitig auf Netzwerke mit bis zu 80 Nodes limitiert. Das reicht bei Weitem nicht, um den Raum Dresden
+vollständig abzudecken.
+Das Protokoll scheint auch nicht für solche Mega-Meshes ausgelegt zu sein, was man am maximalen Hop Count von 7 erkennen kann.
+Ein limitierter Hop Count könnte eine weitreichende Zustellung verhindern.\\
 \\
-Die Software ist für ein Open Source Projekt ohne große Finanzierung auf einem guten Niveau, aber noch nicht für allgemeine Nutzung ausgereift. Dafür würde es einen Feinschliff in User Experience und Stabilität benötigen.\\
+Die Software ist für ein Open Source Projekt ohne große Finanzierung auf einem guten Niveau,
+aber noch nicht für allgemeine Nutzung ausgereift. Dafür würde es einen Feinschliff in User Experience und Stabilität benötigen.\\
 \end{document}
