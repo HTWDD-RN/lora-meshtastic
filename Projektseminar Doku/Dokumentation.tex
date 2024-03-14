@@ -659,17 +659,17 @@ SNR &= \text{Signal-Rausch-Verhältnis (signal to noise ratio).} \\
 \newpage
 \subsubsection{Beispielrechnung}
 
-Let's consider a simplified example of a LoRa link budget for a point-to-point communication link. Please note that real-world scenarios are more complex and involve additional factors, but this example should provide a basic understanding:
+Lassen Sie uns ein vereinfachtes Beispiel für ein LoRa Link-Budget für einen Punkt-zu-Punkt-Kommunikationslink betrachten. Bitte beachten Sie, dass reale Szenarien komplexer sind und zusätzliche Faktoren berücksichtigen, aber dieses Beispiel sollte ein grundlegendes Verständnis bieten.
 
-1. \textbf{Transmit Power (Tx Power):} Let's assume the transmitter has a power output of 20 dBm.
+1. \textbf{Sendeleistung (Tx Power):} Wir gehen von einer Sendeleistung von 20 dBm aus.
 
-2. \textbf{Frequency (f):} Assume a frequency of 868 MHz.
+2. \textbf{Frequenz (f):} Es wird mit einer Frequenz von 868 MHz gerechnet.
 
-3. \textbf{Distance (d):} Let's consider a communication distance of 2 kilometers.
+3. \textbf{Distanz (d):} Als Distanz werden 2 Kilometer verwendet.
 
-4. \textbf{Antenna Gains (Gt and Gr):} Assume both the transmitter and receiver antennas have a gain of 2 dBi.
+4. \textbf{Antennen Gains (Gt and Gr):} Für die Sende- und Empfangsantenne wird ein Gain von 2 dBi verwendet.
 
-5. \textbf{Free Space Path Loss (Lp):} Using the free space path loss formula:
+5. \textbf{Freiraumdämpfung (Lp):} unter verwendung der Freiraumdämpfungsformel:
 
    $$
    Lp = 20 \log_{10}{d} + 20 \log_{10}{(f)} + L_{FS}
@@ -679,19 +679,19 @@ Let's consider a simplified example of a LoRa link budget for a point-to-point c
    Lp = 20 \log_{10}{2} + 20 \log_{10}{(868 \cdot 10^6)} + 20 \cdot \log_{10}{\frac{4\pi}{c}}
    $$
 
-   Here, \(c\) is the speed of light. The result will be the path loss in dB.
+   In diesem Fall ist \(c\) die Lichtgeschwindigkeit. Das Ergebniss ist der Path Loss in dB.
 
-6. \textbf{Received Power (Rx Power):} Plug the values into the link budget equation:
+6. \textbf{Empfangsleistung (Rx Power):} Die werte werden in die Formel eingesetzt:
 
    $$
    \text{Rx Power} = \text{Tx Power} + \text{Tx Antenna Gain} - \text{Path Loss} + \text{Rx Antenna Gain}
    $$
 
-   Substitute the values and calculate the received power.
+   Ersetze die Werte und berechne die Empfangsleistung.
 
-The calculated received power should be compared with the receiver's sensitivity specification. If the received power is higher than the sensitivity threshold, the link is expected to work under the specified conditions.
+Die berechnete Empfangsleistung sollte mit der Empfindlichkeitsspezifikation des Empfängers verglichen werden. Wenn die empfangene Leistung höher ist als der Empfindlichkeitsschwellenwert, wird erwartet, dass die Verbindung unter den spezifizierten Bedingungen funktioniert.
 
-Keep in mind that this is a simplified example, and in a real-world scenario, additional factors such as atmospheric conditions, interference, and fading effects should be considered for a more accurate link budget analysis.
+Bitte beachten Sie, dass dies ein vereinfachtes Beispiel ist, in einem realen Szenario sollten zusätzliche Faktoren wie atmosphärische Bedingungen, Störungen und Ausbleibungseffekte berücksichtigt werden, um eine genauere Analyse des Link-Budgets durchzuführen.
 \newpage
 \section{Fazit}
 Meshtastic ist ein gut voranschreitendes Projekt, dass eine solide Software-Plattform für die Kommunikation
