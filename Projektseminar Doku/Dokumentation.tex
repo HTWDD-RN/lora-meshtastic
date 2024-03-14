@@ -231,7 +231,7 @@ Web & \href{https://client.meshtastic.org/}{Web App} & \href{https://github.com/
 Die Apps werden regelmäßig geupdated und sind modern aufgebaut.\\ \\
 Ursprünglich sollte hier ein Vergleich der Funktionalitäten erfolgen, es gibt aber keine erkennbaren Unterschiede, außer kleinere in der Bennennung und Bedienung.\\
 
-\subsection{Ui}
+\subsection{UI}
 \subsubsection{iOS}
 \begin{tabular}[h]{l  l  l}
 \includegraphics[scale=0.2]{./Bilder/Software/ios/messages.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_channels.png} & \includegraphics[scale=0.2]{./Bilder/Software/ios/messages_contacts.png}\\
@@ -315,6 +315,42 @@ Damit der Meshtasticator die gewünschten Anordnungen simulieren kann, muss die 
 \end{lstlisting}
 Die Abhängigkeiten können mit \lstinline{pip3 install -r requirements.txt} installiert werden.
 
+\newpage
+\section{Praxistest}
+
+In unseren Praxistests am Elbufer in Dresden haben wir eine Reichweite von 4km Luftlinie erreicht.
+
+Wir sind mit dem Fahrrad jeweils vom Blauen Wunder in beide Richtungen gefahren und haben unsere
+Meshtastic Geräte im Rucksack mitgenommen.
+
+Für den kontinierlichen Sendetest, haben wir in den Moduleinstellungen den Range Test aktiviert
+und auf ein Interval von 1min gestellt.
+
+\subsection{Logfiles}
+\begin{tabular}[h]{l | l | l}
+Node & Typ & Link \\
+\hline
+
+Göran & Metrics & \href{https://htwdd-rn.github.io/lora-meshtastic/logs/goeran%20Device%20Metrics%20Log.csv}{Download} \\
+  		& Position & \href{https://htwdd-rn.github.io/lora-meshtastic/logs/goeran%20Position%20Log.csv}{Download} \\
+\hline
+Julian & Metrics & \href{https://htwdd-rn.github.io/lora-meshtastic/logs/Julian%20Device%20Metrics%20Log.csv}{Download} \\
+			& Position & \href{https://htwdd-rn.github.io/lora-meshtastic/logs/Julian%20Position%20Log.csv}{Download} \\
+\hline
+Sventastic & Metrics & \href{https://htwdd-rn.github.io/lora-meshtastic/logs/Sventastic%20Device%20Metrics%20Log.csv}{Download} \\
+					 & Position & \href{https://htwdd-rn.github.io/lora-meshtastic/logs/Sventastic%20Position%20Log.csv}{Download} \\
+\end{tabular}\\
+
+\subsection{Fazit}
+Dieser Test konnte zeigen, dass Meshtastic mit batteriebetriebenen Geräten ohne besondere Ausrichtung
+der Antennen eine gute Distanz auf Luftlinie zurücklegen kann. Wegen der Weiterleitung von Nachrichten
+konnte die Verbindung zwischen Christian und Julian aufrechterhalten werden.
+
+Die Werte ließen sich wahrscheinlich auch noch verbessern, wenn bessere Antennen verwendet würden und
+eine genauere Ausrichtung der Antennen erfolgen würde.
+
+Innerhalb der Stadt, mit vielen Gebäuden und anderen Hindernissen, ist die Reichweite wesentlich geringer.
+Das Meshnetzwerk müsste dann enger aufgebaut werden, um eine gute Verbindung zu gewährleisten.
 
 \newpage
 \section{Theorie}
