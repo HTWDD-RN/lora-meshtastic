@@ -273,11 +273,9 @@ Radio-Konfiguration
 \end{itemize}
 \newpage
 \section{Simulation}
-TODO LINKS einfügen @goeranh
-
 Die Wartung vieler Meshtastic Nodes für den Zweck des Experimentierens mit der Software bzw. dem Protokoll kommt mit einem größeren Aufwand einher. Dafür kann sich eine Simulation besser eignen, um Resultate ohne Aufwand direkt beobachten zu können.
 
-Mit der Software Meshtasticator ist es möglich, ein Meshtastic Netzwerk zu simulieren. Diese basiert auf zwei vorherigen Simulatoren (lora-network-simulator und LoRaSim) und nutzt unterliegend die Meshtastic Linux Anwendung, weswegen die Verwendung eines Linux Betriebsystems Voraussetzung ist.
+Mit der Software \href{https://github.com/GUVWAF/Meshtasticator}{Meshtasticator} ist es möglich, ein Meshtastic Netzwerk zu simulieren. Diese basiert auf zwei vorherigen Simulatoren (\href{https://github.com/lucagioacchini/lora-network-simulator}{lora-network-simulator} und \href{https://mcbor.github.io/lorasim/}{LoRaSim}) und nutzt unterliegend die \href{https://meshtastic.org/docs/software/linux-native/}{Meshtastic Linux Anwendung}, weswegen die Verwendung eines Linux Betriebsystems Voraussetzung ist.
 
 Wir haben den Simulator in einer Ubuntu-VM installiert. Einige Pakete mussten installiert werden.
 \begin{lstlisting}
@@ -286,7 +284,7 @@ Wir haben den Simulator in einer Ubuntu-VM installiert. Einige Pakete mussten in
 	libgpiod2 libyaml-cpp-dev libbluetooth-dev
 \end{lstlisting}
 
-Danach musste man das Meshtasticator und Meshtastic-Firmware Repository herunterladen.
+Danach muss das \href{https://github.com/GUVWAF/Meshtasticator}{Meshtasticator} und \href{https://github.com/meshtastic/firmware}{Meshtastic-Firmware} Repository herunter geladen werden.
 
 Um die Firmware zu compilieren, benötigt man PlatformIO. Das Tool lässt sich mit dem System Paketmanager wie z.B. apt installieren, häufig bekommt man eine veraltete Version, da die Paketquellen der meisten Betriebsysteme nur langsam aktualisiert werden.
 
@@ -300,7 +298,7 @@ Der Installationspfad liegt in ~/.local/bin, welcher nicht standardmäßig in de
 	export PATH="$HOME/.local/bin:$PATH"
 \end{lstlisting}
 
-Die Meshtastic Firmware, welche normalerweise für IoT Hardware kompiliert wird, kann auch nativ auf einem Linux Betriebsystem mithilfe von Portduino ausgeführt werden.
+Die Meshtastic Firmware, welche normalerweise für IoT Hardware kompiliert wird, kann auch nativ auf einem Linux Betriebsystem mithilfe von \href{https://github.com/meshtastic/framework-portduino}{Portduino} ausgeführt werden.
 
 Mit Environment-Parameter native baut PlatformIO die Firmware für ein Linux Betriebsystem.
 \begin{lstlisting}
