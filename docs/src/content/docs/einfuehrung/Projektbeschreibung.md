@@ -11,3 +11,6 @@ Meshtastic ist ein Open-Source-Projekt, das es ermöglicht, ein Mesh-Netzwerk au
 ## Fragestellung
 
 Ist Meshtastic als unabhängiges Kommunikations-Netzwerk für den Krisenfall im Raum Dresden geeignet?
+
+:::note
+Die neuere Version der Dokumentation ist als PDF-Dokument im GitHub-Repository verfügbar.
