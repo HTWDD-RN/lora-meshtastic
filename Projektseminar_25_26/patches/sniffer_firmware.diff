@@ -1,0 +1,130 @@
+diff --git a/src/RedirectablePrint.cpp b/src/RedirectablePrint.cpp
+index 9624a4593..914d915c6 100644
+--- a/src/RedirectablePrint.cpp
++++ b/src/RedirectablePrint.cpp
+@@ -54,7 +54,7 @@ size_t RedirectablePrint::vprintf(const char *logLevel, const char *format, va_l
+ #if ENABLE_JSON_LOGGING || ARCH_PORTDUINO
+     static char printBuf[512];
+ #else
+-    static char printBuf[160];
++    static char printBuf[560];
+ #endif
+ 
+ #ifdef ARCH_PORTDUINO
+diff --git a/src/mesh/RadioLibInterface.cpp b/src/mesh/RadioLibInterface.cpp
+index 80e51b8bc..0e03b3599 100644
+--- a/src/mesh/RadioLibInterface.cpp
++++ b/src/mesh/RadioLibInterface.cpp
+@@ -8,6 +8,7 @@
+ #include "error.h"
+ #include "main.h"
+ #include "mesh-pb-constants.h"
++#include <cstdio>
+ #include <pb_decode.h>
+ #include <pb_encode.h>
+ 
+@@ -422,6 +423,23 @@ void RadioLibInterface::completeSending()
+     }
+ }
+ 
++void RadioLibInterface::printBytesInfo(const char *label, const uint8_t *p, size_t numbytes)
++{
++    int labelSize = strlen(label);
++    char *messageBuffer = new char[(numbytes * 2) + 2];
++    //strncpy(messageBuffer, label, labelSize);
++    //snprintf(messageBuffer + labelSize, 9, " %03d %03d", lora.getSNR(), lround(lora.getRSSI()));
++    for (size_t i = 0; i < numbytes; i++)
++        snprintf(messageBuffer + i * 2, 4, "%02x", p[i]);
++    strcpy(messageBuffer + numbytes * 2, "\n");
++    //LOG_INFO(messageBuffer);
++    // the buffer size of the stream seems to limit how much data can actually be dumped
++    //console->Print::write(messageBuffer, sizeof(messageBuffer));
++    //console->flush();
++    consolePrintf("%s %d %d %s", label, getRSSI(), getSNR(), messageBuffer);
++    delete[] messageBuffer;
++}
++
+ void RadioLibInterface::handleReceiveInterrupt()
+ {
+     // when this is called, we should be in receive mode - if we are not, just jump out instead of bombing. Possible Race
+@@ -452,6 +470,7 @@ void RadioLibInterface::handleReceiveInterrupt()
+         printBytes("Raw incoming packet: ", (uint8_t *)&radioBuffer, length);
+     }
+ #endif
++    printBytesInfo("[sniff snoff] Raw incoming packet: ", (uint8_t *)&radioBuffer, length);
+     if (state != RADIOLIB_ERR_NONE) {
+         LOG_ERROR("Ignore received packet due to error=%d (maybe to=0x%08x, from=0x%08x, flags=0x%02x)", state,
+                   radioBuffer.header.to, radioBuffer.header.from, radioBuffer.header.flags);
+diff --git a/src/mesh/RadioLibInterface.h b/src/mesh/RadioLibInterface.h
+index 833c88710..bd46d4876 100644
+--- a/src/mesh/RadioLibInterface.h
++++ b/src/mesh/RadioLibInterface.h
+@@ -216,6 +216,16 @@ class RadioLibInterface : public RadioInterface, protected concurrency::Notified
+      */
+     virtual void addReceiveMetadata(meshtastic_MeshPacket *mp) = 0;
+ 
++    virtual int getRSSI(){
++      return 0;
++    }
++
++    virtual int getSNR(){
++      return 0;
++    }
++
++    void printBytesInfo(const char *label, const uint8_t *p, size_t numbytes);
++
+     /**
+      * Subclasses must override, implement and then call into this base class implementation
+      */
+diff --git a/src/mesh/SX126xInterface.cpp b/src/mesh/SX126xInterface.cpp
+index e1f07a32b..f40fc3900 100644
+--- a/src/mesh/SX126xInterface.cpp
++++ b/src/mesh/SX126xInterface.cpp
+@@ -269,6 +269,14 @@ template <typename T> void SX126xInterface<T>::addReceiveMetadata(meshtastic_Mes
+     LOG_DEBUG("Corrected frequency offset: %f", lora.getFrequencyError());
+ }
+ 
++template <typename T> int SX126xInterface<T>::getRSSI(){
++    return lround(lora.getRSSI());
++}
++
++template <typename T> int SX126xInterface<T>::getSNR(){
++    return lora.getSNR();
++}
++
+ /** We override to turn on transmitter power as needed.
+  */
+ template <typename T> void SX126xInterface<T>::configHardwareForSend()
+diff --git a/src/mesh/SX126xInterface.h b/src/mesh/SX126xInterface.h
+index b8f16ac6d..dd46a3897 100644
+--- a/src/mesh/SX126xInterface.h
++++ b/src/mesh/SX126xInterface.h
+@@ -70,6 +70,9 @@ template <class T> class SX126xInterface : public RadioLibInterface
+      */
+     virtual void addReceiveMetadata(meshtastic_MeshPacket *mp) override;
+ 
++    virtual int getRSSI() override;
++    virtual int getSNR() override;
++
+     virtual void setStandby() override;
+ 
+     uint32_t getPacketTime(uint32_t pl, bool received) override { return computePacketTime(lora, pl, received); }
+diff --git a/src/mqtt/MQTT.cpp b/src/mqtt/MQTT.cpp
+index f9f114039..8939ce8ad 100644
+--- a/src/mqtt/MQTT.cpp
++++ b/src/mqtt/MQTT.cpp
+@@ -41,6 +41,14 @@
+ #endif
+ #include <RTC.h>
+ 
++size_t strlcpy(char* dst, const char* src, size_t sz){
++    size_t ret = (strncpy(dst, src, sz) - dst);
++    if(sz > 0){
++        dst[sz - 1] = 0;
++    }
++    return ret;
++}
++
+ MQTT *mqtt;
+ 
+ namespace
