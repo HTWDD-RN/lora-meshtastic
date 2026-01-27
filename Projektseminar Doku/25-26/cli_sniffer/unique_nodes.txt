@@ -1,0 +1,80 @@
+!dfea17c0 | name=Radmir_HTWD | short=TE_2 | num=3756660672 | mac=5Bzf6hfA | hw=T_ECHO
+!a5c8a594 | name=TEcho Jason | short=TeJa | num=2781390228 | mac=7DClyKWU | hw=T_ECHO | pos=510951424,136871936
+!1c49779c | name=Altfranken JO61TA | short=MiGo | num=474576796 | mac=EAYcSXec | hw=TBEAM | pos=510394368,136577024
+!b03c4718 | name=DD-Klotzsche-02 | short=4718 | num=2956740376 | mac=NM2wPEcY | hw=HELTEC_V3 | pos=511152128,137662464
+!91478185 | name=Niedersedlitz ☀️🔋 | short=Niez | num=2437382533 | mac=7JGRR4GF | hw=RAK4631 | pos=510000000,138230000
+!7a6d66d8 | name=Wahnsdorf JO61UC 🗼🏡☀️ | short=WdGa | num=2053990104 | mac=NJh6bWbY | hw=TBEAM | pos=511213568,136806400
+!75e068f0 | name=Colega 68f0 | short=C6 | num=1977641200 | mac=3FR14Gjw | hw=TLORA_T3_S3 | pos=511967232,139722752
+!17a39b07 | name=Lars mobil | short=Lars | num=396598023 | mac=27AXo5sH | hw=HELTEC_MESH_NODE_T114 | pos=510722048,137691136
+!75cec1cc | name=phixom Meshtastic | short=phxm | num=1976484300 | mac=3FR1zsHM | hw=HELTEC_V3 | pos=510918656,137625600
+!43b69bd8 | name=DDN-FIX | short=9BD8 | num=1136040920 | mac=SMpDtpvY | hw=HELTEC_V3 | pos=509870080,138149888
+!433b959c | name=PHOS-4🏮 | short=PO4 | num=1127978396 | mac=SMpDO5Wc | hw=HELTEC_WIRELESS_PAPER | pos=511175900,136400300
+!fa6645b0 | name=Informatik/Rechnernetze | short=HTWD | num=4201006512 | mac=AAAAAAAA | hw=HELTEC_V3 | pos=510394368,137101312
+!7ed238e8 | name=Kastanienhof 3 | short=LRN3 | num=2127706344 | mac=lLl+0jjo | hw=TBEAM | pos=510829655,137422095
+!eb9f42bc | name=Altfranken 2 JO61TA | short=MGrw | num=3953083068 | mac=7g7rn0K8 | hw=RAK4631 | pos=510263296,136445952
+!da5a16a4 | name=Meshtastic 16a4 | short=16a4 | num=3663337124 | mac=NLfaWhak | hw=TLORA_T3_S3 | pos=509870080,138149888
+!433e5f04 | name=Meshtastic HV3 | short=HV3 | num=1128161028 | mac=SMpDPl8E | hw=HELTEC_V3 | pos=510812160,137453568
+!849ad2b4 | name=DD_01069_Hübner_I | short=d2b4 | num=2224738996 | mac=sIGEmtK0 | hw=HELTEC_WIRELESS_TRACKER | pos=510360585,137276343
+!849c6f0c | name=MountainFox | short=MnFx | num=2224844556 | mac=sIGEnG8M | hw=HELTEC_V3 | pos=510394368,136577024
+!da64b958 | name=KLP1 | short=klp1 | num=3664034136 | mac=NLfaZLlY | hw=HELTEC_WSL_V3 | pos=510394368,137101312
+!be29b10e | name=NICK-MOB | short=B10E | num=3190403342 | mac=2iu+KbEO | hw=HELTEC_MESH_NODE_T114 | pos=509870080,138149888
+!2f8dd803 | name=Meshtastic d803 | short=D803 | num=797825027 | mac=zXIvjdgD | hw=HELTEC_MESH_NODE_T114 | pos=509870080,138149888
+!6c741fdc | name=NICK-WM | short=1FDC | num=1819549660 | mac=oN1sdB/c | hw=TBEAM | pos=509870080,137625600
+!433c74fc | name=DDN-YAGI | short=74FD | num=1128035580 | mac=SMpDPHT8 | hw=HELTEC_V3 | pos=509870080,138149888
+!33695d28 | name=Station 5d28 | short=5d28 | num=862543144 | mac=ZOgzaV0o | hw=HELTEC_V3 | pos=509935616,137822208
+!fa74c8f0 | name=Niederwalder | short=Nied | num=4201957616 | mac=9BL6dMjw | hw=HELTEC_V3 | pos=510464000,138055680
+!db2b6038 | name=Meshtastic 6038 | short=6038 | num=3677052984 | mac=EFHbK2A4 | hw=HELTEC_V3 | pos=510459904,137953280
+!b03bd14c | name=FTL Döhlen | short=FTLD | num=2956710220 | mac=NM2wO9FM | hw=HELTEC_V3 | pos=510033920,136347648
+!db2b2d4c | name=n00b0ss home node | short=2d4c | num=3677039948 | mac=EFHbKy1M | hw=HELTEC_V3
+!06cdfbe4 | name=R JO61UA44FI 🔋 DD Coschütz | short=RSG1 | num=114162660 | mac=kBUGzfvk | hw=TLORA_V2_1_1P6 | pos=510164992,137003008
+!08ac91a4 | name=Meshtastic 91a4 | short=91a4 | num=145527204 | mac=ZLcIrJGk | hw=TLORA_V2_1_1P6 | pos=511221760,135913472
+!66e0519c | name=SG17 portabel | short=SG17 | num=1725976988 | mac=2Zlm4FGc | hw=T_ECHO | pos=510263296,136970240
+!6c730ff0 | name=drombo 👋 | short=Drmb | num=1819480048 | mac=oN1scw/w | hw=TBEAM | pos=511049728,137232384
+!b40946c9 | name=Rabu1_T114 | short=Rab1 | num=3020506825 | mac=yR20CUbJ | hw=HELTEC_MESH_NODE_T114
+!69d148a9 | name=Meshtastic 48a9 | short=48a9 | num=1775323305 | mac=5c1p0Uip | hw=SEEED_SOLAR_NODE | pos=510394368,137101312
+!cd096374 | name=Krümel  | short=DRS1 | num=3439944564 | mac=/X7NCWN0 | hw=T_ECHO
+!16c3f39c | name=DJT0 Stat | short=DJT0 | num=381940636 | mac=mKMWw/Oc | hw=STATION_G2 | pos=510066688,137297920
+!bd5044f4 | name=Meshtastic 44f4 | short=44f4 | num=3176154356 | mac=8PW9UET0 | hw=HELTEC_V3 | pos=510394368,137101312
+!cd5d12e8 | name=T-ECHO_3 | short=TE_3 | num=3445428968 | mac=zC3NXRLo | hw=T_ECHO | pos=510394368,137101312
+!ba6a5e94 | name=Meshtastic 5e94 | short=5e94 | num=3127533204 | mac=ECC6al6U | hw=HELTEC_V3 | pos=510918656,137625600
+!db2b6fb0 | name=Meshtastic 6fb0 | short=6fb0 | num=3677056944 | mac=EFHbK2+w | hw=HELTEC_V3 | pos=509560160,140364123
+!99d38474 | name=Nachteule portabel 🔋 | short=NaEu | num=2580776052 | mac=8MWZ04R0 | hw=T_ECHO | pos=510361600,137199616
+!78052454 | name=Meshtastic 2454 | short=2454 | num=2013602900 | mac=x0N4BSRU | hw=SEEED_WIO_TRACKER_L1 | pos=510918656,137101312
+!ba6060d4 | name=DampDiaper99 | short=DD99 | num=3126878420 | mac=ECC6YGDU | hw=HELTEC_V3
+!43578d14 | name=Meshtastic 8d14 | short=8d14 | num=1129811220 | mac=SMpDV40U | hw=HELTEC_V3
+!18690271 | name=dieg0 | short=die0 | num=409535089 | mac=92MYaQJx | hw=THINKNODE_M1 | pos=510328832,137297920
+!f96a9b94 | name=JO61VC Hellerau 🗼 📧 🔋 | short=DDH | num=4184513428 | mac=CNH5apuU | hw=TBEAM | pos=511057920,137617408
+!ba663210 | name=TrashPanda99 | short=TP99 | num=3127259664 | mac=ECC6ZjIQ | hw=HELTEC_V3
+!db2a199c | name=SYSTEMA Dresden | short=SYSD | num=3676969372 | mac=EFHbKhmc | hw=HELTEC_V3 | pos=510952954,137687691
+!f86f94e3 | name=Juliane | short=94e3 | num=4168062179 | mac=x8j4b5Tj | hw=TRACKER_T1000_E | pos=510358450,137429100
+!bba83178 | name=Mesh Lockwitz | short=LKWZ | num=3148362104 | mac=LLy7qDF4 | hw=TBEAM | pos=509870080,138149888
+!75cef9a4 | name=Netopyr-Base | short=NtBs | num=1976498596 | mac=3FR1zvmk | hw=HELTEC_V3
+!b03cc594 | name=McLynx | short=Lynx | num=2956772756 | mac=NM2wPMWU | hw=HELTEC_V3
+!9ea1c5d8 | name=Meshtastic c5d8 | short=c5d8 | num=2661402072 | mac=nBOeocXY | hw=HELTEC_V3 | pos=510918656,136577024
+!2fa681b8 | name=R JO61UA54MM 🔋 DD Kleinpestitz | short=NaEu | num=799441336 | mac=FCsvpoG4 | hw=TLORA_V2_1_1P6 | pos=510394368,137101312
+!bba83454 | name=MESHendrahtzaun  | short=RG1 | num=3148362836 | mac=LLy7qDRU | hw=TBEAM | pos=510918656,139198464
+!b330c06f | name=toru | short=c06f | num=3006316655 | mac=yKuzMMBv | hw=TRACKER_T1000_E | pos=510328832,137428992
+!8cfe6896 | name=OneForTheNode | short=OFTN | num=2365483158 | mac=2TGM/miW | hw=T_ECHO
+!34ef084d | name=PowerNet DD 01217 | short=084d | num=888080461 | mac=3RE07whN | hw=SEEED_SOLAR_NODE | pos=510394368,137625600
+!336a8940 | name=Netopyr Alfa | short=NetA | num=862619968 | mac=ZOgzaolA | hw=HELTEC_WSL_V3 | pos=510918656,137101312
+!48f559d8 | name=Azetbur | short=59d8 | num=1224038872 | mac=0GVI9VnY | hw=TRACKER_T1000_E | pos=511377408,137428992
+!db294c7c | name=PowerNetMobil1 | short=4c7c | num=3676916860 | mac=EFHbKUx8 | hw=HELTEC_V3 | pos=510263296,137494528
+!81aa36c5 | name=Node1_ 51°01'42"N13°39'16"E | short=PSW1 | num=2175416005 | mac=y7GBqjbF | hw=RAK4631 | pos=510394368,136577024
+!433cc430 | name=Lampe 💡Wmob 430 | short=Wmob | num=1128055856 | mac=SMpDPMQw | hw=HELTEC_V3 | pos=513015808,136577024
+!e7a5e5e6 | name=HT Tracker | short=HTTr | num=3886409190 | mac=72vnpeXm | hw=TRACKER_T1000_E | pos=509870080,136577024
+!0eca7bfc | name=Lampe💡 Y114 | short=W114 | num=248151036 | mac=+7IOynv8 | hw=HELTEC_MESH_NODE_T114
+!bba82b9c | name=Meshtastic 2b9c | short=2b9c | num=3148360604 | mac=LLy7qCuc | hw=TBEAM
+!06f5cb80 | name=Meshtastic cb80 | short=cb80 | num=116771712 | mac=kBUG9cuA | hw=TLORA_V2_1_1P6
+!9ea20b08 | name=Lada28-04 | short=2804 | num=2661419784 | mac=nBOeogsI | hw=HELTEC_V3 | pos=511270912,137338880
+!7ed2361c | name=Kastanienhof 2 | short=LRN2 | num=2127705628 | mac=lLl+0jYc | hw=TBEAM | pos=510832640,137424896
+!335c2538 | name=Spitzberg🗼 | short=Sptz | num=861676856 | mac=ZOgzXCU4 | hw=HELTEC_V3 | pos=508986212,139680451
+!43579240 | name=Meshtastic 9240 | short=9240 | num=1129812544 | mac=SMpDV5JA | hw=HELTEC_V3
+!b03d8490 | name=DB3WM-868MHz-1 | short=MEI1 | num=2956821648 | mac=NM2wPYSQ | hw=HELTEC_V3 | pos=511442944,135004160
+!06f5251c | name=MAPE4 | short=MAP4 | num=116729116 | mac=kBUG9SUc | hw=TLORA_V2_1_1P6 | pos=510394368,136577024
+!db5169a8 | name=KrashPanda01 | short=KR01 | num=3679545768 | mac=EFHbUWmo | hw=HELTEC_V3 | pos=510394368,138149888
+!b2a79b80 | name=FOH Coswig ☀️🔋 | short=FOHC | num=2997328768 | mac=gPGyp5uA | hw=HELTEC_V4
+!ba66330c | name=GoatSlayer01 | short=GS01 | num=3127259916 | mac=ECC6ZjMM | hw=HELTEC_V3
+!db517970 | name=TRAG1 | short=RAG1 | num=3679549808 | mac=EFHbUXlw | hw=HELTEC_V3
+!55c80d3c | name=Koetzschenbroda | short=Koet | num=1439173948 | mac=lLVVyA08 | hw=TBEAM
+!b03ca600 | name=knallobst_002_HV3-MQTT-@home | short=knl2 | num=2956764672 | mac=NM2wPKYA | hw=HELTEC_V3
+2996810440 | num=2996810440 | pos=509968384,136085504
